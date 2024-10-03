@@ -35,10 +35,28 @@ def extract_video_info(data)
   }
 end
 
-def display_video_info(video_info)
+def ensure_directory_exists(path)
+  dir = File.dirname(path)
+  FileUtils.mkdir_p(dir) unless File.directory?(dir)
+end
+
+def generate_unique_filename(dir, prefix = 'github_results_', ext = '.yml')
+  timestamp = Time.now.strftime('%Y%m%d%H%M%S')
+  random_str = SecureRandom.hex(4)
+  "#{dir}/#{prefix}#{timestamp}_#{random_str}#{ext}"
+end
+
+def save_video_info_as_yaml(video_info, file_path)
   return puts 'Unable to find video data.' unless video_info
 
-  video_info.each { |key, value| puts "#{key}: #{value}" }
+  dir = '../spec/fixtures/' # 固定目錄
+  ensure_directory_exists(dir) # 確認目錄存在
+
+  # 自動生成唯一檔案名
+  file_path = generate_unique_filename(dir)
+
+  File.write(file_path, video_info.to_yaml)
+  puts "Video information saved to #{file_path}"
 end
 
 video_id = 'jeqH4eMGjhY'
@@ -48,7 +66,7 @@ url = youtube_api_path(video_id, api_key)
 begin
   data = fetch_youtube_data(url)
   video_info = extract_video_info(data)
-  display_video_info(video_info)
+  save_video_info_as_yaml(video_info, 'spec/fixtures/github_results.yml')
 rescue JSON::ParserError => e
   puts "JSON parsing error: #{e.message}"
 end
