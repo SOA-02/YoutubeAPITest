@@ -40,7 +40,7 @@ def ensure_directory_exists(path)
   FileUtils.mkdir_p(dir) unless File.directory?(dir)
 end
 
-def generate_unique_filename(dir, prefix = 'github_results_', ext = '.yml')
+def generate_unique_filename(dir, prefix = 'youtube_results_', ext = '.yml')
   timestamp = Time.now.strftime('%Y%m%d%H%M%S')
   random_str = SecureRandom.hex(4)
   "#{dir}/#{prefix}#{timestamp}_#{random_str}#{ext}"

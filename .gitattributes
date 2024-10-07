@@ -1,1 +1,1 @@
-core.autocrlf=false
+*.rb text eol=lf
