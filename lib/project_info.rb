@@ -49,10 +49,10 @@ end
 def save_video_info_as_yaml(video_info, file_path)
   return puts 'Unable to find video data.' unless video_info
 
-  dir = '../spec/fixtures/' # 固定目錄
-  ensure_directory_exists(dir) # 確認目錄存在
+  dir = '../spec/fixtures/' 
+  ensure_directory_exists(dir) 
 
-  # 自動生成唯一檔案名
+
   file_path = generate_unique_filename(dir)
 
   File.write(file_path, video_info.to_yaml)
