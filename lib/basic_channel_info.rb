@@ -3,7 +3,7 @@ module CodePraise
 
   class ChannelInfo
     def initialize(video_info)
-      @video_info = video_info['snippet'] 
+      @video_info = video_info['snippet']
     end
 
     def title

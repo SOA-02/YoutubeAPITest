@@ -7,8 +7,7 @@ require 'yaml'
 require_relative '../lib/youtube_api'
 
 
-# 在這裡定義要測試的檔案和預期的正確結果
-# config = YAML.safe_load_file('../config/secrets.yml')
+
 
 CONFIG = YAML.safe_load_file(File.expand_path('../config/secrets.yml', __dir__))
 CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')
