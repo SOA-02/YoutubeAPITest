@@ -23,7 +23,7 @@ module CodePraise
       @yt_token = token
     end
 
-    def basic_channel_info(video_id) 
+    def basic_channel_info(video_id)
       url = yt_api_path(video_id, @yt_token) 
       basic_channel_info_data = call_yt_url(url).parse 
       basic_channel_info_data['items'].map do |data| 

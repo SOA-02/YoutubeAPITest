@@ -52,7 +52,6 @@ def save_video_info_as_yaml(video_info, file_path)
   dir = '../spec/fixtures/' 
   ensure_directory_exists(dir) 
 
-
   file_path = generate_unique_filename(dir)
 
   File.write(file_path, video_info.to_yaml)

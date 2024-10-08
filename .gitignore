@@ -1,3 +1,5 @@
 _*
 config/secrets.yml
 _snippets/
+coverage/*
+!coverage/.resultset.json
