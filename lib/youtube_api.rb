@@ -6,11 +6,12 @@ require 'yaml'
 
 config_path = File.join(File.dirname(__dir__), 'config', 'secrets.yml')
 config = YAML.safe_load_file(config_path)
-api_key = config['API_KEY']
-video_id = 'jeqH4eMGjhY'
+config['API_KEY']
 
 module CodePraise
+  # Represents interactions with the YouTube API.
   class YoutubeApi
+    # Your class implementation...
     API_PROJECT_ROOT = 'https://www.googleapis.com/youtube/v3'
     module Errors
       class ChannelNotFound < StandardError; end
@@ -24,10 +25,10 @@ module CodePraise
     end
 
     def basic_channel_info(video_id)
-      url = yt_api_path(video_id, @yt_token) 
-      basic_channel_info_data = call_yt_url(url).parse 
-      basic_channel_info_data['items'].map do |data| 
-        CodePraise::ChannelInfo.new(data) 
+      url = yt_api_path(video_id, @yt_token)
+      basic_channel_info_data = call_yt_url(url).parse
+      basic_channel_info_data['items'].map do |data|
+        CodePraise::ChannelInfo.new(data)
       end
     end
 
@@ -41,8 +42,8 @@ module CodePraise
       result =
         HTTP.headers('Accept' => 'application/json')
             .get(url)
-      puts "Response Code: #{result.code}"
-      successful_or_not(result) ? result : raise(HTTP_ERROR[result.code])
+      code = result.code
+      successful_or_not(result) ? result : raise(HTTP_ERROR[code])
     end
 
     def successful_or_not(result)

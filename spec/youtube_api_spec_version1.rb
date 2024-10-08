@@ -28,7 +28,7 @@ describe 'Tests Youtube Video Details' do
     end
 
     it 'SAD: should raise an error for missing keys' do
-      _(@video_details.title).wont_be_nil 
+      _(@video_details.title).wont_be_nil
     end
   end
 end

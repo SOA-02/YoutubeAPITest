@@ -1,9 +1,5 @@
-require 'minitest/autorun'
-require 'yaml'
-require 'vcr'
-require 'webmock'
+# frozen_string_literal: true
 
-require_relative '../lib/youtube_api'
 require_relative 'spec_helper' # 根據需要包含spec_helper來配置VCR等
 
 describe 'Tests Youtube Video Details' do
