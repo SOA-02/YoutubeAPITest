@@ -1,6 +1,8 @@
 # frozen_string_literal: true
-module CodePraise
 
+# Represents channel information for YouTube API.
+module CodePraise
+  # Your class implementation...
   class ChannelInfo
     def initialize(video_info)
       @video_info = video_info['snippet']
