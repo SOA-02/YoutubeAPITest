@@ -4,13 +4,15 @@
 
 * **Elements**
     * Title
+    * Title of Playlist
     * Channel Title
     * Video Description
     * Thumbnail URL
 * **Entities:**
-    * Subtitle
+    * Subtitle 
     * User
     * Channel
+    * Playlist
 
 
 
