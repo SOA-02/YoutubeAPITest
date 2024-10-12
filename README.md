@@ -1,24 +1,31 @@
-# Mission FizzBuzz
+# Pull Titles and Subtitles from Youtube Tutorials
 
-## 1. Setup Instructions
+## 1. Youtube API
+
+* **Elements**
+    * Playlists
+    * PlaylistItems
 
 
-In your working folder, use `rbenv` to set the version of ruby for this project.
+* **Entities:**
+* Playlists: list 
+    * contentDetails
+    * id
+    * localizations
+    * player
+    * snippet
+        * snippet.title
+    * status
 
-```sh
-$ rbenv local #.#.#
-# (where #.#.# sgpg --full-generate-key
-hould be the your latest installed ruby version)
-```
 
-Then,use the `bundle` command at the Unix shell to install all the necessary gems from the `Gemfile` file:
-
-```sh
-$ bundle install
-# (You only need to run this once; bundle should report success)
-```
-
-A `Gemfile.lock` file should appear showing the installed gem versions
+* PlaylistItems: list 
+    * kind
+    * etag
+    * id
+    * snippet
+        *snippit.title
+    * contentDetails
+    * status
 
 
 
