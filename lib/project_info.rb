@@ -47,6 +47,12 @@ module YoutubeUtil
   end
 end
 
+def generate_unique_filename(dir, prefix = 'github_results_', ext = '.yml')
+  timestamp = Time.now.strftime('%Y%m%d%H%M%S')
+  random_str = SecureRandom.hex(4)
+  "#{dir}/#{prefix}#{timestamp}_#{random_str}#{ext}"
+end
+
 def save_video_info_as_yaml(video_info)
   return puts 'Unable to find video data.' unless video_info
 
