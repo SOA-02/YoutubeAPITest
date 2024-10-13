@@ -16,4 +16,12 @@ gem 'webmock', '~> 3'
 # Code Quality
 gem 'flog'
 gem 'reek'
+<<<<<<< HEAD
 gem 'rubocop', '~> 1'
+=======
+gem 'rubocop'
+
+
+
+
+>>>>>>> 1bee099d4dd644e03d99154ba2da72e4a8bbb4df
