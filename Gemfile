@@ -4,4 +4,4 @@ source 'https://rubygems.org'
 
 # Networking
 gem 'http', '~> 5.2'
-
+gem 'rubocop'
