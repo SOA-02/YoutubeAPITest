@@ -3,6 +3,31 @@
 ## 1. Youtube API
 
 * **Elements**
+    * Playlists
+    * PlaylistItems
+
+
+* **Entities:**
+* Playlists: list 
+    * contentDetails
+    * id
+    * localizations
+    * player
+    * snippet
+        * snippet.title
+    * status
+
+
+* PlaylistItems: list 
+    * kind
+    * etag
+    * id
+    * snippet
+        *snippit.title
+    * contentDetails
+    * status
+
+* **Elements**
     * Title
     * Title of Playlist
     * Channel Title
