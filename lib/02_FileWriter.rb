@@ -1,6 +1,6 @@
 # Class to handle file writing operations
-require 'YouTubeAPI'
-require 'Playlist'
+require_relative '00_YouTubeAPI'
+require_relative '01_Playlist'
 
 module TitleTOC
   class FileWriter
@@ -19,3 +19,4 @@ module TitleTOC
       puts "Titles written to #{@filename}"
     end
   end
+end

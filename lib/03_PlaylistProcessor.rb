@@ -1,8 +1,8 @@
 # Main class to manage the entire process
 
-require 'YouTubeAPI'
-require 'Playlist'
-require 'FileWriter'
+require_relative '00_YouTubeAPI'
+require_relative '01_Playlist'
+require_relative '02_FileWriter'
 
 module TitleTOC
   class PlaylistProcessor
@@ -23,5 +23,4 @@ module TitleTOC
       FileWriter.new(@output_filename).write_playlist_info(playlist_info)
     end
   end
-
-  
+end 
