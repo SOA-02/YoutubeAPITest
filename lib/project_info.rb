@@ -32,12 +32,6 @@ module YoutubeUtil
     FileUtils.mkdir_p(dir) unless File.directory?(dir)
   end
 
-  def self.generate_unique_filename(dir, prefix = 'youtube_results_', ext = '.yml')
-    timestamp = Time.now.strftime('%Y%m%d%H%M%S')
-    random_str = SecureRandom.hex(4)
-    "#{dir}/#{prefix}#{timestamp}_#{random_str}#{ext}"
-  end
-
   def self.extract_video_info(data)
     items = data['items']
     return unless data && items && !items.empty?
