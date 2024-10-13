@@ -2,12 +2,27 @@
 
 source 'https://rubygems.org'
 
+
 # Networking
 gem 'http', '~> 5.2'
 
-# Development
-gem 'rubocop'
+# Reach YouTube
+gem 'google-api-client'
 
+# Utilities
+gem 'rake'
+
+# Testing
+gem 'minitest', '~> 5.20'
+gem 'minitest-rg', '~> 5.2'
+gem 'simplecov', '~> 0'
+gem 'vcr', '~> 6'
+gem 'webmock', '~> 3'
+
+# Code Quality
+gem 'flog'
+gem 'reek'
+gem 'rubocop'
 
 
 

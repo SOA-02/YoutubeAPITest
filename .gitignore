@@ -1,4 +1,4 @@
 _*
-config/secrets.yml
+!config/secrets.yml
 spec/fixtures/*
 !spec/fixtures/.keep

@@ -10,4 +10,4 @@ module TitleTOC
       match[1] if match
     end
   end
-
+end

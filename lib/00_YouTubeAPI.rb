@@ -1,4 +1,7 @@
 # Class to handle YouTube API interactions
+
+require 'google/apis/youtube_v3'
+
 module TitleTOC
   class YouTubeAPI
     YOUTUBE_API_KEY = 'YOUR_YOUTUBE_API_KEY'
