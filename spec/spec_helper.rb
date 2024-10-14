@@ -22,4 +22,4 @@ API_KEY = CONFIG['API_KEY']
 CASSETTES_FOLDER = 'spec/fixtures/cassettes'
 CASSETTE_FILE = 'youtube_api'
 CHANNEL_ID = 'UCpYf6C9QsP_BRf97vLuXlIA'
-VIEDO_ID = 'jeqH4eMGjhY'
+VIDEO_ID = 'jeqH4eMGjhY'

@@ -39,4 +39,29 @@ describe 'Tests Youtube API library' do
       _(@channel.channel_title).wont_be_nil
     end
   end
+
+  describe 'Video Information' do
+    before do
+      @video_data = Outline::Youtube::YoutubeApi.new(API_KEY).video_info(VIDEO_ID)
+      @items_data = @video_data['items'].first
+      @video_mapper = Outline::Youtube::VideoMapper.new(API_KEY).find(VIDEO_ID)
+    end
+
+    it 'HAPPY: fetches video data successfully' do
+      _(@video_data).must_be_kind_of Hash
+      _(@video_data['kind']).must_equal 'youtube#videoListResponse'
+
+      _(@items_data['kind']).must_equal 'youtube#video'
+      _(@items_data['id']).must_equal VIDEO_ID
+    end
+
+    it 'HAPPY: maps video data successfully' do
+      _(@video_mapper).must_be_kind_of Outline::Entity::Video
+    end
+
+    it 'HAPPY: entity are of correct type' do
+      _(@video_mapper.id).must_equal VIDEO_ID
+      _(@video_mapper.title).must_be_kind_of String
+    end
+  end
 end
