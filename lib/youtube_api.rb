@@ -14,6 +14,7 @@ module CodePraise
     # Your class implementation...
     API_PROJECT_ROOT = 'https://www.googleapis.com/youtube/v3'
     module Errors
+      # Represents an error that occurs when a YouTube channel cannot be found.
       class ChannelNotFound < StandardError; end
     end
     HTTP_ERROR = {
@@ -39,17 +40,33 @@ module CodePraise
     end
 
     def call_yt_url(url)
-      result =
-        HTTP.headers('Accept' => 'application/json')
-            .get(url)
-      code = result.code
-      puts "HTTP Response Code: #{code}."
-      puts "Response Body: #{result.to_s}" # 印出回傳的內容
-      successful_or_not(result) ? result : raise(HTTP_ERROR[code])
+      result = CodePraise::YoutubeApiUtils.make_http_request(url)
+      handle_response(result)
     end
 
-    def successful_or_not(result)
-      !HTTP_ERROR.keys.include?(result.code)
+    # def make_http_request(url)
+    #   HTTP.headers('Accept' => 'application/json').get(url)
+    # end
+
+    def handle_response(result)
+      code = result.code
+      puts "HTTP Response Code: #{code}."
+      puts "Response Body: #{result}" # 印出回傳的內容
+      raise(HTTP_ERROR[code]) unless YoutubeApiUtils.successful_or_not(result)
+
+      result
+    end
+  end
+
+  # This module provides utility methods for interacting with the
+  # YouTube API, such as checking the success of API responses.
+  module YoutubeApiUtils
+    def self.make_http_request(url)
+      HTTP.headers('Accept' => 'application/json').get(url)
+    end
+
+    def self.successful_or_not(result)
+      !CodePraise::YoutubeApi::HTTP_ERROR.keys.include?(result.code)
     end
   end
 end

@@ -51,12 +51,10 @@ module YoutubeUtil
   def self.generate_unique_filename(dir)
     "#{dir}youtube_channel_info.yml"
   end
-  
 end
 
 def save_video_info_as_yaml(video_info)
   return puts 'Unable to find video data.' unless video_info
-
 
   file_path = '../spec/fixtures/youtube_channel_info.yml'
   YoutubeUtil.ensure_directory_exists(File.dirname(file_path))
