@@ -3,8 +3,10 @@
 require 'http'
 require 'json'
 require 'yaml'
+require 'fileutils'
+require 'securerandom'
 
-config = YAML.safe_load_file('../config/secrets.yml')
+config = YAML.safe_load_file(File.expand_path('../config/secrets.yml', __dir__))
 
 def youtube_api_path(video_id, api_key)
   "https://www.googleapis.com/youtube/v3/videos?id=#{video_id}&key=#{api_key}&part=snippet"
@@ -45,23 +47,19 @@ module YoutubeUtil
       thumbnail_url: snippet['thumbnails']['high']['url']
     }
   end
-end
 
-def generate_unique_filename(dir, prefix = 'github_results_', ext = '.yml')
-  timestamp = Time.now.strftime('%Y%m%d%H%M%S')
-  random_str = SecureRandom.hex(4)
-  "#{dir}/#{prefix}#{timestamp}_#{random_str}#{ext}"
+  def self.generate_unique_filename(dir)
+    "#{dir}youtube_channel_info.yml"
+  end
 end
 
 def save_video_info_as_yaml(video_info)
   return puts 'Unable to find video data.' unless video_info
 
-  dir = '../spec/fixtures/'
-  YoutubeUtil.ensure_directory_exists(dir)
+  file_path = '../spec/fixtures/youtube_channel_info.yml'
+  YoutubeUtil.ensure_directory_exists(File.dirname(file_path))
 
-  unique_file_path = YoutubeUtil.generate_unique_filename(dir)
-
-  write_to_file(unique_file_path, video_info)
+  write_to_file(file_path, video_info)
 end
 
 def write_to_file(file_path, video_info)

@@ -4,9 +4,9 @@
 # require 'minitest/unit'
 # require 'minitest/rg'
 # require 'yaml'
-# require_relative '../lib/youtube_api'
+require_relative '../lib/youtube_api'
 
-require 'spec_helper'
+require_relative 'spec_helper'
 
 # CONFIG = YAML.safe_load_file(File.expand_path('../config/secrets.yml', __dir__))
 # CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')

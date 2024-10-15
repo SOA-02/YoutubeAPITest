@@ -1,7 +1,8 @@
-# Contains libraries and constants 
+# frozen_string_literal: true
+
+# Contains libraries and constants
 require 'simplecov'
 SimpleCov.start
-
 
 require 'minitest/autorun'
 require 'minitest/unit'
