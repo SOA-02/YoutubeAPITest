@@ -9,6 +9,9 @@ describe 'Tests Youtube Video Details' do
       c.hook_into :webmock
       c.filter_sensitive_data('<API_KEY>') { API_KEY }
       c.filter_sensitive_data('<API_KEY_ESC>') { CGI.escape(API_KEY) }
+      c.before_record do |interaction|
+        interaction.response.body.force_encoding('UTF-8') if interaction.response.body.respond_to?(:force_encoding)
+      end
     end
 
     VCR.insert_cassette CASSETTE_FILE,
