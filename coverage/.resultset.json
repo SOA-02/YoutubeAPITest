@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/root/Desktop/rubyhw/YoutubeAPITest/lib/youtube_api.rb": {
+      "/Users/fifiding/YoutubeAPITest/lib/youtube_api.rb": {
         "lines": [
           null,
           null,
@@ -16,19 +16,13 @@
           1,
           null,
           1,
-          1,
-          null,
-          1,
           null,
           1,
           1,
           1,
           null,
           null,
-          null,
           1,
-          null,
-          null,
           null,
           null,
           1,
@@ -39,35 +33,32 @@
           2,
           2,
           0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          0,
           0,
           null,
           null,
           null,
-          null,
           1,
-          1,
-          2,
-          2,
-          null,
           null,
           1,
           2,
+          null,
+          null,
+          1,
+          null,
+          2,
+          null,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
           null,
           null,
           null
         ]
       },
-      "/root/Desktop/rubyhw/YoutubeAPITest/lib/basic_channel_info.rb": {
+      "/Users/fifiding/YoutubeAPITest/lib/basic_channel_info.rb": {
         "lines": [
           null,
           null,
@@ -107,6 +98,6 @@
         ]
       }
     },
-    "timestamp": 1728401070
+    "timestamp": 1728995051
   }
 }

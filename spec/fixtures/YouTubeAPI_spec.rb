@@ -7,7 +7,7 @@ describe 'Tests YouTube Playlist API and File Writing' do
     @playlist_url = CORRECT['playlist_url']
     @invalid_playlist_url = CORRECT['invalid_playlist_url']
     @processor = TitleTOC::PlaylistProcessor.new(@playlist_url, 'spec/fixtures/test_output.txt')
-    @invalid_processor =TitleTOC::PlaylistProcessor.new(@invalid_playlist_url)
+    @invalid_processor = TitleTOC::PlaylistProcessor.new(@invalid_playlist_url)
   end
 
   describe 'Playlist information fetching' do

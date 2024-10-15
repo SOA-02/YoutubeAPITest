@@ -14,7 +14,7 @@ require 'webmock'
 require_relative '../lib/youtube_api'
 
 CONFIG = YAML.safe_load_file(File.expand_path('../config/secrets.yml', __dir__))
-CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')
+CORRECT = YAML.safe_load_file(File.expand_path('../spec/fixtures/youtube_channel_info.yml', __dir__))
 API_KEY = CONFIG['API_KEY']
 
 CASSETTES_FOLDER = 'spec/fixtures/cassettes'
