@@ -43,6 +43,7 @@ module CodePraise
         HTTP.headers('Accept' => 'application/json')
             .get(url)
       code = result.code
+      puts "先確認取得道內容 #{code}."
       successful_or_not(result) ? result : raise(HTTP_ERROR[code])
     end
 

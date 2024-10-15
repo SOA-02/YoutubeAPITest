@@ -4,7 +4,7 @@
 # require 'minitest/unit'
 # require 'minitest/rg'
 # require 'yaml'
-# require_relative '../lib/youtube_api'
+require_relative '../lib/youtube_api'
 
 require_relative 'spec_helper.rb'
 

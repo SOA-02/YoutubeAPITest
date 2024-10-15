@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper' # 根據需要包含spec_helper來配置VCR等
+require_relative 'spec_helper' 
 
 describe 'Tests Youtube Video Details' do
   before do

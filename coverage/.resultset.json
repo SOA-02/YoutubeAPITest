@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/fifiding/YoutubeAPITest/lib/youtube_api.rb": {
+      "/root/Desktop/rubyhw/YoutubeAPITest/lib/youtube_api.rb": {
         "lines": [
           null,
           null,
@@ -49,6 +49,7 @@
           null,
           0,
           0,
+          0,
           null,
           null,
           1,
@@ -58,7 +59,7 @@
           null
         ]
       },
-      "/Users/fifiding/YoutubeAPITest/lib/basic_channel_info.rb": {
+      "/root/Desktop/rubyhw/YoutubeAPITest/lib/basic_channel_info.rb": {
         "lines": [
           null,
           null,
@@ -98,6 +99,6 @@
         ]
       }
     },
-    "timestamp": 1728995051
+    "timestamp": 1729000927
   }
 }
