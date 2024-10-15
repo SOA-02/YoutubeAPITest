@@ -15,4 +15,4 @@ gem 'webmock', '~> 3'
 # Code Quality
 gem 'flog'
 gem 'reek'
-gem 'rubocop', '~> 1'
+gem 'rubocop'

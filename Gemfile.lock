@@ -142,7 +142,7 @@ DEPENDENCIES
   minitest (~> 5.20)
   minitest-rg (~> 5.2)
   reek
-  rubocop (~> 1)
+  rubocop
   simplecov (~> 0)
   vcr (~> 6)
   webmock (~> 3)

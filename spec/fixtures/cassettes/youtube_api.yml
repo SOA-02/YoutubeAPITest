@@ -27,7 +27,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Tue, 08 Oct 2024 06:41:36 GMT
+      - Tue, 15 Oct 2024 14:48:19 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -48,7 +48,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string:
+      string: |
         {
           "kind": "youtube#videoListResponse",
           "etag": "y_39M7bx6FfTImfwv8E4w1Ndi5s",
@@ -116,5 +116,5 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Tue, 08 Oct 2024 06:41:36 GMT
+  recorded_at: Tue, 15 Oct 2024 14:48:18 GMT
 recorded_with: VCR 6.3.1
