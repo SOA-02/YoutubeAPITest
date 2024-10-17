@@ -9,10 +9,9 @@
     * Video Description
     * Thumbnail URL
 * **Entities:**
-    * Subtitle 
-    * User
     * Channel
     * Playlist
+    * Video
 
 
 

@@ -3,7 +3,7 @@
 require 'http'
 require 'json'
 require 'yaml'
-require_relative '../entities/video_info06'
+require_relative '../entities/video_info06_fifi'
 
 config = YAML.load_file(File.expand_path('../../../config/secrets.yml', __dir__))
 
