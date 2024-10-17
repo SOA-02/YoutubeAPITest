@@ -21,7 +21,6 @@ module Outline
     # Video entity
     class Video < Dry::Struct
       include Dry.Types
-  
       attribute :id, Types::Strict::String
       attribute :title, Types::Strict::String
       attribute :description, Types::Strict::String
@@ -48,5 +47,5 @@ api_key = config['API_KEY']
 video_id = 'jeqH4eMGjhY'
 
 api_response = Outline::YoutubeApi.new(api_key)
-video = Outline::Entity::Video.new(api_response.to_h)
+video = Outline::Entity::Video.new(api_response)
 puts video.id
