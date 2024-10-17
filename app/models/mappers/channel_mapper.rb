@@ -1,14 +1,16 @@
-module CodePraise
+# frozen_string_literal: true
+
+module Outline
   module Youtube
     class ChannelMapper
-      def initialize(api_key, gateway_class = Api)
+      def initialize(api_key, gateway_class = YoutubeApi)
         @api_key = api_key
         @gateway_class = gateway_class
         @gateway = @gateway_class.new(@api_key)
       end
 
       def find(video_id)
-        video_data = @gateway.channel_data(video_id)
+        video_data = @gateway.channel_info(video_id)
         # 確認 `items` 是否有內容，並取得第一個項目
         item_data = video_data['items']&.first
         raise 'Video data is missing' unless item_data # 若資料為空則報錯
@@ -38,6 +40,10 @@ module CodePraise
         end
 
         private
+
+        def id
+          @data['id']
+        end
 
         def title
           @data['title']

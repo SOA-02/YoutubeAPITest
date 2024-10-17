@@ -24,12 +24,12 @@ describe 'Tests Youtube API library' do
 
   describe 'Channel information' do
     before do
-      @project = CodePraise::Youtube::ChannelMapper.new(API_KEY)
-      @channel = @project.find(VIEDO_ID) 
+      @project = Outline::Youtube::ChannelMapper.new(API_KEY)
+      @channel = @project.find(VIEDO_ID)
     end
   
     it 'HAPPY: should recognize channel' do
-      _(@channel).must_be_kind_of CodePraise::Entity::Channel
+      _(@channel).must_be_kind_of Outline::Entity::Channel
     end
   
     it 'HAPPY: should get channel title' do

@@ -3,13 +3,13 @@
 require 'dry-types'
 require 'dry-struct'
 
-module CodePraise
+module Outline
   module Entity
     # Domain entity for channel
     class Channel < Dry::Struct
       include Dry.Types
 
-      attribute? :id, Strict::String.optional
+      attribute? :id, Strict::String
       attribute :title, Strict::String
       attribute :published_at, Strict::String
       attribute :channel_title, Strict::String
