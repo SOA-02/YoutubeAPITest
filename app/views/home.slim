@@ -1,18 +1,18 @@
 .container
-  form role="form" action="/channel_info" method='POST' id='show-project-form'
+  form role="form" action="/channel" method='POST' id='show-project-form'
     .row.vertical-align.query-bar
       .col-md-2.col-sm-3
-        .text-right Github URL:
+        .text-right Please follow the placeholder:
       .col-md-8.col-sm-6
         input { 
-          type='text' name='github_url'
-          id='github_url_input' class="form-control"
-          placeholder="e.g. https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UC_x5XG1OV2P6uZZ5FSM9Ttw&key=AIzaSyBs83XOxfclwMlJU5NsowQ8PdigNMbEM3Y"
+          type='text' name='youtube_url'
+          id='youtube_url' class="form-control"
+          placeholder="e.g. https://www.googleapis.com/youtube/v3/channels/UC_x5XG1OV2P6uZZ5FSM9Ttw"
         }
       .col-md-2.col-sm-3
         button { 
           type='submit' id='repo-form-submit' class='submit' 
           value='submit' class="btn btn-success" 
-        } Show Project
+        } Show Info
     .row
       .col-md-12.blank-row
