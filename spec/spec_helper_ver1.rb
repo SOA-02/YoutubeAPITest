@@ -16,7 +16,6 @@ require_relative '../lib/youtube_api'
 # require_relative '../require_app'
 # require_app
 
-
 CONFIG = YAML.safe_load_file(File.expand_path('../config/secrets.yml', __dir__))
 CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')
 API_KEY = CONFIG['API_KEY']

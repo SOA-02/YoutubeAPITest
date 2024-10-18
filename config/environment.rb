@@ -3,7 +3,7 @@
 require 'roda'
 require 'yaml'
 
-module CodePraise
+module Outline
   # Configuration for the App
   class App < Roda
     CONFIG = YAML.safe_load_file('config/secrets.yml')

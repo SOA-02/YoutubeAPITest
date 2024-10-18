@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 module Outline
+  # Provides access to contributor data
   module Youtube
+    # Data Mapper: Youtube contributor -> Channel entity
     class ChannelMapper
       def initialize(api_key, gateway_class = YoutubeApi)
         @api_key = api_key
@@ -22,14 +24,16 @@ module Outline
         DataMapper.new(data).build_entity
       end
 
+      # Extracts entity specific elements from data structure
       class DataMapper
         def initialize(data)
           @data = data
           raise 'Snippet data missing' unless @data # 若無 `snippet` 則報錯
         end
 
+        # rubocop:disable Metrics/MethodLength
         def build_entity
-          Entity::Channel.new(
+          Outline::Entity::Channel.new(
             id:,
             channel_title:,
             description:,
@@ -42,6 +46,7 @@ module Outline
             view_count:
           )
         end
+        # rubocop:enable Metrics/MethodLength
 
         private
 
@@ -60,7 +65,7 @@ module Outline
         def custom_url
           @data['snippet']['customUrl']
         end
-        
+
         def country
           @data['snippet']['country']
         end

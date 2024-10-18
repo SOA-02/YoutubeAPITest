@@ -3,7 +3,7 @@
 require 'roda'
 require 'slim'
 
-module CodePraise
+module Outline
   # Web App
   class App < Roda
     plugin :render, engine: 'slim', views: 'app/views'
@@ -20,28 +20,30 @@ module CodePraise
         view 'home'
       end
 
-      routing.on 'channelInfo' do
+      routing.on 'channel' do
         routing.is do
-          # POST /channelInfo/
+          # POST /channel/
           routing.post do
-            # gh_url = routing.params['github_url'].downcase
-            # routing.halt 400 unless (gh_url.include? 'github.com') &&
-            #                         (gh_url.split('/').count >= 3)
-            # owner, project = gh_url.split('/')[-2..]
+            yt_url = routing.params['youtube_url']
+            routing.halt(400, 'youtube_channel_url parameter is required') unless yt_url
 
-            # routing.redirect "project/#{owner}/#{project}"
+            routing.halt(400, 'Invalid YouTube URL') unless (yt_url.include? 'googleapis.com') &&
+                                                            (yt_url.include? '/channels/') &&
+                                                            (yt_url.split('/').count >= 5)
+            channel_id = yt_url.split('/').last
+
+            routing.redirect "channel/#{channel_id}"
           end
         end
 
-        routing.on String, String do |owner, project|
-          # GET /project/[owner]/[project]
-          # routing.get do
-          #   github_project = Github::ProjectMapper
-          #     .new(GH_TOKEN)
-          #     .find(owner, project)
+        routing.on String do |channel_id|
+          # GET /channel/channel_id
+          routing.get do
+            yt_channel_data = Youtube::ChannelMapper
+              .new(API_KEY).find(channel_id)
 
-          #   view 'project', locals: { project: github_project }
-          # end
+            view 'channel', locals: { channel: yt_channel_data }
+          end
         end
       end
     end
