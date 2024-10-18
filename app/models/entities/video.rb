@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-#require_relative 'channel'
-#require_relative 'playlist'
+# require_relative 'channel'
+# require_relative 'playlist'
 
 require 'dry-struct'
 require 'dry-types'

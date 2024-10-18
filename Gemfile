@@ -16,3 +16,8 @@ gem 'webmock', '~> 3'
 gem 'flog'
 gem 'reek'
 gem 'rubocop'
+
+# Validation
+gem 'dry-struct'
+gem 'dry-types'
+
