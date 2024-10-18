@@ -1,26 +1,33 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/fifiding/YoutubeAPITest/lib/youtube_api.rb": {
+      "/root/Desktop/rubyhw/YoutubeAPITest/require_app.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          4,
+          null,
+          null
+        ]
+      },
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/models/entities/channel.rb": {
         "lines": [
           null,
           null,
           1,
           1,
-          1,
           null,
           1,
-          1,
-          1,
-          null,
-          1,
-          null,
           1,
           null,
           1,
           1,
           null,
           1,
+<<<<<<< HEAD
           null,
           null,
           1,
@@ -72,19 +79,74 @@
           null,
           1,
           0,
+=======
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+>>>>>>> 7d5f3a70b294ab9f5d0c1140123af7861bd2716e
           null,
           null,
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/fifiding/YoutubeAPITest/lib/basic_channel_info.rb": {
+=======
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/models/gateways/youtube_api.rb": {
+>>>>>>> 7d5f3a70b294ab9f5d0c1140123af7861bd2716e
         "lines": [
           null,
           null,
-          null,
+          1,
           1,
           null,
           1,
+          null,
+          1,
+          1,
+<<<<<<< HEAD
+          0,
+=======
+          1,
+          2,
+>>>>>>> 7d5f3a70b294ab9f5d0c1140123af7861bd2716e
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+<<<<<<< HEAD
+          1,
+          0,
+          null,
+=======
+>>>>>>> 7d5f3a70b294ab9f5d0c1140123af7861bd2716e
+          null,
+          1,
+          0,
+          null,
+<<<<<<< HEAD
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+=======
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+>>>>>>> 7d5f3a70b294ab9f5d0c1140123af7861bd2716e
+          null,
+          null,
           1,
           0,
           null,
@@ -94,29 +156,136 @@
           null,
           null,
           1,
-          0,
+          2,
+          2,
+          null,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          2,
           null,
           null,
           1,
           0,
           null,
           null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/models/mappers/channel_mapper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
           1,
           0,
           null,
           null,
           1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/models/mappers/video_mapper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
           0,
           null,
           null,
           1,
-          0,
           null,
           null,
           null
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1729083657
+=======
+    "timestamp": 1729180887
+>>>>>>> 7d5f3a70b294ab9f5d0c1140123af7861bd2716e
   }
 }
