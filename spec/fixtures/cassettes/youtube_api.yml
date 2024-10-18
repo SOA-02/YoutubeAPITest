@@ -117,4 +117,296 @@ http_interactions:
           }
         }
   recorded_at: Tue, 15 Oct 2024 15:16:13 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?id=jeqH4eMGjhY&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Fri, 18 Oct 2024 02:42:50 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#channelListResponse",
+          "etag": "RuuXzTIr0OoDqI4S0RU6n4FqKEM",
+          "pageInfo": {
+            "totalResults": 0,
+            "resultsPerPage": 5
+          }
+        }
+  recorded_at: Fri, 18 Oct 2024 02:42:50 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?id=jeqH4eMGjhY&key=<API_KEY>&part=snippet,contentDetails,statistics
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Fri, 18 Oct 2024 02:49:28 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#channelListResponse",
+          "etag": "RuuXzTIr0OoDqI4S0RU6n4FqKEM",
+          "pageInfo": {
+            "totalResults": 0,
+            "resultsPerPage": 5
+          }
+        }
+  recorded_at: Fri, 18 Oct 2024 02:49:28 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?id=UC_x5XG1OV2P6uZZ5FSM9Ttw&key=<API_KEY>&part=snippet,contentDetails,statistics
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Fri, 18 Oct 2024 02:50:17 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#channelListResponse",
+          "etag": "bDXCBVGNhOKZZJhDV5c7X2qYaXM",
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#channel",
+              "etag": "r5k-rFTcSK4BZmk9lqst0Ztr26k",
+              "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+              "snippet": {
+                "title": "Google for Developers",
+                "description": "Subscribe to join a community of creative developers and learn the latest in Google technology — from AI and cloud, to mobile and web.\n\nExplore more at developers.google.com\n\n",
+                "customUrl": "@googledevelopers",
+                "publishedAt": "2007-08-23T00:34:43Z",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s88-c-k-c0x00ffffff-no-rj",
+                    "width": 88,
+                    "height": 88
+                  },
+                  "medium": {
+                    "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s240-c-k-c0x00ffffff-no-rj",
+                    "width": 240,
+                    "height": 240
+                  },
+                  "high": {
+                    "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s800-c-k-c0x00ffffff-no-rj",
+                    "width": 800,
+                    "height": 800
+                  }
+                },
+                "localized": {
+                  "title": "Google for Developers",
+                  "description": "Subscribe to join a community of creative developers and learn the latest in Google technology — from AI and cloud, to mobile and web.\n\nExplore more at developers.google.com\n\n"
+                },
+                "country": "US"
+              },
+              "contentDetails": {
+                "relatedPlaylists": {
+                  "likes": "",
+                  "uploads": "UU_x5XG1OV2P6uZZ5FSM9Ttw"
+                }
+              },
+              "statistics": {
+                "viewCount": "309534509",
+                "subscriberCount": "2390000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "6317"
+              }
+            }
+          ]
+        }
+  recorded_at: Fri, 18 Oct 2024 02:50:17 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?id=UCpYf6C9QsP_BRf97vLuXlIA&key=<API_KEY>&part=snippet,contentDetails,statistics
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Fri, 18 Oct 2024 04:06:10 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n  \"kind\": \"youtube#channelListResponse\",\n  \"etag\": \"7_dYc7pkJzTAxZD3yCcuYRUaJ2o\",\n
+        \ \"pageInfo\": {\n    \"totalResults\": 1,\n    \"resultsPerPage\": 5\n  },\n
+        \ \"items\": [\n    {\n      \"kind\": \"youtube#channel\",\n      \"etag\":
+        \"3YGJTH3HTcRPT9CDvjEubP65EXM\",\n      \"id\": \"UCpYf6C9QsP_BRf97vLuXlIA\",\n
+        \     \"snippet\": {\n        \"title\": \"Vantacrow Bringer 【NIJISANJI EN】\",\n
+        \       \"description\": \"The unstoppable Tyrant from Krisis, Vantacrow Bringer!
+        \U0001F0CF\U0001F52A\\n\",\n        \"customUrl\": \"@vantacrowbringer\",\n
+        \       \"publishedAt\": \"2023-06-08T03:43:49.635489Z\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://yt3.ggpht.com/GLPkvp_8o7OvZ3q57IpqDSHIyv6OqZFK6tO1egzLoMjE19EBlo3tISEMIOLEvkC5jnl2Uus93A=s88-c-k-c0x00ffffff-no-rj\",\n
+        \           \"width\": 88,\n            \"height\": 88\n          },\n          \"medium\":
+        {\n            \"url\": \"https://yt3.ggpht.com/GLPkvp_8o7OvZ3q57IpqDSHIyv6OqZFK6tO1egzLoMjE19EBlo3tISEMIOLEvkC5jnl2Uus93A=s240-c-k-c0x00ffffff-no-rj\",\n
+        \           \"width\": 240,\n            \"height\": 240\n          },\n          \"high\":
+        {\n            \"url\": \"https://yt3.ggpht.com/GLPkvp_8o7OvZ3q57IpqDSHIyv6OqZFK6tO1egzLoMjE19EBlo3tISEMIOLEvkC5jnl2Uus93A=s800-c-k-c0x00ffffff-no-rj\",\n
+        \           \"width\": 800,\n            \"height\": 800\n          }\n        },\n
+        \       \"localized\": {\n          \"title\": \"Vantacrow Bringer 【NIJISANJI
+        EN】\",\n          \"description\": \"The unstoppable Tyrant from Krisis, Vantacrow
+        Bringer! \U0001F0CF\U0001F52A\\n\"\n        },\n        \"country\": \"JP\"\n
+        \     },\n      \"contentDetails\": {\n        \"relatedPlaylists\": {\n          \"likes\":
+        \"\",\n          \"uploads\": \"UUpYf6C9QsP_BRf97vLuXlIA\"\n        }\n      },\n
+        \     \"statistics\": {\n        \"viewCount\": \"8764868\",\n        \"subscriberCount\":
+        \"177000\",\n        \"hiddenSubscriberCount\": false,\n        \"videoCount\":
+        \"472\"\n      }\n    }\n  ]\n}\n"
+  recorded_at: Fri, 18 Oct 2024 04:06:10 GMT
 recorded_with: VCR 6.3.1
