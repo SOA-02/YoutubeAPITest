@@ -12,6 +12,7 @@ module Outline
       attribute? :id, Strict::String
       attribute :channel_title, Strict::String
       attribute :description, Strict::String
+      attribute :custom_url, Strict::String
       attribute :country, Strict::String
       attribute :localized_title, Strict::String.optional
       attribute :localized_description, Strict::String.optional

@@ -33,6 +33,7 @@ module Outline
             id:,
             channel_title:,
             description:,
+            custom_url:,
             country:,
             localized_title:,
             localized_description:,
@@ -56,6 +57,10 @@ module Outline
           @data['snippet']['description']
         end
 
+        def custom_url
+          @data['snippet']['customUrl']
+        end
+        
         def country
           @data['snippet']['country']
         end

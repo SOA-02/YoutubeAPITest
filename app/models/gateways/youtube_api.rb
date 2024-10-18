@@ -24,6 +24,7 @@ module Outline
         end
 
         def yt_channel_path(channel_id)
+          # https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=VantacrowBringer&key="
           get(CHANNELS_PATH + "/channels?part=snippet%2CcontentDetails%2Cstatistics&id=#{channel_id}&key=#{@api_key}")
         end
 
