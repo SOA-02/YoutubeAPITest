@@ -33,7 +33,7 @@ module Outline
 
         # rubocop:disable Metrics/MethodLength
         def build_entity
-          Entity::Channel.new(
+          Outline::Entity::Channel.new(
             id:,
             channel_title:,
             description:,
