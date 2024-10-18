@@ -17,7 +17,7 @@ module Outline
 
       # Sends out HTTP requests to Youtube
       class Request
-        CHANNELS_PATH = 'https://www.googleapis.com/youtube/v3'
+        YT_API_ROOT = 'https://www.googleapis.com/youtube/v3'
 
         def initialize(api_key)
           @api_key = api_key
@@ -25,7 +25,7 @@ module Outline
 
         def yt_channel_path(channel_id)
           # https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=VantacrowBringer&key="
-          get(CHANNELS_PATH + "/channels?part=snippet%2CcontentDetails%2Cstatistics&id=#{channel_id}&key=#{@api_key}")
+          get(YT_API_ROOT + "/channels?part=snippet%2CcontentDetails%2Cstatistics&id=#{channel_id}&key=#{@api_key}")
         end
 
         def yt_playlist_path(playlist_id, api_key)
