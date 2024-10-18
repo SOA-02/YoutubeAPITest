@@ -17,22 +17,22 @@ module Outline
 
       # Sends out HTTP requests to Youtube
       class Request
-        CHANNELS_PATH = 'https://www.googleapis.com/youtube/v3'
+        YT_API_ROOT = 'https://www.googleapis.com/youtube/v3'
 
         def initialize(api_key)
           @api_key = api_key
         end
 
-        def yt_channel_path(video_id)
-          get(CHANNELS_PATH + "/videos?id=#{video_id}&key=#{@api_key}&part=snippet")
+        def yt_channel_path(channel_id)
+          get(YT_API_ROOT + "/channels?id=#{channel_id}&key=#{@api_key}&part=snippet")
         end
 
-        def yt_playlist_path(playlist_id, api_key)
-          "#{YT_API_ROOT}/playlists?id=#{playlist_id}&key=#{api_key}&part=snippet"
+        def yt_playlist_path(playlist_id)
+          get(YT_API_ROOT + "/playlists?id=#{playlist_id}&key=#{@api_key}&part=snippet")
         end
 
-        def yt_video_path(video_id, api_key)
-          "#{YT_API_ROOT}/videos?id=#{video_id}&key=#{api_key}&part=snippet"
+        def yt_video_path(video_id)
+          get(YT_API_ROOT + "/videos?id=#{video_id}&key=#{@api_key}&part=snippet")
         end
 
         def get(url)
@@ -45,6 +45,7 @@ module Outline
         end
       end
 
+      # Decorates HTTP::Response with success and error methods.
       class Response < SimpleDelegator
         NotFound = Class.new(StandardError)
         HTTP_ERROR = {
@@ -62,3 +63,14 @@ module Outline
     end
   end
 end
+
+# Example usage:
+config = YAML.load_file(File.expand_path('../../../config/secrets.yml', __dir__))
+api_key = config['YT_TOKEN']
+video_id = 'jeqH4eMGjhY'
+channel_id = 'UCMUnInmOkrWN4gof9KlhNmQ'
+
+youtube_api = Outline::Youtube::YoutubeApi.new(api_key)
+channel_info = youtube_api.channel_info(channel_id)
+#video_info = youtube_api.video_info(video_id)
+puts "Channel Info: #{channel_info}"
