@@ -26,18 +26,17 @@ describe 'Tests Youtube API library' do
       @project = Outline::Youtube::ChannelMapper.new(API_KEY)
       @channel = @project.find(CHANNEL_ID)
     end
-  
+
     it 'HAPPY: should recognize channel' do
       _(@channel).must_be_kind_of Outline::Entity::Channel
       puts "Channel ID: #{@channel.id}"
       puts "Channel Title: #{@channel.channel_title}"
       puts "Channel Description: #{@channel.description}"
     end
-  
+
     it 'HAPPY: should get channel title' do
       _(@channel.id).wont_be_nil
       _(@channel.channel_title).wont_be_nil
     end
   end
-  
 end
