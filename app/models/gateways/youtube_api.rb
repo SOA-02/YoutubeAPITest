@@ -11,8 +11,8 @@ module Outline
         @api_key = api_key
       end
 
-      def channel_info(video_id)
-        Request.new(@api_key).yt_channel_path(video_id).parse
+      def channel_info(channel_id)
+        Request.new(@api_key).yt_channel_path(channel_id).parse
       end
 
       # Sends out HTTP requests to Youtube
@@ -23,8 +23,8 @@ module Outline
           @api_key = api_key
         end
 
-        def yt_channel_path(video_id)
-          get(CHANNELS_PATH + "/videos?id=#{video_id}&key=#{@api_key}&part=snippet")
+        def yt_channel_path(channel_id)
+          get(CHANNELS_PATH + "/channels?part=snippet%2CcontentDetails%2Cstatistics&id=#{channel_id}&key=#{@api_key}")
         end
 
         def yt_playlist_path(playlist_id, api_key)

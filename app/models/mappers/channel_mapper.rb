@@ -9,10 +9,10 @@ module Outline
         @gateway = @gateway_class.new(@api_key)
       end
 
-      def find(video_id)
-        video_data = @gateway.channel_info(video_id)
+      def find(channel_id)
+        channel_data = @gateway.channel_info(channel_id)
         # 確認 `items` 是否有內容，並取得第一個項目
-        item_data = video_data['items']&.first
+        item_data = channel_data['items']&.first
         raise 'Video data is missing' unless item_data # 若資料為空則報錯
 
         build_entity(item_data)
@@ -24,18 +24,21 @@ module Outline
 
       class DataMapper
         def initialize(data)
-          @data = data['snippet']
+          @data = data
           raise 'Snippet data missing' unless @data # 若無 `snippet` 則報錯
         end
 
         def build_entity
           Entity::Channel.new(
-            title:,
-            published_at:,
+            id:,
             channel_title:,
             description:,
-            thumbnail_url:,
-            tags:
+            country:,
+            localized_title:,
+            localized_description:,
+            subscriber_count:,
+            video_count:,
+            view_count:
           )
         end
 
@@ -45,28 +48,36 @@ module Outline
           @data['id']
         end
 
-        def title
-          @data['title']
-        end
-
-        def published_at
-          @data['publishedAt']
-        end
-
         def channel_title
-          @data['channelTitle']
+          @data['snippet']['title']
         end
 
         def description
-          @data['description']
+          @data['snippet']['description']
         end
 
-        def thumbnail_url
-          @data['thumbnails']['high']['url']
+        def country
+          @data['snippet']['country']
         end
 
-        def tags
-          @data['tags']
+        def localized_title
+          @data.dig('snippet', 'localized', 'title') || @data['snippet']['title']
+        end
+
+        def localized_description
+          @data.dig('snippet', 'localized', 'description') || @data['snippet']['description']
+        end
+
+        def subscriber_count
+          @data['statistics']['subscriberCount'].to_i
+        end
+
+        def video_count
+          @data['statistics']['videoCount'].to_i
+        end
+
+        def view_count
+          @data['statistics']['viewCount'].to_i
         end
       end
     end

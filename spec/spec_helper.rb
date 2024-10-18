@@ -22,5 +22,5 @@ CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')
 API_KEY = CONFIG['API_KEY']
 CASSETTES_FOLDER = 'spec/fixtures/cassettes'
 CASSETTE_FILE = 'youtube_api'
-
+CHANNEL_ID = 'UC_x5XG1OV2P6uZZ5FSM9Ttw'
 VIEDO_ID = 'jeqH4eMGjhY'

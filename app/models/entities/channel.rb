@@ -10,12 +10,14 @@ module Outline
       include Dry.Types
 
       attribute? :id, Strict::String
-      attribute :title, Strict::String
-      attribute :published_at, Strict::String
       attribute :channel_title, Strict::String
       attribute :description, Strict::String
-      attribute :thumbnail_url, Strict::String
-      attribute :tags, Strict::Array.of(Strict::String).optional
+      attribute :country, Strict::String
+      attribute :localized_title, Strict::String.optional
+      attribute :localized_description, Strict::String.optional
+      attribute :subscriber_count, Strict::Integer
+      attribute :video_count, Strict::Integer
+      attribute :view_count, Strict::Integer
     end
   end
 end
