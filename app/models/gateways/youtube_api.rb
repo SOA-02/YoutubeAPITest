@@ -15,6 +15,14 @@ module Outline
         Request.new(@api_key).yt_channel_path(video_id).parse
       end
 
+      def playlist_info(playlist_id)
+        Request.new(@api_key).yt_playlist_video_path(playlist_id).parse
+      end
+
+      def video_info(video_id)
+        Request.new(@api_key).yt_video_path(video_id).parse
+      end
+
       # Sends out HTTP requests to Youtube
       class Request
         YT_API_ROOT = 'https://www.googleapis.com/youtube/v3'
@@ -64,13 +72,3 @@ module Outline
   end
 end
 
-# Example usage:
-config = YAML.load_file(File.expand_path('../../../config/secrets.yml', __dir__))
-api_key = config['YT_TOKEN']
-video_id = 'jeqH4eMGjhY'
-channel_id = 'UCMUnInmOkrWN4gof9KlhNmQ'
-
-youtube_api = Outline::Youtube::YoutubeApi.new(api_key)
-channel_info = youtube_api.channel_info(channel_id)
-#video_info = youtube_api.video_info(video_id)
-puts "Channel Info: #{channel_info}"
