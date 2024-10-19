@@ -15,8 +15,8 @@ module Outline
       end
 
       def find(video_id)
-        video_data = @gateway.video_info(video_id)
-        item_data = video_data['items'].first
+        @video_data = @gateway.video_info(video_id)
+        item_data = @video_data['items'].first
         build_entity(item_data)
       end
 
@@ -44,7 +44,7 @@ module Outline
         private
 
         def id
-          @items_data['id']
+          @video_data['id']
         end
 
         def title

@@ -4,8 +4,8 @@ require 'http'
 require 'yaml'
 
 module Outline
-  # Represents interactions with the YouTube API.
   module Youtube
+    # Represents interactions with the YouTube API.
     class YoutubeApi
       def initialize(api_key)
         @api_key = api_key
@@ -44,7 +44,7 @@ module Outline
         end
 
         def get(url)
-          puts("先確認是否正確#{url}")
+          #puts("先確認是否正確#{url}")
           http_response = HTTP.headers('Accept' => 'application/json').get(url)
 
           Response.new(http_response).tap do |response|
