@@ -41,9 +41,9 @@ Feature: List of Table of Content
     * description
 
 ## Setup
-* Create a personal YouTube Token with public_repo scope
-* Copy config/secrets_example.yml to config/secrets.yml and update token 
-* Ensure correct version of Ruby install (see .ruby-version for rbenv)
+* Create a personal YouTube Token with ```public_repo``` scope
+* Copy ```config/secrets_example.yml``` to ```config/secrets.yml``` and update token 
+* Ensure correct version of Ruby install (see ```.ruby-version``` for ```rbenv```)
 * run bundle install
 
 ## Running Tests
