@@ -7,7 +7,7 @@ module Outline
   module Entity 
     # domain entity for playlist
     class Playlist < Dry::Struct
-      include Dry.types
+      include Dry.Types
 
       attribute :playlist_id, Strict::String
       attribute? :playlist_title, Strict::String

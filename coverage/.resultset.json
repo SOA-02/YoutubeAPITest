@@ -8,7 +8,7 @@
           null,
           1,
           1,
-          6,
+          8,
           null,
           null
         ]
@@ -107,6 +107,33 @@
           1,
           1,
           1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/root/YoutubeAPITest/app/models/entities/playlist.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
           null,
           null,
           null
@@ -282,6 +309,77 @@
           null
         ]
       },
+      "/root/YoutubeAPITest/app/models/mappers/playlist_mapper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/root/YoutubeAPITest/app/models/mappers/video_mapper.rb": {
         "lines": [
           null,
@@ -302,6 +400,6 @@
         ]
       }
     },
-    "timestamp": 1729345018
+    "timestamp": 1729350590
   }
 }
