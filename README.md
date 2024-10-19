@@ -1,14 +1,14 @@
 # LFM - TitleTOC
-application that allows users to transfer the title of videos in a playlist to markdown language of Table of Content(TOC).
+application that allows users to transfer the **title of videos in a playlist** to markdown language of **Table of Content(TOC)**.
 
 ## Objectives
 ### short term
-* create TOC 
-* recommend related learning resources 
+* create **TOC** 
+* recommend related learning resources on **YouTube**
 
 ### long term 
 * add title of timestamp 
-* recommend learning resources summarized by ChatGPT 
+* recommend other online learning resources summarized by ChatGPT 
 
 ## User Scenario
 ### Gherkin
