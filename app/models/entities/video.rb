@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#require 'dry-types'
+require 'dry-types'
 require 'dry-struct'
 
 module Outline
@@ -9,12 +9,12 @@ module Outline
     class Video < Dry::Struct
       include Dry.Types
 
-      attribute :video_id, Strict::String
-      attribute :video_title, Strict::String
-      attribute :video_published_at, Strict::Time
-      attribute :video_description, Strict::String
-      attribute :video_thumbnail_url, Strict::String
-      attribute :video_tags, Strict::Array.of(Strict::String).optional
+      attribute :id, Strict::String
+      attribute :title, Strict::String
+      attribute :published_at, Strict::String
+      attribute :description, Strict::String
+      attribute :thumbnail_url, Strict::String
+      attribute :tags, Strict::Array.of(Strict::String).optional
     end
   end
 end

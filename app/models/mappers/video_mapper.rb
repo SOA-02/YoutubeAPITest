@@ -15,56 +15,61 @@ module Outline
       end
 
       def find(video_id)
-        @video_data = @gateway.video_info(video_id)
-        item_data = @video_data['items'].first
-        build_entity(item_data)
+        video_data = @gateway.video_info(video_id)
+        build_entity(video_data)
       end
 
-      def build_entity(items_data)
-        DataMapper.new(items_data).build_entity
+      def build_entity(video_data)
+        DataMapper.new(video_data, @api_key, @gateway_class).build_entity_map
       end
 
       # Extracts entity specific elements from data structure
       class DataMapper
-        def initialize(items_data)
-          @items_data = items_data['snippet']
+        def initialize(mapper_data, token, gateway)
+          @mapper_data = mapper_data
+          @token = token
+          @gateway = gateway
         end
 
-        def build_entity
+        def build_entity_map
+          value = @mapper_data['items'][0]['snippet']
+          #puts "value being passed to Video.new: #{value.inspect}"
+          puts "value class: #{value.class}"
+
           Outline::Entity::Video.new(
-            video_id: id,
-            video_title: title,
-            video_published_at: published_at,
-            video_description: description,
-            video_thumbnail_url: thumbnail_url,
-            video_tags: tags
+            id: id,
+            title: title,
+            published_at: published_at,
+            description: description,
+            thumbnail_url: thumbnail_url,
+            tags: tags
           )
         end
 
         private
 
         def id
-          @video_data['id']
+          @mapper_data['items'][0]['id']
         end
 
         def title
-          @items_data['title']
+          @mapper_data['items'][0]['snippet']['title']
         end
 
         def published_at
-          @items_data['publishedAt']
+          @mapper_data['items'][0]['snippet']['publishedAt']
         end
 
         def description
-          @items_data['description']
+          @mapper_data['items'][0]['snippet']['description']
         end
 
         def thumbnail_url
-          @items_data['thumbnails']['high']['url']
+          @mapper_data['items'][0]['snippet']['thumbnails']['high']['url']
         end
 
         def tags
-          @items_data['tags']
+          @mapper_data['items'][0]['snippet']['tags']
         end
       end
     end

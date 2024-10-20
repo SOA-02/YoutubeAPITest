@@ -21,7 +21,6 @@ describe 'Tests Youtube API library' do
     VCR.eject_cassette
   end
 
-
   describe 'Channel information' do
     before do
       @project = Outline::Youtube::ChannelMapper.new(API_KEY)
@@ -36,5 +35,4 @@ describe 'Tests Youtube API library' do
       _(@channel.channel_title).wont_be_nil
     end
   end
-  
 end

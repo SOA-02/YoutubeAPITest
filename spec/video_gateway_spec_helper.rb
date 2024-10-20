@@ -8,6 +8,7 @@ require 'vcr'
 require 'webmock'
 
 require_relative '../app/models/gateways/youtube_api'
+require_relative '../app/models/mappers/video_mapper'
 
 VIDEO_ID = 'jeqH4eMGjhY'
 CONFIG = YAML.safe_load_file('../config/secrets.yml')
