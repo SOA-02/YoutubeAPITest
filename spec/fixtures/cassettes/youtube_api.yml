@@ -409,4 +409,121 @@ http_interactions:
         \"177000\",\n        \"hiddenSubscriberCount\": false,\n        \"videoCount\":
         \"472\"\n      }\n    }\n  ]\n}\n"
   recorded_at: Fri, 18 Oct 2024 04:06:10 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=jeqH4eMGjhY&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Tue, 22 Oct 2024 14:34:56 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "y_39M7bx6FfTImfwv8E4w1Ndi5s",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "NUVp4WHIJTuDioDXFn9Li0ZjulE",
+              "id": "jeqH4eMGjhY",
+              "snippet": {
+                "publishedAt": "2018-06-12T07:00:02Z",
+                "channelId": "UCMUnInmOkrWN4gof9KlhNmQ",
+                "title": "【都市傳說】兩個未來人（2075和2062）的預言實在太準太可怕 | 老高與小茉 Mr & Mrs Gao",
+                "description": "你相信時間機器的存在嗎？你知道你的周圍就有來自未來的人嗎？如果你不認識未來人，老高今天給你介紹兩個，他們分別來自於2062年和2075年，這兩個人都因準確預測未來而被相信是真的未來人。當然有些事情不信為好。\n順便問大家一下，如果真的有時間機器，你會想去到或者回到什麼時候呢？\n------------------------------------------------\n相關鏈接：\n\n【YJ的推特】https://twitter.com/YJ943636\n\n【2062代言人的主頁】http://2062.jp/\n\n【2062的2010年和2011年的留言】http://from2062.com\n\n------------------------------------------------\n推薦播放列表：\n\n【恐怖靈異】https://goo.gl/Bq54h5\n\n【都市傳說】https://goo.gl/CpmK2Y\n\n【心理測試】https://goo.gl/wf5dp5\n\n【奇趣世界】https://goo.gl/Tbpiuj\n\n------------------------------------------------\n如果喜歡我們的頻道不要忘記訂閱哦，我們會每天更新有趣的內容。\n\n【訂閱按鈕】https://goo.gl/VhzZeS",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/jeqH4eMGjhY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/jeqH4eMGjhY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/jeqH4eMGjhY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/jeqH4eMGjhY/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/jeqH4eMGjhY/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "老高與小茉 Mr & Mrs Gao",
+                "tags": [
+                  "都市傳說",
+                  "未來人",
+                  "2062",
+                  "2075",
+                  "YJ",
+                  "推特",
+                  "地震",
+                  "時光機"
+                ],
+                "categoryId": "24",
+                "liveBroadcastContent": "none",
+                "defaultLanguage": "en",
+                "localized": {
+                  "title": "【都市傳說】兩個未來人（2075和2062）的預言實在太準太可怕 | 老高與小茉 Mr & Mrs Gao",
+                  "description": "你相信時間機器的存在嗎？你知道你的周圍就有來自未來的人嗎？如果你不認識未來人，老高今天給你介紹兩個，他們分別來自於2062年和2075年，這兩個人都因準確預測未來而被相信是真的未來人。當然有些事情不信為好。\n順便問大家一下，如果真的有時間機器，你會想去到或者回到什麼時候呢？\n------------------------------------------------\n相關鏈接：\n\n【YJ的推特】https://twitter.com/YJ943636\n\n【2062代言人的主頁】http://2062.jp/\n\n【2062的2010年和2011年的留言】http://from2062.com\n\n------------------------------------------------\n推薦播放列表：\n\n【恐怖靈異】https://goo.gl/Bq54h5\n\n【都市傳說】https://goo.gl/CpmK2Y\n\n【心理測試】https://goo.gl/wf5dp5\n\n【奇趣世界】https://goo.gl/Tbpiuj\n\n------------------------------------------------\n如果喜歡我們的頻道不要忘記訂閱哦，我們會每天更新有趣的內容。\n\n【訂閱按鈕】https://goo.gl/VhzZeS"
+                },
+                "defaultAudioLanguage": "zh"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Tue, 22 Oct 2024 14:34:56 GMT
 recorded_with: VCR 6.3.1

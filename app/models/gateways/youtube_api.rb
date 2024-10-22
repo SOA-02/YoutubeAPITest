@@ -16,6 +16,14 @@ module Outline
         Request.new(@api_key).yt_channel_path(channel_id).parse
       end
 
+      def video_info(video_id)
+        Request.new(@api_key).yt_video_path(video_id).parse
+      end
+
+      def playlist_info(playlist_id)
+        Request.new(@api_key).yt_playlist_path(playlist_id).parse
+      end
+
       # Sends out HTTP requests to Youtube
       class Request
         YT_API_ROOT = 'https://www.googleapis.com/youtube/v3'
@@ -29,12 +37,12 @@ module Outline
           get(YT_API_ROOT + "/channels?part=snippet%2CcontentDetails%2Cstatistics&id=#{channel_id}&key=#{@api_key}")
         end
 
-        def yt_playlist_path(playlist_id, api_key)
-          "#{YT_API_ROOT}/playlists?id=#{playlist_id}&key=#{api_key}&part=snippet"
+        def yt_playlist_path(playlist_id)
+          get(YT_API_ROOT + "/playlists?id=#{playlist_id}&key=#{@api_key}&part=snippet")
         end
 
-        def yt_video_path(video_id, api_key)
-          "#{YT_API_ROOT}/videos?id=#{video_id}&key=#{api_key}&part=snippet"
+        def yt_video_path(video_id)
+          get(YT_API_ROOT + "/videos?id=#{video_id}&key=#{@api_key}&part=snippet")
         end
 
         def get(url)
