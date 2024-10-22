@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
-
+require_relative 'require_app'
 task :default do
   puts `rake -T`
 end
@@ -26,11 +26,11 @@ task :rerun do
   sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
 end
 
-namespace :db do
+namespace :db do # rubocop:disable Metrics/BlockLength
   task :config do # rubocop:disable Rake/Desc
     require 'sequel'
     require_relative 'config/environment' # load config info
-    # require_relative 'spec/helpers/database_helper'
+    require_relative 'spec/helpers/database_helper'
 
     def app = Outline::App # rubocop:disable Rake/MethodDefinitionInTask
   end

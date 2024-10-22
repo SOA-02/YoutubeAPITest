@@ -12,7 +12,7 @@ module Outline
         @api_key = api_key
       end
 
-      def channel_info(channel_id)
+      def channel_data(channel_id)
         Request.new(@api_key).yt_channel_path(channel_id).parse
       end
 
@@ -23,7 +23,9 @@ module Outline
         def initialize(api_key)
           @api_key = api_key
         end
-
+        def channel_data(channel_id)
+          Request.new(@api_key).yt_channel_path(channel_id).parse
+        end
         def yt_channel_path(channel_id)
           # https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=VantacrowBringer&key="
           get(YT_API_ROOT + "/channels?part=snippet%2CcontentDetails%2Cstatistics&id=#{channel_id}&key=#{@api_key}")
