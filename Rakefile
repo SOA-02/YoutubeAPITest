@@ -10,6 +10,11 @@ desc 'run tests'
 task :spec do
   sh 'ruby spec/gateway_youtube_spec.rb'
 end
+desc 'Run tests once'
+Rake::TestTask.new(:spec) do |t|
+  t.pattern = 'spec/*_spec.rb'
+  t.warning = false
+end
 
 desc 'Keep rerunning tests upon changes'
 task :respec do
