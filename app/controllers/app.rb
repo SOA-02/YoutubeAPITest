@@ -17,7 +17,8 @@ module Outline
 
       # GET /
       routing.root do
-        view 'home'
+        channel = Repository::For.klass(Entity::Channel).all
+        view 'home', locals: { channel: }
       end
 
       routing.on 'channel' do
@@ -32,17 +33,26 @@ module Outline
                                                             (yt_url.split('/').count >= 5)
             channel_id = yt_url.split('/').last
 
+            channel = Youtube::ChannelMapper
+              .new(App.config.API_KEY).find(channel_id)
+            # Add project to database
+            Repository::For.entity(channel).create_or_update(channel)
+            # Redirect viewer to project page
             routing.redirect "channel/#{channel_id}"
+
+
           end
         end
 
         routing.on String do |channel_id|
           # GET /channel/channel_id
           routing.get do
-            yt_channel_data = Youtube::ChannelMapper
-              .new(API_KEY).find(channel_id)
+            # Get project from database
 
-            view 'channel', locals: { channel: yt_channel_data }
+            channel = Repository::For.klass(Entity::Channel)
+              .find_channel_id(channel_id)
+
+            view 'channel', locals: { channel: channel }
           end
         end
       end

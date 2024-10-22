@@ -16,3 +16,23 @@
         } Show Info
     .row
       .col-md-12.blank-row
+    - if channel.any?
+      table class="table table-hover" id="channels_table"
+        thead
+          tr
+            th Channel_title
+            th custom_url
+            th subscriber_count
+        tbody
+          - channel.each.with_index do |channel, index|
+            tr class="table-row channel_row"
+              td id='td_channel_title'
+                span class="channel_table_channel_title" id="channel[#{index}].channel_title"
+                  = channel.channel_title
+              td id='td_custom_url'
+                span class="channel_table_custom_url" id="channel[#{index}].custom_url"
+                  = channel.custom_url
+              td id='td_subscriber_count'
+                span class="channel_table_subscriber_count" id="channel[#{index}].subscriber_count"
+                  = channel.subscriber_count
+

@@ -17,10 +17,10 @@ module Outline
         item_data = channel_data['items']&.first
         raise 'Video data is missing' unless item_data # 若資料為空則報錯
 
-        build_entity(item_data)
+        ChannelMapper.build_entity(item_data)
       end
 
-      def build_entity(data)
+      def self.build_entity(data)
         DataMapper.new(data).build_entity
       end
 
@@ -34,7 +34,8 @@ module Outline
         # rubocop:disable Metrics/MethodLength
         def build_entity
           Outline::Entity::Channel.new(
-            id:,
+            id:  nil,
+            origin_id:,
             channel_title:,
             description:,
             custom_url:,
@@ -50,7 +51,7 @@ module Outline
 
         private
 
-        def id
+        def origin_id
           @data['id']
         end
 
