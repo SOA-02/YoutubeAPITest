@@ -28,8 +28,7 @@ describe 'Tests Youtube API library' do
 
     it 'HAPPY: should get channel title using try' do
       _(@channel.object_id).wont_be_nil
-      channel_title = @channel.try(:channel_title)
-      _(channel_title).wont_be_nil unless channel_title.nil?
+      _(@channel.channel_title).wont_be_nil
     end
   end
 end

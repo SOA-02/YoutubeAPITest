@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+ENV['RACK_ENV'] = 'test'
 
 require 'simplecov'
 SimpleCov.start
@@ -10,7 +11,8 @@ require 'minitest/rg'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/youtube_api'
+require_relative '../require_app'
+require_app
 
 # 載入 secrets.yml 設定
 CONFIG = YAML.safe_load_file(File.expand_path('../config/secrets.yml', __dir__))
