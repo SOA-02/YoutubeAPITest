@@ -11,7 +11,7 @@ module Outline
     plugin :common_logger, $stderr
     plugin :halt
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
@@ -39,8 +39,6 @@ module Outline
             Repository::For.entity(channel).create_or_update(channel)
             # Redirect viewer to project page
             routing.redirect "channel/#{channel_id}"
-
-
           end
         end
 

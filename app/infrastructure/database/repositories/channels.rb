@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Outline
   module Repository
     # Repository for Channels
@@ -22,15 +24,14 @@ module Outline
         if db_channel
           # 如果存在，更新現有的 channel
           db_channel.update(entity.to_attr_hash)
-          rebuild_entity(db_channel)
         else
           # 如果不存在，創建新的 channel
           db_channel = PersistChannel.new(entity).call
-          rebuild_entity(db_channel)
         end
+        rebuild_entity(db_channel)
       end
 
-      def self.rebuild_entity(db_record)
+      def self.rebuild_entity(db_record) # rubocop:disable Metrics/MethodLength
         return nil unless db_record
 
         Entity::Channel.new(
@@ -49,7 +50,7 @@ module Outline
       end
     end
 
-    class PersistChannel
+    class PersistChannel # rubocop:disable Style/Documentation
       def initialize(entity)
         @entity = entity
       end

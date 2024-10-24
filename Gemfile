@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 # Configuration and Utilities
 gem 'figaro'
 gem 'pry'

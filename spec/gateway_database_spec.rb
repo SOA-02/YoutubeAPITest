@@ -33,7 +33,6 @@ describe 'Integration Tests of Youtube API and Database' do
       _(rebuilt.custom_url).must_equal(channel.custom_url)
 
       # not checking email as it is not always provided
-
     end
   end
 end
