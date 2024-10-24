@@ -10,7 +10,7 @@ module Outline
   class App < Roda
     plugin :environments
 
-    # Environment variables setup
+    # Environment variables setup: loads config into hash
     Figaro.application = Figaro::Application.new(
       environment:,
       path: File.expand_path('config/secrets.yml')
