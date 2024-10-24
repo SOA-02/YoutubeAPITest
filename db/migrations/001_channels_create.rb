@@ -5,9 +5,8 @@ require 'sequel'
 Sequel.migration do
   change do
     create_table(:channels) do
-      primary_key :id
+      primary_key :channel_id
 
-      String :channel_id, unique: true, null: false
       String :channel_title, null: false
       String :description
 
