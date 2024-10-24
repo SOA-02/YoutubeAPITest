@@ -1,8 +1,10 @@
 h2 Channel Information
-p Channel Title: #{channel.channel_title}
-p Description: #{channel.description}
-p custom_url: #{channel.custom_url}
-p subscriber_count: #{channel.subscriber_count}
-p video_count: #{channel.video_count}
-p view_count: #{channel.view_count}
-
+- if channel
+  p Channel Title: #{channel.channel_title}
+  p Description: #{channel.description}
+  p Custom URL: #{channel.custom_url}
+  p Subscriber Count: #{channel.subscriber_count}
+  p Video Count: #{channel.video_count}
+  p View Count: #{channel.view_count}
+- else
+  p Channel not found

@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+# Configuration and Utilities
+gem 'figaro'
+gem 'pry'
+gem 'rake'
+
 source 'https://rubygems.org'
 # Web Application
 gem 'logger', '~> 1.6'
@@ -19,8 +24,16 @@ gem 'dry-types', '~> 1.7'
 
 # Networking
 gem 'http', '~> 5.2'
-# Utilities
-gem 'rake'
+
+# Database
+gem 'hirb'
+# gem 'hirb-unicode' # incompatible with new rubocop
+gem 'sequel'
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
 # Testing
 gem 'minitest', '~> 5.20'
 gem 'minitest-rg', '~> 5.2'
@@ -29,8 +42,8 @@ gem 'vcr', '~> 6'
 gem 'webmock', '~> 3'
 
 # Debugging
-gem 'pry'
 gem 'rerun'
+
 # Code Quality
 gem 'flog'
 gem 'reek'

@@ -2,17 +2,38 @@
   form role="form" action="/channel" method='POST' id='show-project-form'
     .row.vertical-align.query-bar
       .col-md-2.col-sm-3
-        .text-right Please follow the placeholder:
+        .text-right Search:
       .col-md-8.col-sm-6
-        input { 
-          type='text' name='youtube_url'
-          id='youtube_url' class="form-control"
-          placeholder="e.g. https://www.googleapis.com/youtube/v3/channels/UC_x5XG1OV2P6uZZ5FSM9Ttw"
-        }
-      .col-md-2.col-sm-3
-        button { 
-          type='submit' id='repo-form-submit' class='submit' 
-          value='submit' class="btn btn-success" 
-        } Show Info
+        input.form-control#youtube_url type='text' name='youtube_url' placeholder="e.g. https://www.googleapis.com/youtube/v3/channels/UC_x5XG1OV2P6uZZ5FSM9Ttw" list="datalistOptions"
+        datalist#datalistOptions
+          option value="https://www.googleapis.com/youtube/v3/channels/UCpYf6C9QsP_BRf97vLuXlIA"
+          option value="https://www.googleapis.com/youtube/v3/channels/UCK9l6rTwU3hiSZijIMq51Gw"
+          option value="https://www.googleapis.com/youtube/v3/channels/UCKpKC3M5fkcEvtOr06dmYlA"
+
+        .col-md-2.col-sm-3
+          button { 
+            type='submit' id='repo-form-submit' class='submit' 
+            value='submit' class="btn btn-success" 
+          } Show Info
     .row
       .col-md-12.blank-row
+    - if channel.any?
+      table class="table table-hover" id="channels_table"
+        thead
+          tr
+            th Channel_title
+            th custom_url
+            th subscriber_count
+        tbody
+          - channel.each.with_index do |channel, index|
+            tr class="table-row channel_row"
+              td id='td_channel_title'
+                span class="channel_table_channel_title" id="channel[#{index}].channel_title"
+                  = channel.channel_title
+              td id='td_custom_url'
+                span class="channel_table_custom_url" id="channel[#{index}].custom_url"
+                  = channel.custom_url
+              td id='td_subscriber_count'
+                span class="channel_table_subscriber_count" id="channel[#{index}].subscriber_count"
+                  = channel.subscriber_count
+
