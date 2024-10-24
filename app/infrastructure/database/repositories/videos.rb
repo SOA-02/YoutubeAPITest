@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Outline
   module Repository
+    # Repository for Videos
     class Videos
       def self.find_id(id)
         rebuild_entity Database::VideoOrm.first(id: id)

@@ -5,7 +5,7 @@ require 'sequel'
 Sequel.migration do
   change do
     create_table(:videos) do
-      primary_key :id
+      primary_key :video_id
 
       foreign_key :channel_id, :channels
       String :title, null: false

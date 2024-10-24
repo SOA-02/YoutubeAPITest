@@ -3,8 +3,8 @@
 module Outline
   module Database
     # Object Relational Mapper for Video Entities
-    class VideoOrm < Sequel::Model(:videos)
-      many_to_one :channel, class: :'Outline::Database::ChannelOrm', key: :channel_id
+    class ChannelOrm < Sequel::Model(:videos)
+      one_to_many :videos, class: :'Outline::Database::VideoOrm', key: :channel_id
 
       plugin :timestamps, update_on_create: true
     end

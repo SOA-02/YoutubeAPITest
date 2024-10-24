@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
+require_relative 'videos'
+
 module Outline
   module Repository
+    # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
         Entity::Video => Videos
