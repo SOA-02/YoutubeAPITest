@@ -8,7 +8,7 @@ module Outline
       def self.find_title(title)
         rebuild_entity Database::VideoOrm.first(title: title)
       end
-      
+
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
