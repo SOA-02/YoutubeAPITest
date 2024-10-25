@@ -14,7 +14,7 @@ module Outline
       attribute? :playlist_published_at, Strict::Time
       attribute? :playlist_description, Strict::String
       attribute? :playlist_thumbnail_url, Strict::String
-      attribute? :playlist_item_count, Strict::Integer
+      # attribute? :playlist_item_count, Strict::Integer
       # attribute? :playlist_item_id, Strict::list
       # attribute? :playlist_item_title, Strict::list
     end
