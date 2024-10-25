@@ -650,8 +650,8 @@
           null,
           1,
           5,
-          47,
-          47,
+          50,
+          50,
           null,
           null,
           5,
@@ -674,9 +674,9 @@
           1,
           1,
           null,
-          null,
-          null,
-          null,
+          0,
+          0,
+          0,
           null,
           null
         ]
@@ -742,53 +742,8 @@
           null,
           null
         ]
-      },
-      "/Users/fifiding/YoutubeAPITest/spec/youtube_api_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1729829681
+    "timestamp": 1729833229
   }
 }

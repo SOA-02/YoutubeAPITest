@@ -17,7 +17,7 @@ describe 'Integration Tests of Youtube API and Database' do
 
   describe 'Retrieve and store project' do
     before do
-      # DatabaseHelper.wipe_database
+      DatabaseHelper.wipe_database
     end
   end
 end
