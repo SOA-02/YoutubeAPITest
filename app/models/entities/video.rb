@@ -11,10 +11,14 @@ module Outline
 
       attribute :id, Strict::String
       attribute :title, Strict::String
-      attribute :published_at, Strict::String
       attribute :description, Strict::String
+      attribute :published_at, Strict::String
       attribute :thumbnail_url, Strict::String
-      attribute :tags, Strict::Array.of(Strict::String).optional
+      attribute :tags, Strict::Array.of(Strict::String)
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end
