@@ -53,4 +53,29 @@ describe 'Tests Youtube API library' do
       _(@video_mapper.title).must_be_kind_of String
     end
   end
+
+  describe 'Playlist Information' do
+    before do
+      @playlist_data = Outline::Youtube::YoutubeApi.new(API_KEY).playlist_info(PLAYLIST_ID)
+      @items_data = @playlist_data['items'].first
+      @playlist_mapper = Outline::Youtube::PlaylistMapper.new(API_KEY).find(PLAYLIST_ID)
+    end
+
+    it 'HAPPY: fetches playlist data successfully' do
+      _(@playlist_data).must_be_kind_of Hash
+      _(@playlist_data['kind']).must_equal 'youtube#videoListResponse'
+
+      _(@items_data['kind']).must_equal 'youtube#playlist'
+      _(@items_data['id']).must_equal PLAYLIST_ID
+    end
+
+    it 'HAPPY: maps playlist data successfully' do
+      _(@playlist_mapper).must_be_kind_of Outline::Entity::Playlist
+    end
+
+    it 'HAPPY: entity are of correct type' do
+      _(@playlist_mapper.id).must_equal PLAYLIST_ID
+      _(@playlist_mapper.title).must_be_kind_of String
+    end
+  end
 end
