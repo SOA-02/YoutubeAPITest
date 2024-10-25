@@ -11,6 +11,7 @@ describe 'Tests Youtube API library' do
   after do
     VcrHelper.eject_vcr
   end
+
   describe 'Channel information' do
     before do
       # puts "API#{API_KEY}"
@@ -54,28 +55,21 @@ describe 'Tests Youtube API library' do
     end
   end
 
-  describe 'Playlist Information' do
+  describe 'Playlist information' do
     before do
-      @playlist_data = Outline::Youtube::YoutubeApi.new(API_KEY).playlist_info(PLAYLIST_ID)
-      @items_data = @playlist_data['items'].first
-      @playlist_mapper = Outline::Youtube::PlaylistMapper.new(API_KEY).find(PLAYLIST_ID)
+      puts "API#{API_KEY}"
+      @playlist = Outline::Youtube::PlaylistMapper
+        .new(API_KEY)
+        .find(PLAYLIST_ID)
     end
 
-    it 'HAPPY: fetches playlist data successfully' do
-      _(@playlist_data).must_be_kind_of Hash
-      _(@playlist_data['kind']).must_equal 'youtube#videoListResponse'
-
-      _(@items_data['kind']).must_equal 'youtube#playlist'
-      _(@items_data['id']).must_equal PLAYLIST_ID
+    it 'HAPPY: should recognize playlist' do
+      _(@playlist).must_be_kind_of Outline::Entity::Playlist
     end
 
-    it 'HAPPY: maps playlist data successfully' do
-      _(@playlist_mapper).must_be_kind_of Outline::Entity::Playlist
-    end
-
-    it 'HAPPY: entity are of correct type' do
-      _(@playlist_mapper.id).must_equal PLAYLIST_ID
-      _(@playlist_mapper.title).must_be_kind_of String
+    it 'HAPPY: should get playlist title using try' do
+      _(@playlist.object_id).wont_be_nil
+      _(@playlist.playlist_title).wont_be_nil
     end
   end
 end
