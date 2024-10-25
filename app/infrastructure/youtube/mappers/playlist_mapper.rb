@@ -23,7 +23,7 @@ module Outline
 
       class Datamapper # rubocop:disable Style/Documentation
         def initialize(data)
-          @data = data['snippet']
+          @data = data
           raise 'Snippet data missing' unless data
         end
 
@@ -40,24 +40,24 @@ module Outline
 
         private
 
-        def id
+        def playlist_id
           @items_data['id']
         end
 
-        def title
-          @items_data['title']
+        def playlist_title
+          @items_data['snippet']['title']
         end
 
-        def published_at
-          @items_data['publishedAt']
+        def playlist_published_at
+          @items_data['snippet']['publishedAt']
         end
 
-        def description
-          @items_data['description']
+        def playlist_description
+          @items_data['snippet']['description']
         end
 
-        def thumbnail_url
-          @items_data['thumbnails']['high']['url']
+        def playlist_thumbnail_url
+          @items_data['snippet']['thumbnails']['high']['url']
         end
       end
     end
