@@ -4,7 +4,7 @@ require 'dry-types'
 require 'dry-struct'
 
 module Outline
-  module Entity 
+  module Entity
     # domain entity for playlist
     class Playlist < Dry::Struct
       include Dry.Types
@@ -17,7 +17,6 @@ module Outline
       attribute? :playlist_item_count, Strict::Integer
       # attribute? :playlist_item_id, Strict::list
       # attribute? :playlist_item_title, Strict::list
-
     end
   end
 end
