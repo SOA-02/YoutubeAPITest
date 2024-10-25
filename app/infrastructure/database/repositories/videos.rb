@@ -4,6 +4,10 @@ module Outline
   module Repository
     # Repository for Videos
     class Videos
+      def self.all
+        Database::VideoOrm.all.map { |db_project| rebuild_entity(db_project) }
+      end
+
       def self.find_id(id)
         rebuild_entity Database::VideoOrm.first(id: id)
       end

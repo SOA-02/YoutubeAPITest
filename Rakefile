@@ -7,9 +7,10 @@ task :default do
   puts `rake -T`
 end
 
-desc 'run tests'
-task :spec do
-  sh 'ruby spec/gateway_youtube_spec.rb'
+desc 'Run tests once'
+Rake::TestTask.new(:spec) do |t|
+  t.pattern = 'spec/*_spec.rb'
+  t.warning = false
 end
 
 desc 'Keep rerunning tests upon changes'
@@ -25,37 +26,6 @@ end
 desc 'Keep rerunning web app upon changes'
 task :rerun do
   sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
-end
-
-namespace :vcr do
-  desc 'delete cassette fixtures'
-  task :wipe do
-    sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|
-      puts(ok ? 'Cassettes deleted' : 'No cassettes found')
-    end
-  end
-end
-
-namespace :quality do
-  only_app = 'config/ app/'
-
-  desc 'run all static-analysis quality checks'
-  task all: %i[rubocop reek flog]
-
-  desc 'code style linter'
-  task :rubocop do
-    sh 'rubocop'
-  end
-
-  desc 'code smell detector'
-  task :reek do
-    sh 'reek'
-  end
-
-  desc 'complexiy analysis'
-  task :flog do
-    sh "flog -m #{only_app}"
-  end
 end
 
 namespace :db do
@@ -101,3 +71,36 @@ desc 'Run application console'
 task :console do
   sh 'pry -r ./load_all'
 end
+
+namespace :vcr do
+  desc 'delete cassette fixtures'
+  task :wipe do
+    sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|
+      puts(ok ? 'Cassettes deleted' : 'No cassettes found')
+    end
+  end
+end
+
+namespace :quality do
+  only_app = 'config/ app/'
+
+  desc 'run all static-analysis quality checks'
+  task all: %i[rubocop reek flog]
+
+  desc 'code style linter'
+  task :rubocop do
+    sh 'rubocop'
+  end
+
+  desc 'code smell detector'
+  task :reek do
+    sh 'reek'
+  end
+
+  desc 'complexiy analysis'
+  task :flog do
+    sh "flog -m #{only_app}"
+  end
+end
+
+

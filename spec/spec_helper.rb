@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# ENV['RACK_ENV'] = 'test'
+ENV['RACK_ENV'] = 'test'
 
 require 'simplecov'
 SimpleCov.start
@@ -18,10 +18,8 @@ require 'webmock'
 require_relative '../require_app'
 require_app
 
-CONFIG = YAML.safe_load_file(File.expand_path('../config/secrets.yml', __dir__))
-CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')
-API_KEY = CONFIG['API_KEY']
-CASSETTES_FOLDER = 'spec/fixtures/cassettes'
-CASSETTE_FILE = 'youtube_api'
 CHANNEL_ID = 'UCpYf6C9QsP_BRf97vLuXlIA'
 VIDEO_ID = 'jeqH4eMGjhY'
+API_KEY = Outline::App.config.API_KEY
+CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')
+

@@ -5,12 +5,21 @@ require 'sequel'
 Sequel.migration do
   change do
     create_table(:channels) do
-      primary_key :channel_id
+      primary_key :id
 
-      String :channel_title, null: false
-      String :description
+      String      :origin_id, unique: true
+      String      :channel_title, null: false
+      String      :description
+      String      :custom_url
+      String      :country
+      String      :localized_title
+      String      :localized_description
+      Integer :subscriber_count
+      Integer :video_count
+      Integer :view_count
 
-      DateTime :published_at
+      DateTime :created_at
+      DateTime :updated_at
     end
   end
 end

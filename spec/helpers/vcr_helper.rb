@@ -5,7 +5,7 @@ require 'webmock'
 
 module VcrHelper
   CASSETTES_FOLDER = 'spec/fixtures/cassettes'
-  YT_CASSETTE = 'youtube_api'
+  CASSETTE_FILE = 'youtube_api'
 
   def self.setup_vcr
     VCR.configure do |c|
@@ -17,13 +17,13 @@ module VcrHelper
   def self.configure_vcr_for_youtube
     VCR.configure do |c|
       c.filter_sensitive_data('<API_KEY>') { API_KEY }
-      c.filter_senstitive_data('<API_KEY_ESC>') { CGI.escape(API_KEY) }
+      c.filter_sensitive_data('<API_KEY>') { CGI.escape(API_KEY) }
     end
 
     VCR.insert_cassette(
-      YT_CASSETTE,
-       record: :new_episodes,
-       match_requests_on: %i[method uri headers]
+      CASSETTE_FILE,
+      record: :new_episodes,
+      match_requests_on: %i[method uri headers]
     )
   end
 

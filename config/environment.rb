@@ -10,7 +10,7 @@ module Outline
   class App < Roda
     plugin :environments
 
-    # Environment variables setup: loads config into hash
+    # Environment variables setup
     Figaro.application = Figaro::Application.new(
       environment:,
       path: File.expand_path('config/secrets.yml')
@@ -19,11 +19,13 @@ module Outline
     def self.config = Figaro.env
 
     configure :development, :test do
+      # puts "Database URL: sqlite://#{config.DB_FILENAME}"
       ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"
     end
 
     # Database Setup
     @db = Sequel.connect(ENV.fetch('DATABASE_URL'))
+
     def self.db = @db # rubocop:disable Style/TrivialAccessors
   end
 end
