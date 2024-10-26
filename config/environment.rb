@@ -4,7 +4,6 @@ require 'figaro'
 require 'roda'
 require 'sequel'
 require 'yaml'
-require 'figaro'
 
 module Outline
   # Configuration for the App
@@ -30,7 +29,7 @@ module Outline
 end
 
 module Outline
-  class Api < Roda
+  class App < Roda
     plugin :environments
 
     Figaro.application = Figaro::Application.new(

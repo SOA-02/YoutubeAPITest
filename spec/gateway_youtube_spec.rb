@@ -57,7 +57,6 @@ describe 'Tests Youtube API library' do
 
   describe 'Playlist information' do
     before do
-      puts "API#{API_KEY}"
       @playlist = Outline::Youtube::PlaylistMapper
         .new(API_KEY)
         .find(PLAYLIST_ID)
@@ -70,6 +69,10 @@ describe 'Tests Youtube API library' do
     it 'HAPPY: should get playlist title using try' do
       _(@playlist.object_id).wont_be_nil
       _(@playlist.playlist_title).wont_be_nil
+
+    puts "API#{API_KEY}"
+    puts "Playlist id#{PLAYLIST_ID}"
+    puts "Playlist title #{@playlist.playlist_title}"
     end
   end
 end

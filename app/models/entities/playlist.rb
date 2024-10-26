@@ -9,7 +9,7 @@ module Outline
     class Playlist < Dry::Struct
       include Dry.Types
 
-      attribute :playlist_id, Strict::String
+      attribute? :playlist_id, Strict::String
       attribute? :playlist_title, Strict::String
       attribute? :playlist_published_at, Strict::Time
       attribute? :playlist_description, Strict::String
