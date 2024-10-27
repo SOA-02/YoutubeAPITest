@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'videos'
+require_relative 'channels'
 
 module Outline
   module Repository
@@ -8,6 +9,7 @@ module Outline
     module For
       ENTITY_REPOSITORY = {
         Entity::Video => Videos
+        Entity::Channel => Channels
       }.freeze
 
       def self.klass(entity_klass)

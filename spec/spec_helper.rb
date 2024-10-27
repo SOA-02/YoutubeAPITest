@@ -6,14 +6,11 @@ require 'simplecov'
 SimpleCov.start
 
 require 'yaml'
-
 require 'minitest/autorun'
-require 'minitest/unit' # minitest Github issue #17 requires
+require 'minitest/unit'
 require 'minitest/rg'
 require 'vcr'
 require 'webmock'
-
-# require_relative '../lib/youtube_api'
 
 require_relative '../require_app'
 require_app

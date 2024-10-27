@@ -11,10 +11,18 @@ module Outline
         @gateway = @gateway_class.new(@api_key)
       end
 
+      def load_several(url)
+        @gateway.channel_data(url).map do |data|
+          ChannelMapper.build_entity(data)
+        end
+      end
+
       def find(channel_id)
-        channel_data = @gateway.channel_info(channel_id)
+        data = @gateway.channel_data(channel_id)
         # 確認 `items` 是否有內容，並取得第一個項目
-        item_data = channel_data['items']&.first
+        item_data = data['items']&.first
+        puts "API Response: #{data}"
+        puts "Channel Data: #{item_data}"
         raise 'Video data is missing' unless item_data # 若資料為空則報錯
 
         build_entity(item_data)
@@ -34,7 +42,8 @@ module Outline
         # rubocop:disable Metrics/MethodLength
         def build_entity
           Outline::Entity::Channel.new(
-            id:,
+            id: nil,
+            origin_id:,
             channel_title:,
             description:,
             custom_url:,
@@ -50,7 +59,7 @@ module Outline
 
         private
 
-        def id
+        def origin_id
           @data['id']
         end
 

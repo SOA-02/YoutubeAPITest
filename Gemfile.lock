@@ -192,7 +192,11 @@ PLATFORMS
 DEPENDENCIES
   dry-struct (~> 1.6)
   dry-types (~> 1.7)
+<<<<<<< HEAD
   figaro (~> 1.2)
+=======
+  figaro
+>>>>>>> main
   flog
   hirb
   http (~> 5.2)
@@ -208,11 +212,18 @@ DEPENDENCIES
   rubocop
   rubocop-minitest
   rubocop-rake
+<<<<<<< HEAD
   rubocop-sequel
   sequel (~> 5.60)
   simplecov (~> 0)
   slim (~> 5.2)
   sqlite3 (~> 1.4)
+=======
+  sequel
+  simplecov (~> 0)
+  slim (~> 5.2)
+  sqlite3
+>>>>>>> main
   vcr (~> 6)
   webmock (~> 3)
 
