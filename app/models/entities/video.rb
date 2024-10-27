@@ -9,13 +9,14 @@ module Outline
     class Video < Dry::Struct
       include Dry.Types
 
-      attribute :id, Strict::String
-      attribute :title, Strict::String
-      attribute :description, Strict::String
-      attribute :published_at, Strict::String
-      attribute :thumbnail_url, Strict::String
-      attribute :tags, Strict::Array.of(Strict::String)
-
+      attribute :id, Integer.optional
+      attribute :video_id, Strict::String
+      attribute :video_title, Strict::String
+      attribute :video_published_at, Strict::String
+      attribute :video_description, Strict::String
+      attribute :video_thumbnail_url, Strict::String
+      attribute :video_tags, Strict::Array.of(Strict::String).optional
+    
       def to_attr_hash
         to_hash.except(:id)
       end

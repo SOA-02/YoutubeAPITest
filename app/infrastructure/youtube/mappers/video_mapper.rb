@@ -33,38 +33,39 @@ module Outline
           # "value class: #{value.class}"
 
           Outline::Entity::Video.new(
-            id: id,
-            title: title,
-            published_at: published_at,
-            description: description,
-            thumbnail_url: thumbnail_url,
-            tags: tags
+            id: nil,
+            video_id:,
+            video_title:,
+            video_published_at:,
+            video_description:,
+            video_thumbnail_url:,
+            video_tags:
           )
         end
 
         private
 
-        def id
+        def video_id
           @mapper_data['items'][0]['id']
         end
 
-        def title
+        def video_title
           @mapper_data['items'][0]['snippet']['title']
         end
 
-        def published_at
+        def video_published_at
           @mapper_data['items'][0]['snippet']['publishedAt']
         end
 
-        def description
+        def video_description
           @mapper_data['items'][0]['snippet']['description']
         end
 
-        def thumbnail_url
+        def video_thumbnail_url
           @mapper_data['items'][0]['snippet']['thumbnails']['high']['url']
         end
 
-        def tags
+        def video_tags
           @mapper_data['items'][0]['snippet']['tags']
         end
       end

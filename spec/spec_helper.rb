@@ -19,7 +19,6 @@ require_relative '../require_app'
 require_app
 
 CHANNEL_ID = 'UCpYf6C9QsP_BRf97vLuXlIA'
-VIDEO_ID = 'jeqH4eMGjhY'
+VIDEO_ID = 'CcGsTuLEs14'
 API_KEY = Outline::App.config.API_KEY
 CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')
-
