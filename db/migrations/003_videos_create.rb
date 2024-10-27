@@ -6,7 +6,7 @@ Sequel.migration do
   change do
     create_table(:videos) do
       primary_key :id
-      # foreign_key :channel_id, :channels
+      foreign_key :channel_id, :channels
 
       String :video_id, unique: true
       String :video_title
