@@ -47,4 +47,3 @@ group :development do
   gem 'rubocop-rake'
   gem 'rubocop-sequel'
 end
-

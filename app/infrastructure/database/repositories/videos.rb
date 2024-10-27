@@ -13,18 +13,15 @@ module Outline
       end
 
       def self.find_id(video_id)
-        db_record = Outline::Database::VideoOrm.first(video_id: )
+        db_record = Outline::Database::VideoOrm.first(video_id:)
         rebuild_entity(db_record)
       end
 
       def self.create(entity)
-        # raise 'Video already exists' if find(entity)
+        raise 'Video already exists' if find(entity)
 
-        #db_video = Outline::Database::VideoOrm.first(video_id: entity.video_id)
-        
-        video = Outline::Database::VideoOrm.create(entity.to_attr_hash)
+        Outline::Database::VideoOrm.create(entity.to_attr_hash)
         rebuild_entity(entity)
-
       end
 
       def self.rebuild_entity(db_record)

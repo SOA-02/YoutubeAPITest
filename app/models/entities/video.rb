@@ -16,7 +16,7 @@ module Outline
       attribute :video_description, Strict::String
       attribute :video_thumbnail_url, Strict::String
       attribute :video_tags, Strict::Array.of(Strict::String).optional
-    
+
       def to_attr_hash
         to_hash.except(:id)
       end

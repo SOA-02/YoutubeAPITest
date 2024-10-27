@@ -32,7 +32,7 @@ task :rerun do
   sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
 end
 
-namespace :db do
+namespace :db do # rubocop:disable Metrics/BlockLength
   task :config do # rubocop:disable Rake/Desc
     require 'sequel'
     require_relative 'config/environment' # load config info
@@ -106,5 +106,3 @@ namespace :quality do
     sh "flog -m #{only_app}"
   end
 end
-
-
