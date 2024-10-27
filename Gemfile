@@ -1,22 +1,11 @@
 # frozen_string_literal: true
 
-# Configuration and Utilities
-gem 'figaro'
-gem 'pry'
-gem 'rake'
-
 source 'https://rubygems.org'
 
 # Configuration and Utilities
 gem 'figaro', '~> 1.2'
 gem 'pry'
 gem 'rake'
-
-# Web Application
-gem 'logger', '~> 1.6'
-gem 'puma', '~> 6.4'
-gem 'roda', '~> 3.85'
-gem 'slim', '~> 5.2'
 
 # Web Application
 gem 'logger', '~> 1.6'
