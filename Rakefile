@@ -2,10 +2,6 @@
 
 require 'rake/testtask'
 require_relative 'require_app'
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 task :default do
   puts `rake -T`
 end

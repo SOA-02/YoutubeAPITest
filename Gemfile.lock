@@ -45,7 +45,6 @@ GEM
       dry-inflector (~> 1.0)
       dry-logic (~> 1.4)
       zeitwerk (~> 2.6)
-    ffi (1.17.0)
     ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-aarch64-linux-musl)
     ffi (1.17.0-arm-linux-gnu)
@@ -77,7 +76,7 @@ GEM
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     ice_nine (0.11.2)
-    json (2.7.2)
+    json (2.7.4)
     language_server-protocol (3.17.0.3)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -87,7 +86,6 @@ GEM
       rake (~> 13.0)
     logger (1.6.1)
     method_source (1.1.0)
-    mini_portile2 (2.8.7)
     minitest (5.25.1)
     minitest-rg (5.3.0)
       minitest (~> 5.0)
@@ -118,7 +116,7 @@ GEM
     regexp_parser (2.9.2)
     rerun (0.14.0)
       listen (~> 3.0)
-    rexml (3.3.8)
+    rexml (3.3.9)
     roda (3.85.0)
       rack
     rubocop (1.67.0)
@@ -138,7 +136,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-sequel (0.3.4)
+    rubocop-sequel (0.3.6)
       rubocop (~> 1.0)
     ruby-progressbar (1.13.0)
     ruby_parser (3.21.1)
@@ -156,8 +154,6 @@ GEM
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
-    sqlite3 (1.7.3)
-      mini_portile2 (~> 2.8.0)
     sqlite3 (1.7.3-aarch64-linux)
     sqlite3 (1.7.3-arm-linux)
     sqlite3 (1.7.3-arm64-darwin)
@@ -174,29 +170,28 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    zeitwerk (2.7.0)
+    zeitwerk (2.7.1)
 
 PLATFORMS
+  aarch64-linux
   aarch64-linux-gnu
   aarch64-linux-musl
+  arm-linux
   arm-linux-gnu
   arm-linux-musl
   arm64-darwin
-  ruby
+  x86-linux
   x86-linux-gnu
   x86-linux-musl
   x86_64-darwin
+  x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
 
 DEPENDENCIES
   dry-struct (~> 1.6)
   dry-types (~> 1.7)
-<<<<<<< HEAD
   figaro (~> 1.2)
-=======
-  figaro
->>>>>>> main
   flog
   hirb
   http (~> 5.2)
@@ -212,20 +207,13 @@ DEPENDENCIES
   rubocop
   rubocop-minitest
   rubocop-rake
-<<<<<<< HEAD
   rubocop-sequel
   sequel (~> 5.60)
   simplecov (~> 0)
   slim (~> 5.2)
   sqlite3 (~> 1.4)
-=======
-  sequel
-  simplecov (~> 0)
-  slim (~> 5.2)
-  sqlite3
->>>>>>> main
   vcr (~> 6)
   webmock (~> 3)
 
 BUNDLED WITH
-   2.5.21
+   2.5.22

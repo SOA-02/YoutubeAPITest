@@ -637,4 +637,716 @@ http_interactions:
           }
         }
   recorded_at: Sun, 27 Oct 2024 06:01:14 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=uAdmzgTmWIU&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 27 Oct 2024 14:25:09 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "2Hz9D8xTE4vvlgSxwWUH_logx2I",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "oL1pcuvPI5J4OenYY4SVmkPHSs4",
+              "id": "uAdmzgTmWIU",
+              "snippet": {
+                "publishedAt": "2019-07-09T02:44:56Z",
+                "channelId": "UCTprjveyeUA-pn6b7KbGhmQ",
+                "title": "Box and Whisker in Tableau",
+                "description": "Learn how to build boxplot from scratch in Tableau.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "Jalayer Academy",
+                "tags": [
+                  "boxplot",
+                  "box and whisker",
+                  "box plot",
+                  "statistics",
+                  "tableau",
+                  "data",
+                  "data analytics",
+                  "data visualization",
+                  "chart",
+                  "plot",
+                  "data plot",
+                  "data science",
+                  "stats",
+                  "predictive",
+                  "analysis",
+                  "data analysis",
+                  "aggregate",
+                  "disaggregate",
+                  "tableau public",
+                  "table",
+                  "math",
+                  "numbers",
+                  "spreadsheet",
+                  "dashboard",
+                  "software"
+                ],
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "Box and Whisker in Tableau",
+                  "description": "Learn how to build boxplot from scratch in Tableau."
+                },
+                "defaultAudioLanguage": "en-US"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 27 Oct 2024 14:25:09 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=uAdmzgTmWIU&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 27 Oct 2024 14:25:10 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "2Hz9D8xTE4vvlgSxwWUH_logx2I",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "oL1pcuvPI5J4OenYY4SVmkPHSs4",
+              "id": "uAdmzgTmWIU",
+              "snippet": {
+                "publishedAt": "2019-07-09T02:44:56Z",
+                "channelId": "UCTprjveyeUA-pn6b7KbGhmQ",
+                "title": "Box and Whisker in Tableau",
+                "description": "Learn how to build boxplot from scratch in Tableau.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/uAdmzgTmWIU/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "Jalayer Academy",
+                "tags": [
+                  "boxplot",
+                  "box and whisker",
+                  "box plot",
+                  "statistics",
+                  "tableau",
+                  "data",
+                  "data analytics",
+                  "data visualization",
+                  "chart",
+                  "plot",
+                  "data plot",
+                  "data science",
+                  "stats",
+                  "predictive",
+                  "analysis",
+                  "data analysis",
+                  "aggregate",
+                  "disaggregate",
+                  "tableau public",
+                  "table",
+                  "math",
+                  "numbers",
+                  "spreadsheet",
+                  "dashboard",
+                  "software"
+                ],
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "Box and Whisker in Tableau",
+                  "description": "Learn how to build boxplot from scratch in Tableau."
+                },
+                "defaultAudioLanguage": "en-US"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 27 Oct 2024 14:25:10 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=27dnJ0zqHJ4&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 27 Oct 2024 14:36:34 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"M86rEXTG_iM8J6MPS98i811fXZ8\",\n
+        \ \"items\": [\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
+        \"Bn-Ze1wU1X78GCG29aWxHLa7fgU\",\n      \"id\": \"27dnJ0zqHJ4\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2024-01-25T10:11:25Z\",\n        \"channelId\":
+        \"UC8_RSKwbU1OmZWNEoLV1tQg\",\n        \"title\": \"Tableau Charts: Box Plot
+        | #Tableau Course #130\",\n        \"description\": \"\U0001F3AC Full Tableau
+        Course: https://youtu.be/UcGF09Awm4Y\\n⬇️ Free Materials (Downloads): https://datawithbaraa.substack.com\\n\U0001F449
+        Support & Subscribe to Channel: http://bit.ly/3GiCVUE\\n\\n☕ Stay connected\\n►
+        Subscribe: http://bit.ly/3GiCVUE\\n► Join: https://www.youtube.com/channel/UC8_RSKwbU1OmZWNEoLV1tQg/join\\n►
+        Newsletter: https://bit.ly/BaraaNewsletter\\n► LinkedIn: https://www.linkedin.com/in/baraa-khatib-salkini/\\n►
+        Website: https://www.datawithbaraa.com\\n\\n\U0001F4DA Free Courses\\n✅ Tableau:
+        https://youtu.be/UcGF09Awm4Y\\n✅ Tableau Project: https://www.youtube.com/watch?v=UcGF09Awm4Y\\n✅
+        SQL Basics: https://youtu.be/NTgejLheGeU?si=2-m6dgYPRvoFUSgS\\n✅ SQL Advanced:
+        https://www.youtube.com/watch?v=ELdz0dXzWGM&list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe\\n✅
+        ChatGPT: https://youtu.be/LJLNfei4i-c?si=EhUNYN38dkswAvZH\\n\\n\U0001F393Other
+        Platforms (Certifications)\\n► Udemy: https://bit.ly/BaraaUdemy\\n► Skillshare
+        (1 Free Month): https://bit.ly/BaraaSkillshare\\n\\n⭐ My favorite books: https://kit.co/DataWithBaraa/my-favorite-books\\n\U0001F4BB
+        My gear: https://kit.co/DataWithBaraa/my-desktop-gear\\n\\n#tableau #data
+        #analytics #datascience \\n**Please note I may earn a small commission for
+        any purchase through these links, which means at no additional cost to you
+        - Thanks for supporting the channel!**\\n**All opinions or statements in this
+        video are my own and do not reflect the opinion of the company I work for
+        or have ever worked for**\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Data with Baraa\",\n        \"tags\": [\n          \"tableau\",\n
+        \         \"data science\",\n          \"data analytics\",\n          \"tableau
+        course\",\n          \"tableau tutorial\",\n          \"tableau charts\",\n
+        \         \"box plot\",\n          \"box plot in tableau\",\n          \"how
+        to create box plot\",\n          \"how to create box plot in tableau\",\n
+        \         \"box plot tableau\",\n          \"tableau box plot\",\n          \"boxplot\",\n
+        \         \"boxplot in tableau\",\n          \"how to create boxplot\",\n
+        \         \"how to create boxplot in tableau\",\n          \"boxplot tableau\",\n
+        \         \"tableau boxplot\",\n          \"how to\",\n          \"viz\",\n
+        \         \"data visualization\",\n          \"business intelligence\",\n
+        \         \"tableau training\",\n          \"learn tableau\",\n          \"tableau
+        dashboards\",\n          \"tableau for beginners\"\n        ],\n        \"categoryId\":
+        \"28\",\n        \"liveBroadcastContent\": \"none\",\n        \"defaultLanguage\":
+        \"en\",\n        \"localized\": {\n          \"title\": \"Tableau Charts:
+        Box Plot | #Tableau Course #130\",\n          \"description\": \"\U0001F3AC
+        Full Tableau Course: https://youtu.be/UcGF09Awm4Y\\n⬇️ Free Materials (Downloads):
+        https://datawithbaraa.substack.com\\n\U0001F449 Support & Subscribe to Channel:
+        http://bit.ly/3GiCVUE\\n\\n☕ Stay connected\\n► Subscribe: http://bit.ly/3GiCVUE\\n►
+        Join: https://www.youtube.com/channel/UC8_RSKwbU1OmZWNEoLV1tQg/join\\n► Newsletter:
+        https://bit.ly/BaraaNewsletter\\n► LinkedIn: https://www.linkedin.com/in/baraa-khatib-salkini/\\n►
+        Website: https://www.datawithbaraa.com\\n\\n\U0001F4DA Free Courses\\n✅ Tableau:
+        https://youtu.be/UcGF09Awm4Y\\n✅ Tableau Project: https://www.youtube.com/watch?v=UcGF09Awm4Y\\n✅
+        SQL Basics: https://youtu.be/NTgejLheGeU?si=2-m6dgYPRvoFUSgS\\n✅ SQL Advanced:
+        https://www.youtube.com/watch?v=ELdz0dXzWGM&list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe\\n✅
+        ChatGPT: https://youtu.be/LJLNfei4i-c?si=EhUNYN38dkswAvZH\\n\\n\U0001F393Other
+        Platforms (Certifications)\\n► Udemy: https://bit.ly/BaraaUdemy\\n► Skillshare
+        (1 Free Month): https://bit.ly/BaraaSkillshare\\n\\n⭐ My favorite books: https://kit.co/DataWithBaraa/my-favorite-books\\n\U0001F4BB
+        My gear: https://kit.co/DataWithBaraa/my-desktop-gear\\n\\n#tableau #data
+        #analytics #datascience \\n**Please note I may earn a small commission for
+        any purchase through these links, which means at no additional cost to you
+        - Thanks for supporting the channel!**\\n**All opinions or statements in this
+        video are my own and do not reflect the opinion of the company I work for
+        or have ever worked for**\"\n        },\n        \"defaultAudioLanguage\":
+        \"en\"\n      }\n    }\n  ],\n  \"pageInfo\": {\n    \"totalResults\": 1,\n
+        \   \"resultsPerPage\": 1\n  }\n}\n"
+  recorded_at: Sun, 27 Oct 2024 14:36:34 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=27dnJ0zqHJ4&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 27 Oct 2024 14:36:34 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"M86rEXTG_iM8J6MPS98i811fXZ8\",\n
+        \ \"items\": [\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
+        \"Bn-Ze1wU1X78GCG29aWxHLa7fgU\",\n      \"id\": \"27dnJ0zqHJ4\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2024-01-25T10:11:25Z\",\n        \"channelId\":
+        \"UC8_RSKwbU1OmZWNEoLV1tQg\",\n        \"title\": \"Tableau Charts: Box Plot
+        | #Tableau Course #130\",\n        \"description\": \"\U0001F3AC Full Tableau
+        Course: https://youtu.be/UcGF09Awm4Y\\n⬇️ Free Materials (Downloads): https://datawithbaraa.substack.com\\n\U0001F449
+        Support & Subscribe to Channel: http://bit.ly/3GiCVUE\\n\\n☕ Stay connected\\n►
+        Subscribe: http://bit.ly/3GiCVUE\\n► Join: https://www.youtube.com/channel/UC8_RSKwbU1OmZWNEoLV1tQg/join\\n►
+        Newsletter: https://bit.ly/BaraaNewsletter\\n► LinkedIn: https://www.linkedin.com/in/baraa-khatib-salkini/\\n►
+        Website: https://www.datawithbaraa.com\\n\\n\U0001F4DA Free Courses\\n✅ Tableau:
+        https://youtu.be/UcGF09Awm4Y\\n✅ Tableau Project: https://www.youtube.com/watch?v=UcGF09Awm4Y\\n✅
+        SQL Basics: https://youtu.be/NTgejLheGeU?si=2-m6dgYPRvoFUSgS\\n✅ SQL Advanced:
+        https://www.youtube.com/watch?v=ELdz0dXzWGM&list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe\\n✅
+        ChatGPT: https://youtu.be/LJLNfei4i-c?si=EhUNYN38dkswAvZH\\n\\n\U0001F393Other
+        Platforms (Certifications)\\n► Udemy: https://bit.ly/BaraaUdemy\\n► Skillshare
+        (1 Free Month): https://bit.ly/BaraaSkillshare\\n\\n⭐ My favorite books: https://kit.co/DataWithBaraa/my-favorite-books\\n\U0001F4BB
+        My gear: https://kit.co/DataWithBaraa/my-desktop-gear\\n\\n#tableau #data
+        #analytics #datascience \\n**Please note I may earn a small commission for
+        any purchase through these links, which means at no additional cost to you
+        - Thanks for supporting the channel!**\\n**All opinions or statements in this
+        video are my own and do not reflect the opinion of the company I work for
+        or have ever worked for**\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/27dnJ0zqHJ4/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Data with Baraa\",\n        \"tags\": [\n          \"tableau\",\n
+        \         \"data science\",\n          \"data analytics\",\n          \"tableau
+        course\",\n          \"tableau tutorial\",\n          \"tableau charts\",\n
+        \         \"box plot\",\n          \"box plot in tableau\",\n          \"how
+        to create box plot\",\n          \"how to create box plot in tableau\",\n
+        \         \"box plot tableau\",\n          \"tableau box plot\",\n          \"boxplot\",\n
+        \         \"boxplot in tableau\",\n          \"how to create boxplot\",\n
+        \         \"how to create boxplot in tableau\",\n          \"boxplot tableau\",\n
+        \         \"tableau boxplot\",\n          \"how to\",\n          \"viz\",\n
+        \         \"data visualization\",\n          \"business intelligence\",\n
+        \         \"tableau training\",\n          \"learn tableau\",\n          \"tableau
+        dashboards\",\n          \"tableau for beginners\"\n        ],\n        \"categoryId\":
+        \"28\",\n        \"liveBroadcastContent\": \"none\",\n        \"defaultLanguage\":
+        \"en\",\n        \"localized\": {\n          \"title\": \"Tableau Charts:
+        Box Plot | #Tableau Course #130\",\n          \"description\": \"\U0001F3AC
+        Full Tableau Course: https://youtu.be/UcGF09Awm4Y\\n⬇️ Free Materials (Downloads):
+        https://datawithbaraa.substack.com\\n\U0001F449 Support & Subscribe to Channel:
+        http://bit.ly/3GiCVUE\\n\\n☕ Stay connected\\n► Subscribe: http://bit.ly/3GiCVUE\\n►
+        Join: https://www.youtube.com/channel/UC8_RSKwbU1OmZWNEoLV1tQg/join\\n► Newsletter:
+        https://bit.ly/BaraaNewsletter\\n► LinkedIn: https://www.linkedin.com/in/baraa-khatib-salkini/\\n►
+        Website: https://www.datawithbaraa.com\\n\\n\U0001F4DA Free Courses\\n✅ Tableau:
+        https://youtu.be/UcGF09Awm4Y\\n✅ Tableau Project: https://www.youtube.com/watch?v=UcGF09Awm4Y\\n✅
+        SQL Basics: https://youtu.be/NTgejLheGeU?si=2-m6dgYPRvoFUSgS\\n✅ SQL Advanced:
+        https://www.youtube.com/watch?v=ELdz0dXzWGM&list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe\\n✅
+        ChatGPT: https://youtu.be/LJLNfei4i-c?si=EhUNYN38dkswAvZH\\n\\n\U0001F393Other
+        Platforms (Certifications)\\n► Udemy: https://bit.ly/BaraaUdemy\\n► Skillshare
+        (1 Free Month): https://bit.ly/BaraaSkillshare\\n\\n⭐ My favorite books: https://kit.co/DataWithBaraa/my-favorite-books\\n\U0001F4BB
+        My gear: https://kit.co/DataWithBaraa/my-desktop-gear\\n\\n#tableau #data
+        #analytics #datascience \\n**Please note I may earn a small commission for
+        any purchase through these links, which means at no additional cost to you
+        - Thanks for supporting the channel!**\\n**All opinions or statements in this
+        video are my own and do not reflect the opinion of the company I work for
+        or have ever worked for**\"\n        },\n        \"defaultAudioLanguage\":
+        \"en\"\n      }\n    }\n  ],\n  \"pageInfo\": {\n    \"totalResults\": 1,\n
+        \   \"resultsPerPage\": 1\n  }\n}\n"
+  recorded_at: Sun, 27 Oct 2024 14:36:34 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=GZe2FJOWGIs&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 27 Oct 2024 14:56:12 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "QyKkUOatK1uZkbtKSgA3C-f9DUQ",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "SEd_RAdPM0iZC_h33JaPS4tcZhE",
+              "id": "GZe2FJOWGIs",
+              "snippet": {
+                "publishedAt": "2021-02-04T01:30:15Z",
+                "channelId": "UCTprjveyeUA-pn6b7KbGhmQ",
+                "title": "Graphical Summaries of Data (part 2) Numerical",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "Jalayer Academy",
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "Graphical Summaries of Data (part 2) Numerical",
+                  "description": ""
+                },
+                "defaultAudioLanguage": "en-US"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 27 Oct 2024 14:56:12 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=GZe2FJOWGIs&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 27 Oct 2024 14:56:13 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "QyKkUOatK1uZkbtKSgA3C-f9DUQ",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "SEd_RAdPM0iZC_h33JaPS4tcZhE",
+              "id": "GZe2FJOWGIs",
+              "snippet": {
+                "publishedAt": "2021-02-04T01:30:15Z",
+                "channelId": "UCTprjveyeUA-pn6b7KbGhmQ",
+                "title": "Graphical Summaries of Data (part 2) Numerical",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/GZe2FJOWGIs/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "Jalayer Academy",
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "Graphical Summaries of Data (part 2) Numerical",
+                  "description": ""
+                },
+                "defaultAudioLanguage": "en-US"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 27 Oct 2024 14:56:13 GMT
 recorded_with: VCR 6.3.1
