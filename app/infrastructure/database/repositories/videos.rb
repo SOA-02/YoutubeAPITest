@@ -17,18 +17,13 @@ module Outline
         rebuild_entity(db_record)
       end
 
-      def self.find_title(title)
-        db_record = Database::VideoOrm.first(video_title: title)
-        rebuild_entity(db_record)
-      end
-
-      def self.db_find_or_create(entity)
-        # raise 'Video already exists' if find(entity)
-        # rebuild_entity(db_video)
-      end
-
       def self.create(entity)
-        db_channel = Database::VideoOrm.first(video_id: entity.video_id)
+        raise 'Video already exists' if find(entity)
+        
+        db_video = Outline::Database::VideoOrm.first(video_id: entity.video_id)
+        record = Outline::Database::VideoOrm.create(entity.to_attr_hash)
+
+        puts record.video_id
       end
 
       def self.rebuild_entity(db_record)
@@ -51,13 +46,7 @@ module Outline
           @entity = entity
         end
 
-        def call
-          channel = Channels.create_or_update(@entity.channel)
-
-          create_video.tap do |db_video|
-            db_video.update(channel_id: channel.id)
-          end
-        end
+        def call; end
       end
     end
   end

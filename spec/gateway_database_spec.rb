@@ -24,8 +24,9 @@ describe 'Integration Tests of Youtube API and Database' do
       video = Outline::Youtube::VideoMapper.new(API_KEY).find(VIDEO_ID)
       _(video).must_be_kind_of Outline::Entity::Video
 
+      test_find = Outline::Repository::For.entity(video).find(video)
       rebuilt = Outline::Repository::For.entity(video).create(video)
-
+      
       # _(rebuilt.video_id).must_equal(video.video_id)
       # _(rebuilt.video_title).must_equal(video.video_title)
     end
