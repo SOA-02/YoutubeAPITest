@@ -43,7 +43,7 @@ module Outline
 
         def yt_search_path(key_word)
           # https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=[YOUR_API_KEY]"
-          get(YT_API_ROOT + "/search?part=snippet&maxResults=5&q=#{key_word}&key=#{@api_key}")
+          get(YT_API_ROOT + "/search?part=snippet&maxResults=#{MAX_RESULTS}&q=#{key_word}&key=#{@api_key}")
         end
 
         def yt_playlist_path(playlist_id)
