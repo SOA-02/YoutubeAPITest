@@ -37,11 +37,11 @@ module Outline
           # GET /search/key_word
           routing.get do
             begin
-              search_results = Youtube::SearchMapper
+              @search_results= Youtube::SearchMapper
                                .new(App.config.API_KEY).find(key_word)
-              view 'search', locals: { search_results: search_results }
+              view 'search', locals: { search_results: @search_results }
             rescue StandardError => e
-              puts "Error: #{e.message}" # Output to console
+              puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
               view 'error', locals: { error_message: e.message }
             end
           end

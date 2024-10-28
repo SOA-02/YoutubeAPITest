@@ -8,7 +8,6 @@ module Outline
   module Youtube
     # Library for Youtube Web API
     class YoutubeApi
-      MAX_RESULTS = 5
       def initialize(api_key)
         @api_key = api_key
       end
@@ -32,7 +31,7 @@ module Outline
       # Sends out HTTP requests to Youtube
       class Request
         YT_API_ROOT = 'https://www.googleapis.com/youtube/v3'
-
+        MAX_RESULTS = 5
         def initialize(api_key)
           @api_key = api_key
         end

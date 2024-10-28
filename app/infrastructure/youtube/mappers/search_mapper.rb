@@ -20,15 +20,20 @@ module Outline
       def find(key_word)
         data = @gateway.search_info(key_word)
         # 確認 `items` 是否有內容，並取得第一個項目
-        item_data = data['items']&.first
-        puts "API Response: #{data}"
+        item_data = data['items']
         puts "Channel Data: #{item_data}"
         raise 'Video data is missing' unless item_data # 若資料為空則報錯
 
-        build_entity(item_data)
+        parsed_items =  item_data.map do |item|
+          puts "=== Item: #{item.inspect}"
+          build_entity(item)
+        end
+        # 回傳所有解析後的項目
+        parsed_items
       end
 
       def build_entity(data)
+        puts "=== data===: #{data.inspect}"
         DataMapper.new(data).build_entity
       end
 
@@ -55,6 +60,8 @@ module Outline
         private
 
         def video_id
+          # @data['id']['videoId']
+          # puts "AAA=>#{@data['id']['videoId']}"
           @data['id']['videoId']
         end
 
