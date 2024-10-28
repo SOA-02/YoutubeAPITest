@@ -12,7 +12,7 @@ module Outline
         @api_key = api_key
       end
 
-      def channel_data(channel_id)
+      def channel_info(channel_id)
         Request.new(@api_key).yt_channel_path(channel_id).parse
       end
 
@@ -30,10 +30,6 @@ module Outline
 
         def initialize(api_key)
           @api_key = api_key
-        end
-
-        def channel_data(channel_id)
-          Request.new(@api_key).yt_channel_path(channel_id).parse
         end
 
         def yt_channel_path(channel_id)
