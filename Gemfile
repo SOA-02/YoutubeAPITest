@@ -21,6 +21,7 @@ gem 'http', '~> 5.2'
 # Database
 gem 'hirb'
 gem 'sequel', '~> 5.60'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
 end
