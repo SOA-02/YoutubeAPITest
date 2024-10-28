@@ -1349,4 +1349,129 @@ http_interactions:
           }
         }
   recorded_at: Sun, 27 Oct 2024 14:56:13 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 28 Oct 2024 14:33:25 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n  \"kind\": \"youtube#searchListResponse\",\n  \"etag\": \"WMJIG_bD-VerWTNpYL73fQjZ1AA\",\n
+        \ \"nextPageToken\": \"CAUQAA\",\n  \"regionCode\": \"TW\",\n  \"pageInfo\":
+        {\n    \"totalResults\": 1000000,\n    \"resultsPerPage\": 5\n  },\n  \"items\":
+        [\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"yi4X61BETplVSOuxupNHNJuO7bw\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"Jw90haI8Cts\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2024-10-28T02:00:17Z\",\n        \"channelId\": \"UC3Ard6ooM7JsdAYgTqM_O3Q\",\n
+        \       \"title\": \"namar gangan baigaarai gd urigu erhluulchihlee \U0001F979\U0001F496\",\n
+        \       \"description\": \"\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Jw90haI8Cts/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Jw90haI8Cts/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Jw90haI8Cts/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Ruby’s Channel\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2024-10-28T02:00:17Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"6rGkY44xUTERxHwjZ2H1ztgtcPw\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"qObzgUfCl28\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2009-12-02T08:05:50Z\",\n        \"channelId\": \"UCEGENb0qic-2tdRWP5FRjXg\",\n
+        \       \"title\": \"Kaiser Chiefs - Ruby (Official Video)\",\n        \"description\":
+        \"Kaiser Chiefs - Ruby (Official Video) Our new album DUCK is out in the wild.
+        Grab it here → https://kaiserchiefs.lnk.to/DuckID ...\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/qObzgUfCl28/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/qObzgUfCl28/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/qObzgUfCl28/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"KaiserChiefsVEVO\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2009-12-02T08:05:50Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"v3ZlxEllx-lQokbHkAjOq14vAok\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"81PQQYOvNRg\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2024-10-25T02:00:08Z\",\n        \"channelId\": \"UC3Ard6ooM7JsdAYgTqM_O3Q\",\n
+        \       \"title\": \"ta nar ymr ih stresstei bn aa?\",\n        \"description\":
+        \"\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/81PQQYOvNRg/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/81PQQYOvNRg/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/81PQQYOvNRg/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Ruby’s Channel\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2024-10-25T02:00:08Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"woz6vUywFWvdFhFD94qhmAFGBnQ\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"zCHfWwv4Meo\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2024-09-22T16:11:31Z\",\n        \"channelId\": \"UC90xz-i20jmoZhI8RMLzzjA\",\n
+        \       \"title\": \"VILMEI RAINBOW RUBY !!\",\n        \"description\": \"\",\n
+        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/zCHfWwv4Meo/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/zCHfWwv4Meo/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/zCHfWwv4Meo/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Vilmei\",\n        \"liveBroadcastContent\": \"none\",\n
+        \       \"publishTime\": \"2024-09-22T16:11:31Z\"\n      }\n    },\n    {\n
+        \     \"kind\": \"youtube#searchResult\",\n      \"etag\": \"d9VudNR-LNPT5OTp6IV-AXX6L6w\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"oV_2853N4n4\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2022-01-03T08:59:58Z\",\n        \"channelId\": \"UC3IZKseVpdzPSBaWxBxundA\",\n
+        \       \"title\": \"WOOZI &#39;Ruby&#39; Official MV\",\n        \"description\":
+        \"WOOZI 'Ruby' Official MV Credits: PRODUCTION｜VM PROJECT ARCHITECTURE DIRECTOR｜BEOMJIN
+        PKA PARANOID ...\",\n        \"thumbnails\": {\n          \"default\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/oV_2853N4n4/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/oV_2853N4n4/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/oV_2853N4n4/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"HYBE LABELS\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2022-01-03T08:59:58Z\"\n      }\n    }\n
+        \ ]\n}\n"
+  recorded_at: Mon, 28 Oct 2024 14:33:25 GMT
 recorded_with: VCR 6.3.1
