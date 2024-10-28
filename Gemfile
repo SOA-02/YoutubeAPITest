@@ -5,9 +5,7 @@ gem 'figaro'
 gem 'pry'
 gem 'rake'
 
-source 'https://rubygems.org'
-# Web Application
-gem 'figaro'
+
 gem 'logger', '~> 1.6'
 gem 'puma', '~> 6.4'
 gem 'roda', '~> 3.85'
