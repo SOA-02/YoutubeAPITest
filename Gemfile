@@ -20,25 +20,10 @@ gem 'http', '~> 5.2'
 
 # Database
 gem 'hirb'
-# gem 'hirb-unicode' # incompatible with new rubocop
-gem 'sequel'
+gem 'sequel', '~> 5.60'
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
 end
-
-# Debugging
-gem 'rerun'
-
-# Code Quality
-gem 'flog'
-gem 'reek'
-gem 'rubocop'
-gem 'rubocop-minitest'
-gem 'rubocop-rake'
-
-# Database
-gem 'hirb'
-gem 'sequel'
 
 # Testing
 group :test do
