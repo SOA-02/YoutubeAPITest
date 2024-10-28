@@ -5,7 +5,6 @@ gem 'figaro'
 gem 'pry'
 gem 'rake'
 
-
 gem 'logger', '~> 1.6'
 gem 'puma', '~> 6.4'
 gem 'roda', '~> 3.85'
@@ -23,16 +22,6 @@ gem 'hirb'
 # gem 'hirb-unicode' # incompatible with new rubocop
 gem 'sequel'
 
-group :development, :test do
-  gem 'sqlite3'
-end
-
-# Testing
-gem 'minitest', '~> 5.20'
-gem 'minitest-rg', '~> 5.2'
-gem 'simplecov', '~> 0'
-gem 'vcr', '~> 6'
-gem 'webmock', '~> 3'
 
 # Debugging
 gem 'rerun'
@@ -48,6 +37,21 @@ gem 'rubocop-rake'
 gem 'hirb'
 gem 'sequel'
 
-group :development, :test do
-  gem 'sqlite3'
+# Testing
+group :test do
+  gem 'minitest', '~> 5.20'
+  gem 'minitest-rg', '~> 5.2'
+  gem 'simplecov', '~> 0'
+  gem 'vcr', '~> 6'
+  gem 'webmock', '~> 3'
 end
+
+# Development
+group :development do
+  gem 'flog'
+  gem 'reek'
+  gem 'rerun'
+  gem 'rubocop'
+  gem 'rubocop-minitest'
+  gem 'rubocop-rake'
+  gem 'rubocop-sequel'
