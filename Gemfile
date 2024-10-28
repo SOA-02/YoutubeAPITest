@@ -5,6 +5,7 @@ gem 'figaro'
 gem 'pry'
 gem 'rake'
 
+# Web Application
 gem 'logger', '~> 1.6'
 gem 'puma', '~> 6.4'
 gem 'roda', '~> 3.85'
@@ -21,7 +22,9 @@ gem 'http', '~> 5.2'
 gem 'hirb'
 # gem 'hirb-unicode' # incompatible with new rubocop
 gem 'sequel'
-
+group :development, :test do
+  gem 'sqlite3', '~> 1.4'
+end
 
 # Debugging
 gem 'rerun'
@@ -55,3 +58,4 @@ group :development do
   gem 'rubocop-minitest'
   gem 'rubocop-rake'
   gem 'rubocop-sequel'
+end
