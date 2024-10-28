@@ -8,12 +8,17 @@ module Outline
   module Youtube
     # Library for Youtube Web API
     class YoutubeApi
+      MAX_RESULTS = 5
       def initialize(api_key)
         @api_key = api_key
       end
 
       def channel_info(channel_id)
         Request.new(@api_key).yt_channel_path(channel_id).parse
+      end
+
+      def search_info(key_word)
+        Request.new(@api_key).yt_search_path(key_word).parse
       end
 
       def video_info(video_id)
@@ -37,6 +42,11 @@ module Outline
           get(YT_API_ROOT + "/channels?part=snippet%2CcontentDetails%2Cstatistics&id=#{channel_id}&key=#{@api_key}")
         end
 
+        def yt_search_path(key_word)
+          # https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=[YOUR_API_KEY]"
+          get(YT_API_ROOT + "/search?part=snippet&maxResults=5&q=#{key_word}&key=#{@api_key}")
+        end
+
         def yt_playlist_path(playlist_id)
           get(YT_API_ROOT + "/playlists?id=#{playlist_id}&key=#{@api_key}&part=snippet")
         end
@@ -46,7 +56,7 @@ module Outline
         end
 
         def get(url)
-          puts("先確認是否正確#{url}")
+          puts("先確認URL是否正確#{url}")
           http_response = HTTP.headers('Accept' => 'application/json').get(url)
           Response.new(http_response).tap do |response|
             raise(response.error) unless response.successful?

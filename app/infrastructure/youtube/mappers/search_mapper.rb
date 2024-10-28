@@ -3,8 +3,8 @@
 module Outline
   # Provides access to contributor data
   module Youtube
-    # Data Mapper: Youtube contributor -> Channel entity
-    class ChannelMapper
+    # Data Mapper: Youtube contributor -> Search entity
+    class SearchMapper
       def initialize(api_key, gateway_class = YoutubeApi)
         @api_key = api_key
         @gateway_class = gateway_class
@@ -12,13 +12,13 @@ module Outline
       end
 
       def load_several(url)
-        @gateway.channel_data(url).map do |data|
-          ChannelMapper.build_entity(data)
+        @gateway.search_info(url).map do |data|
+          self.class.build_entity(data)
         end
       end
 
-      def find(channel_id)
-        data = @gateway.channel_data(channel_id)
+      def find(key_word)
+        data = @gateway.search_info(key_word)
         # 確認 `items` 是否有內容，並取得第一個項目
         item_data = data['items']&.first
         puts "API Response: #{data}"
@@ -41,29 +41,28 @@ module Outline
 
         # rubocop:disable Metrics/MethodLength
         def build_entity
-          Outline::Entity::Channel.new(
+          Entity::Search.new(
             id: nil,
-            origin_id:,
-            channel_title:,
+            video_id:,
+            channel_id:,
+            title:,
             description:,
-            custom_url:,
-            country:,
-            localized_title:,
-            localized_description:,
-            subscriber_count:,
-            video_count:,
-            view_count:
+            default_thumbnail_url:
           )
         end
         # rubocop:enable Metrics/MethodLength
 
         private
 
-        def origin_id
-          @data['id']
+        def video_id
+          @data['id']['videoId']
         end
 
-        def channel_title
+        def channel_id
+          @data['snippet']['channelId']
+        end
+
+        def title
           @data['snippet']['title']
         end
 
@@ -71,32 +70,8 @@ module Outline
           @data['snippet']['description']
         end
 
-        def custom_url
-          @data['snippet']['customUrl']
-        end
-
-        def country
-          @data['snippet']['country']
-        end
-
-        def localized_title
-          @data.dig('snippet', 'localized', 'title') || @data['snippet']['title']
-        end
-
-        def localized_description
-          @data.dig('snippet', 'localized', 'description') || @data['snippet']['description']
-        end
-
-        def subscriber_count
-          @data['statistics']['subscriberCount'].to_i
-        end
-
-        def video_count
-          @data['statistics']['videoCount'].to_i
-        end
-
-        def view_count
-          @data['statistics']['viewCount'].to_i
+        def default_thumbnail_url
+          @data['snippet']['thumbnails']['default']['url']
         end
       end
     end

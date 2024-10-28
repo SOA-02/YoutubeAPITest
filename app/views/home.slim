@@ -1,14 +1,15 @@
 .container
-  form role="form" action="/channel" method='POST' id='show-project-form'
+  form role="form" action="/search" method='POST' id='show-project-form'
     .row.vertical-align.query-bar
       .col-md-2.col-sm-3
         .text-right Search:
       .col-md-8.col-sm-6
-        input.form-control#youtube_url type='text' name='youtube_url' placeholder="e.g. https://www.googleapis.com/youtube/v3/channels/UC_x5XG1OV2P6uZZ5FSM9Ttw" list="datalistOptions"
-        datalist#datalistOptions
-          option value="https://www.googleapis.com/youtube/v3/channels/UCpYf6C9QsP_BRf97vLuXlIA"
-          option value="https://www.googleapis.com/youtube/v3/channels/UCK9l6rTwU3hiSZijIMq51Gw"
-          option value="https://www.googleapis.com/youtube/v3/channels/UCKpKC3M5fkcEvtOr06dmYlA"
+        input.form-control#search_key_word type='text' name='search_key_word' placeholder="e.g. Ruby" 
+        / list="datalistOptions"
+        / datalist#datalistOptions
+        /   option value="https://www.googleapis.com/youtube/v3/channels/UCpYf6C9QsP_BRf97vLuXlIA"
+        /   option value="https://www.googleapis.com/youtube/v3/channels/UCK9l6rTwU3hiSZijIMq51Gw"
+        /   option value="https://www.googleapis.com/youtube/v3/channels/UCKpKC3M5fkcEvtOr06dmYlA"
 
         .col-md-2.col-sm-3
           button { 

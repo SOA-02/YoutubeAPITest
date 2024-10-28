@@ -12,7 +12,7 @@ module Outline
     plugin :halt
 
     route do |routing| # rubocop:disable Metrics/BlockLength
-      routing.assets # load CSS
+      routing.assets # Load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
       # GET /
@@ -21,12 +21,39 @@ module Outline
         view 'home', locals: { channel: }
       end
 
+      routing.on 'search' do
+        routing.is do
+          # POST /search/
+          routing.post do
+            key_word = routing.params['search_key_word']
+            routing.halt(400, 'Search keyword parameter is required') unless key_word
+            puts "POST /search - Received key_word: #{key_word}" # Log received keyword
+
+            routing.redirect "search/#{key_word}"
+          end
+        end
+
+        routing.on String do |key_word|
+          # GET /search/key_word
+          routing.get do
+            begin
+              search_results = Youtube::SearchMapper
+                               .new(App.config.API_KEY).find(key_word)
+              view 'search', locals: { search_results: search_results }
+            rescue StandardError => e
+              puts "Error: #{e.message}" # Output to console
+              view 'error', locals: { error_message: e.message }
+            end
+          end
+        end
+      end
+
       routing.on 'channel' do
         routing.is do
           # POST /channel/
           routing.post do
             yt_url = routing.params['youtube_url']
-            routing.halt(400, 'youtube_channel_url parameter is required') unless yt_url
+            routing.halt(400, 'YouTube channel URL parameter is required') unless yt_url
 
             routing.halt(400, 'Invalid YouTube URL') unless (yt_url.include? 'googleapis.com') &&
                                                             (yt_url.include? '/channels/') &&
@@ -34,10 +61,8 @@ module Outline
             channel_id = yt_url.split('/').last
 
             channel = Youtube::ChannelMapper
-              .new(App.config.API_KEY).find(channel_id)
-            # Add project to database
+                      .new(App.config.API_KEY).find(channel_id)
             Repository::For.entity(channel).create_or_update(channel)
-            # Redirect viewer to project page
             routing.redirect "channel/#{channel_id}"
           end
         end
@@ -45,11 +70,7 @@ module Outline
         routing.on String do |channel_id|
           # GET /channel/channel_id
           routing.get do
-            # Get project from database
-
-            channel = Repository::For.klass(Entity::Channel)
-              .find_channel_id(channel_id)
-
+            channel = Repository::For.klass(Entity::Channel).find_channel_id(channel_id)
             view 'channel', locals: { channel: channel }
           end
         end
