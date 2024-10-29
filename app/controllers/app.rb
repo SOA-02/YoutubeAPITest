@@ -47,20 +47,30 @@ module Outline
       end
       routing.on 'outline' do
         routing.is do
-          routing.get ':video_id' do |video_id|
+          # routing.get ':video_id' do |video_id|
+          #   video = Youtube::VideoMapper
+          #     .new(App.config.API_KEY).find(video_id)
+          #   puts "Get video:#{video}"
 
-            routing.redirect "outline/#{video_id}"
-          rescue StandardError => e
-            puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
-            view 'error', locals: { error_message: e.message }
-
-          end
+          #   Repository::For.entity(video).create(video)
+          #   routing.redirect "outline/#{video_id}"
+          # rescue StandardError => e
+          #   puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
+          #   view 'error', locals: { error_message: e.message }
+          # end
         end
 
-        routing.on String do |video_id|
+        routing.on String do |_video_id|
           # GET /outline/video_id
           routing.get do
-            view 'outline', locals: { video: video_id }
+            puts "Video_id#{_video_id}"
+            video = Youtube::VideoMapper
+              .new(App.config.API_KEY).find(_video_id)
+            # puts "Get video=>#{video.inspect}"
+            Repository::For.entity(video).create(video)
+            video = Repository::For.klass(Entity::Video).find_id(_video_id)
+            puts "Retrieved video: #{video.inspect}"
+            view 'outline', locals: { video: video }
           rescue StandardError => e
             puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
             view 'error', locals: { error_message: e.message }

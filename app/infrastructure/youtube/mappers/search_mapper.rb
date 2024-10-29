@@ -35,7 +35,7 @@ module Outline
       end
       
       def build_entity(data)
-        puts "=== data===: #{data.inspect}"
+        # puts "=== data===: #{data.inspect}"
         DataMapper.new(data).build_entity
       end
 

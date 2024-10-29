@@ -52,7 +52,6 @@ describe 'Integration Tests of Youtube API and Database' do
       _(rebuilt.video_description).must_equal(video.video_description)
       _(rebuilt.video_published_at).must_equal(video.video_published_at)
       _(rebuilt.video_thumbnail_url).must_equal(video.video_thumbnail_url)
-      _(rebuilt.video_tags).must_equal(video.video_tags)
     end
   end
 end

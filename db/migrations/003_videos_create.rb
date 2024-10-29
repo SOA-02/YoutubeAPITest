@@ -12,7 +12,6 @@ Sequel.migration do
       String :video_title
       String :video_description
       String :video_thumbnail_url
-      String :video_tags
       String :video_published_at
 
       DateTime :created_at
