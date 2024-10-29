@@ -36,14 +36,12 @@ module Outline
         routing.on String do |key_word|
           # GET /search/key_word
           routing.get do
-            begin
-              @search_results= Youtube::SearchMapper
-                               .new(App.config.API_KEY).find(key_word)
-              view 'search', locals: { search_results: @search_results }
-            rescue StandardError => e
-              puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
-              view 'error', locals: { error_message: e.message }
-            end
+            @search_results = Youtube::SearchMapper
+              .new(App.config.API_KEY).find(key_word)
+            view 'search', locals: { search_results: @search_results }
+          rescue StandardError => e
+            puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
+            view 'error', locals: { error_message: e.message }
           end
         end
       end
@@ -61,7 +59,7 @@ module Outline
             channel_id = yt_url.split('/').last
 
             channel = Youtube::ChannelMapper
-                      .new(App.config.API_KEY).find(channel_id)
+              .new(App.config.API_KEY).find(channel_id)
             Repository::For.entity(channel).create_or_update(channel)
             routing.redirect "channel/#{channel_id}"
           end
