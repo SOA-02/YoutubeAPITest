@@ -11,7 +11,9 @@ module Outline
 
       def find(playlist_id)
         playlist_info = @gateway.playlist_info(playlist_id)
-        item_data = playlist_info['items']&.first
+        item_data = playlist_info['items']
+        puts "API Response: #{data}"
+        puts "Playlist Data: #{item_data}"
         raise 'Playlist data is missing' unless item_data
 
         build_entity(item_data)
@@ -23,7 +25,7 @@ module Outline
 
       class Datamapper # rubocop:disable Style/Documentation
         def initialize(data)
-          @data = data['snippet']
+          @data = data
           raise 'Snippet data missing' unless data
         end
 
@@ -40,24 +42,24 @@ module Outline
 
         private
 
-        def id
-          @items_data['id']
+        def playlist_id
+          @items_data['items'][0]['id']
         end
 
-        def title
-          @items_data['title']
+        def playlist_title
+          @items_data['items'][0]['snippet']['title']
         end
 
-        def published_at
-          @items_data['publishedAt']
+        def playlist_published_at
+          @items_data['items'][0]['snippet']['publishedAt']
         end
 
-        def description
-          @items_data['description']
+        def playlist_description
+          @items_data['items'][0]['snippet']['description']
         end
 
-        def thumbnail_url
-          @items_data['thumbnails']['high']['url']
+        def playlist_thumbnail_url
+          @items_data['items'][0]['snippet']['thumbnails']['high']['url']
         end
       end
     end

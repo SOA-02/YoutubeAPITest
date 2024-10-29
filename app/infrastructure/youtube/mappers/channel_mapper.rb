@@ -21,8 +21,8 @@ module Outline
         data = @gateway.channel_data(channel_id)
         # 確認 `items` 是否有內容，並取得第一個項目
         item_data = data['items']&.first
-        puts "API Response: #{data}"
-        puts "Channel Data: #{item_data}"
+        # puts "API Response: #{data}"
+        # puts "Channel Data: #{item_data}"
         raise 'Video data is missing' unless item_data # 若資料為空則報錯
 
         build_entity(item_data)
