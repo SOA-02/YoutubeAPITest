@@ -45,7 +45,28 @@ module Outline
           end
         end
       end
+      routing.on 'outline' do
+        routing.is do
+          routing.get ':video_id' do |video_id|
 
+            routing.redirect "outline/#{video_id}"
+          rescue StandardError => e
+            puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
+            view 'error', locals: { error_message: e.message }
+
+          end
+        end
+
+        routing.on String do |video_id|
+          # GET /outline/video_id
+          routing.get do
+            view 'outline', locals: { video: video_id }
+          rescue StandardError => e
+            puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
+            view 'error', locals: { error_message: e.message }
+          end
+        end
+      end
       routing.on 'channel' do
         routing.is do
           # POST /channel/
