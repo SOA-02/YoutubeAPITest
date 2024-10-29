@@ -18,7 +18,7 @@ module Outline
       end
 
       def self.create(entity)
-        raise 'Video already exists' if find(entity)
+        return if find(entity)
 
         Outline::Database::VideoOrm.create(entity.to_attr_hash)
         rebuild_entity(entity)
