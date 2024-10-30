@@ -18,63 +18,58 @@ module Outline
       def find(playlist_id)
         data = @gateway.playlist_data(playlist_id)
         # puts "Playlist Item data here: #{data}"
-        raise 'Playlist data is missing' unless data
+        # raise 'Playlist data is missing' unless data
         build_entity(data)
       end
 
       def build_entity(data)
-        @entity = Datamapper.new(data).mapper_build_entity
+        Datamapper.new(data).build_entity
         # puts "Entity exist: #{@entity}"
-        raise 'Entity missing' unless @entity
+        # raise 'Entity missing' unless @entity
       end
 
       class Datamapper # rubocop:disable Style/Documentation
         def initialize(data)
-          @items_data = data['items']
+          @mapper_data = data
           # puts "items_data here #{@items_data}"
-          raise 'Snippet data missing' unless @items_data
         end
 
-        def mapper_build_entity
-          value = @items_data[0]
-          puts "value being passed to Datamapper.new: #{value.inspect}"
-          puts "value class: #{value.class}"
-
+        def build_entity
           Outline::Entity::Playlist.new(
             id: nil,
             playlist_id:,
             playlist_title:,
             playlist_published_at:,
             playlist_description:,
-            playlist_thumbnail_url:,
+            playlist_thumbnail_url:
           )
         end
 
         private
 
         def playlist_id
-          @items_data.dig('items', 'id').to_s 
-          #|| @items_data['items'][0]['id'].to_s
+          # @items_data.dig('items', 'id').to_s 
+          @mapper_data['items'][0]['id']
         end
 
         def playlist_title
-          @items_data.dig('items', 'snippet', 'title') 
-          #|| @items_data['items'][0]['snippet']['title'] 
+          # @items_data.dig('items', 'snippet', 'title') 
+          @mapper_data['items'][0]['snippet']['title'] 
         end
 
         def playlist_published_at
-          @items_data.dig('items', 'snippet', 'publishedAt') 
-          #|| @items_data['items'][0]['snippet']['publishedAt'] 
+          # @items_data.dig('items', 'snippet', 'publishedAt') 
+          @mapper_data['items'][0]['snippet']['publishedAt'] 
         end
 
         def playlist_description
-          @items_data.dig('items', 'snippet', 'description') 
-          #|| @items_data['items'][0]['snippet']['description'] 
+          # @items_data.dig('items', 'snippet', 'description') 
+          @mapper_data['items'][0]['snippet']['description'] 
         end
 
         def playlist_thumbnail_url
-          @items_data.dig('items', 'snippet', 'thumbnails') 
-          #|| @items_data['items'][0]['snippet']['thumbnails']['high']['url'] 
+          # @items_data.dig('items', 'snippet', 'thumbnails') 
+          @mapper_data['items'][0]['snippet']['thumbnails']['high']['url'] 
         end
       end
     end

@@ -56,6 +56,7 @@ describe 'Tests Youtube API library' do
 
   describe 'Playlist information' do
     before do
+      @playlist_data = Outline::Youtube::YoutubeApi.new(API_KEY).playlist_data(PLAYLIST_ID)
       @playlist = Outline::Youtube::PlaylistMapper
         .new(API_KEY)
         .find(PLAYLIST_ID)
@@ -65,11 +66,11 @@ describe 'Tests Youtube API library' do
       _(@playlist).must_be_kind_of Outline::Entity::Playlist
     end
 
-    # it 'HAPPY: should get playlist title using try' do
-    #   _(@playlist.playlist_id).wont_be_nil
-    #   _(@playlist.playlist_title).wont_be_nil
+    it 'HAPPY: should get playlist title using try' do
+      _(@playlist.playlist_id).wont_be_nil
+      _(@playlist.playlist_title).wont_be_nil
 
-    puts "testtest123"
-    # end
+    # puts "testtest123"
+    end
   end
 end

@@ -42,6 +42,7 @@ module Outline
             video_tags:
           )
         end
+
         private
 
         def video_id

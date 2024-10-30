@@ -19,5 +19,4 @@ CHANNEL_ID = 'UCpYf6C9QsP_BRf97vLuXlIA'
 VIDEO_ID = 'GZe2FJOWGIs'
 PLAYLIST_ID = 'PLBlnK6fEyqRh5OzEIQOQ0-hx3rNHxsDvz'
 API_KEY = Outline::App.config.API_KEY
-puts 'API=>>>>'+API_KEY
 CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')

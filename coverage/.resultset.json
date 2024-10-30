@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/root/YoutubeAPITest/require_app.rb": {
+      "/Users/fifiding/YoutubeAPITest/require_app.rb": {
         "lines": [
           null,
           null,
@@ -16,7 +16,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/config/environment.rb": {
+      "/Users/fifiding/YoutubeAPITest/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -50,7 +50,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/models/entities/channel.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/models/entities/channel.rb": {
         "lines": [
           null,
           null,
@@ -83,7 +83,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/models/entities/playlist.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/models/entities/playlist.rb": {
         "lines": [
           null,
           null,
@@ -95,6 +95,7 @@
           null,
           1,
           1,
+          null,
           1,
           1,
           1,
@@ -110,7 +111,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/models/entities/video.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/models/entities/video.rb": {
         "lines": [
           null,
           null,
@@ -139,7 +140,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/database/orm/channel_orm.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/database/orm/channel_orm.rb": {
         "lines": [
           null,
           null,
@@ -158,7 +159,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/database/orm/playlist_orm.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/database/orm/playlist_orm.rb": {
         "lines": [
           null,
           null,
@@ -177,7 +178,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/database/orm/video_orm.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/database/orm/video_orm.rb": {
         "lines": [
           null,
           null,
@@ -200,7 +201,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/database/repositories/channels.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/database/repositories/channels.rb": {
         "lines": [
           null,
           null,
@@ -267,7 +268,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/database/repositories/for.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/database/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -295,7 +296,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/database/repositories/videos.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/database/repositories/videos.rb": {
         "lines": [
           null,
           null,
@@ -350,7 +351,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/database/repositories/playlist.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/database/repositories/playlist.rb": {
         "lines": [
           null,
           null,
@@ -412,7 +413,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/youtube/gateways/youtube_api.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/youtube/gateways/youtube_api.rb": {
         "lines": [
           null,
           null,
@@ -425,7 +426,7 @@
           null,
           1,
           1,
-          12,
+          15,
           null,
           null,
           1,
@@ -437,7 +438,7 @@
           null,
           null,
           1,
-          1,
+          4,
           null,
           null,
           null,
@@ -445,7 +446,7 @@
           1,
           null,
           1,
-          12,
+          15,
           null,
           null,
           1,
@@ -458,7 +459,7 @@
           null,
           null,
           1,
-          1,
+          4,
           null,
           null,
           1,
@@ -466,10 +467,10 @@
           null,
           null,
           1,
-          12,
-          12,
-          12,
-          12,
+          15,
+          15,
+          15,
+          15,
           null,
           null,
           null,
@@ -483,7 +484,7 @@
           null,
           null,
           1,
-          12,
+          15,
           null,
           null,
           1,
@@ -495,7 +496,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/youtube/mappers/channel_mapper.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/youtube/mappers/channel_mapper.rb": {
         "lines": [
           null,
           null,
@@ -602,7 +603,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/youtube/mappers/playlist_mapper.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/youtube/mappers/playlist_mapper.rb": {
         "lines": [
           null,
           null,
@@ -610,9 +611,9 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
           null,
           null,
           null,
@@ -622,31 +623,26 @@
           null,
           null,
           1,
-          1,
-          null,
-          1,
-          1,
+          2,
           null,
           null,
-          1,
-          1,
-          null,
-          0,
+          2,
           null,
           null,
           1,
-          1,
-          1,
+          2,
           null,
-          1,
+          null,
           null,
           null,
           1,
           1,
-          1,
-          1,
+          2,
+          null,
+          null,
           null,
           1,
+          2,
           null,
           null,
           null,
@@ -659,28 +655,28 @@
           1,
           null,
           1,
-          1,
           null,
-          null,
-          null,
-          1,
-          0,
-          null,
+          2,
           null,
           null,
           1,
-          0,
           null,
-          null,
-          null,
-          1,
-          0,
-          null,
+          2,
           null,
           null,
           1,
-          0,
           null,
+          2,
+          null,
+          null,
+          1,
+          null,
+          2,
+          null,
+          null,
+          1,
+          null,
+          2,
           null,
           null,
           null,
@@ -688,7 +684,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/infrastructure/youtube/mappers/video_mapper.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/infrastructure/youtube/mappers/video_mapper.rb": {
         "lines": [
           null,
           null,
@@ -725,6 +721,7 @@
           null,
           null,
           5,
+          null,
           null,
           null,
           null,
@@ -765,7 +762,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/app/controllers/app.rb": {
+      "/Users/fifiding/YoutubeAPITest/app/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -828,7 +825,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/spec/helpers/vcr_helper.rb": {
+      "/Users/fifiding/YoutubeAPITest/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -848,12 +845,12 @@
           null,
           null,
           1,
-          9,
-          639,
-          639,
+          10,
+          835,
+          835,
           null,
           null,
-          9,
+          10,
           null,
           null,
           null,
@@ -861,12 +858,12 @@
           null,
           null,
           1,
-          9,
+          10,
           null,
           null
         ]
       },
-      "/root/YoutubeAPITest/spec/helpers/database_helper.rb": {
+      "/Users/fifiding/YoutubeAPITest/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -880,7 +877,7 @@
           null
         ]
       },
-      "/root/YoutubeAPITest/spec/gateway_youtube_spec.rb": {
+      "/Users/fifiding/YoutubeAPITest/spec/gateway_youtube_spec.rb": {
         "lines": [
           null,
           null,
@@ -889,11 +886,11 @@
           null,
           1,
           1,
-          6,
+          7,
           null,
           null,
           1,
-          6,
+          7,
           null,
           1,
           1,
@@ -940,26 +937,27 @@
           null,
           1,
           1,
-          1,
+          2,
+          2,
           null,
           null,
           null,
           null,
           1,
-          0,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           null,
           1,
+          1,
+          1,
+          null,
+          null,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1730291497
+    "timestamp": 1730299117
   }
 }
