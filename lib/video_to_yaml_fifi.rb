@@ -70,7 +70,7 @@ video_id = 'jeqH4eMGjhY'
 api_key = config['API_KEY']
 url = video_api_path(video_id, api_key)
 
-puts fetch_video_data(url)
+# puts fetch_video_data(url)
 
 begin
   data = fetch_video_data(url)

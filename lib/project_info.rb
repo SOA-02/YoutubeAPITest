@@ -64,7 +64,7 @@ end
 
 def write_to_file(file_path, video_info)
   File.write(file_path, video_info.to_yaml)
-  puts "Video information saved to #{file_path}"
+  # puts "Video information saved to #{file_path}"
 end
 
 # main logic

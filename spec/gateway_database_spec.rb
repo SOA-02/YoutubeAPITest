@@ -24,7 +24,6 @@ describe 'Integration Tests of Youtube API and Database' do
       channel = Outline::Youtube::ChannelMapper
         .new(API_KEY)
         .find(CHANNEL_ID)
-      puts channel
       rebuilt = Outline::Repository::For.entity(channel).create_or_update(channel)
 
       _(rebuilt.origin_id).must_equal(channel.origin_id)
