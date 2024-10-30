@@ -56,7 +56,6 @@ module Outline
           )
         end
         # rubocop:enable Metrics/MethodLength
-
         private
 
         def origin_id

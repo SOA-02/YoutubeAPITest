@@ -74,5 +74,21 @@ describe 'Integration Tests of Youtube API and Database' do
       _(rebuilt.video_thumbnail_url).must_equal(video.video_thumbnail_url)
       _(rebuilt.video_tags).must_equal(video.video_tags)
     end
+
+    # describe 'Retrieve and store playlist' do
+    #   before do
+    #     DatabaseHelper.wipe_database
+    #   end
+  
+    #   it 'HAPPY: should be able to save playlist from Youtube to database' do
+    #     playlist = Outline::Youtube::PlaylistMapper
+    #       .new(API_KEY)
+    #       .find(PLAYLIST_ID)
+    #     rebuilt = Outline::Repository::For.entity(playlist).create_or_update(playlist)
+  
+    #     _(rebuilt.playlist_id).must_equal(playlist.playlist_id)
+    #     _(rebuilt.playlist_title).must_equal(playlist.playlist_title)
+    # end
+    # end
   end
 end

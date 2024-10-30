@@ -36,15 +36,11 @@ module Outline
 
         Entity::Playlist.new(
           id: db_playlist_record.id,
-          playlist_title: db_playlist_record.channel_title,
-          description: db_playlist_record.description,
-          custom_url: db_playlist_record.custom_url,
-          country: db_playlist_record.country,
-          localized_title: db_playlist_record.localized_title,
-          localized_description: db_playlist_record.localized_description,
-          subscriber_count: db_playlist_record.subscriber_count,
-          video_count: db_playlist_record.video_count,
-          view_count: db_playlist_record.view_count
+          playlist_id: db_playlist_record.playlist_id,
+          playlist_title: db_playlist_record.playlist_title,
+          playlist_published_at: db_playlist_record.playlist_published_at,
+          playlist_description: db_playlist_record.playlist_description,
+          playlist_thumbnail_url: db_playlist_record.playlist_thumbnail_url,
         )
       end
     end

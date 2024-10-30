@@ -8,15 +8,16 @@ module Outline
     # domain entity for playlist
     class Playlist < Dry::Struct
       include Dry.Types
+      attribute :id, Integer.optional
+      attribute :playlist_id, Strict::String.optional
+      attribute :playlist_title, Strict::String.optional
+      attribute :playlist_published_at, Strict::String.optional
+      attribute :playlist_description, Strict::String.optional
+      attribute :playlist_thumbnail_url, Strict::String.optional
 
-      attribute :playlist_id, Strict::String
-      attribute? :playlist_title, Strict::String
-      attribute? :playlist_published_at, Strict::Time
-      attribute? :playlist_description, Strict::String
-      attribute? :playlist_thumbnail_url, Strict::String
-      attribute? :playlist_item_count, Strict::Integer
-      # attribute? :playlist_item_id, Strict::list
-      # attribute? :playlist_item_title, Strict::list
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end

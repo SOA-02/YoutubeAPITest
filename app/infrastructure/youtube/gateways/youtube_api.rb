@@ -20,7 +20,7 @@ module Outline
         Request.new(@api_key).yt_video_path(video_id).parse
       end
 
-      def playlist_info(playlist_id)
+      def playlist_data(playlist_id)
         Request.new(@api_key).yt_playlist_path(playlist_id).parse
       end
 

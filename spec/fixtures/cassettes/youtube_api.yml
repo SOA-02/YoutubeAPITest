@@ -1349,4 +1349,107 @@ http_interactions:
           }
         }
   recorded_at: Sun, 27 Oct 2024 14:56:13 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/playlists?id=PLBlnK6fEyqRh5OzEIQOQ0-hx3rNHxsDvz&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Tue, 29 Oct 2024 15:05:33 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#playlistListResponse",
+          "etag": "rb9IVK_INaNb1GlFXTaoGedZlUY",
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#playlist",
+              "etag": "KuInD3S-i3-INWfFac_NwVHL6aM",
+              "id": "PLBlnK6fEyqRh5OzEIQOQ0-hx3rNHxsDvz",
+              "snippet": {
+                "publishedAt": "2023-09-09T09:37:26Z",
+                "channelId": "UCQYMhOMi_Cdj1CEAU-fv80A",
+                "title": "Tuples in Python",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/LlKzq__kQeE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/LlKzq__kQeE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/LlKzq__kQeE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/LlKzq__kQeE/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/LlKzq__kQeE/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "Neso Academy",
+                "localized": {
+                  "title": "Tuples in Python",
+                  "description": ""
+                }
+              }
+            }
+          ]
+        }
+  recorded_at: Tue, 29 Oct 2024 15:05:34 GMT
 recorded_with: VCR 6.3.1
