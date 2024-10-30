@@ -50,7 +50,7 @@
           null
         ]
       },
-      "/root/Desktop/rubyhw/YoutubeAPITest/app/models/entities/channel.rb": {
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/domain/entities/channel.rb": {
         "lines": [
           null,
           null,
@@ -83,7 +83,7 @@
           null
         ]
       },
-      "/root/Desktop/rubyhw/YoutubeAPITest/app/models/entities/playlist.rb": {
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/domain/entities/playlist.rb": {
         "lines": [
           null,
           null,
@@ -109,7 +109,7 @@
           null
         ]
       },
-      "/root/Desktop/rubyhw/YoutubeAPITest/app/models/entities/search.rb": {
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/domain/entities/search.rb": {
         "lines": [
           null,
           null,
@@ -137,7 +137,7 @@
           null
         ]
       },
-      "/root/Desktop/rubyhw/YoutubeAPITest/app/models/entities/video.rb": {
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/domain/entities/video.rb": {
         "lines": [
           null,
           null,
@@ -469,8 +469,6 @@
           null,
           3,
           3,
-          3,
-          3,
           null,
           3,
           null,
@@ -645,7 +643,7 @@
           2,
           null,
           2,
-          2,
+          null,
           2,
           null,
           null,
@@ -816,36 +814,9 @@
           0,
           0,
           0,
-          0,
-          null,
-          0,
-          null,
           null,
           null,
           0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -853,13 +824,40 @@
           null,
           0,
           0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
           0,
           null,
           null,
           0,
           null,
           0,
-          0,
+          null,
           0,
           null,
           0,
@@ -1038,6 +1036,6 @@
         ]
       }
     },
-    "timestamp": 1730190195
+    "timestamp": 1730301938
   }
 }
