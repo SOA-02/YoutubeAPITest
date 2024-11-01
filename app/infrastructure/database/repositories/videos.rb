@@ -5,7 +5,7 @@ module Outline
     # Repository for Videos
     class Videos
       def self.all
-        Database::VideoOrm.all.map { |db_project| rebuild_entity(db_project) }
+        Database::VideoOrm.all.map { |db_record| rebuild_entity(db_record) }
       end
 
       def self.find(entity)
@@ -18,7 +18,7 @@ module Outline
       end
 
       def self.create(entity)
-        raise 'Video already exists' if find(entity)
+        return if find(entity)
 
         Outline::Database::VideoOrm.create(entity.to_attr_hash)
         rebuild_entity(entity)
@@ -33,19 +33,15 @@ module Outline
           video_title: db_record.video_title,
           video_published_at: db_record.video_published_at,
           video_description: db_record.video_description,
-          video_thumbnail_url: db_record.video_thumbnail_url,
-          video_tags: db_record.video_tags
+          video_thumbnail_url: db_record.video_thumbnail_url
         )
       end
 
-      # Helper class to persist video to database
-      class PersistVideo
-        def initialize(entity)
-          @entity = entity
-        end
-
-        def call; end
+      def initialize(entity)
+        @entity = entity
       end
+
+      def call; end
     end
   end
 end

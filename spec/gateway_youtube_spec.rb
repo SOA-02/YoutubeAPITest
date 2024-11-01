@@ -29,6 +29,32 @@ describe 'Tests Youtube API library' do
     end
   end
 
+  describe 'Search information' do
+    before do
+      # puts "API#{API_KEY}"
+      @result = Outline::Youtube::SearchMapper
+        .new(API_KEY)
+        .find(KEY_WORD)
+    end
+
+    it 'HAPPY: should recognize search result' do
+      # 檢查 @result 是否為數組
+      assert_kind_of Array, @result
+      # 確保數組不為空
+      refute_empty @result
+      # 檢查數組中的每個元素都是 Outline::Entity::Search 的實例
+      @result.each do |item|
+        assert_kind_of Outline::Entity::Search, item
+      end
+    end
+    it 'HAPPY: should get channel title using try' do
+      @result.each do |item|
+        refute_nil item.video_id
+        refute_nil item.channel_id
+        refute_nil item.title
+      end
+    end
+  end
   describe 'Video Information' do
     before do
       @video_data = Outline::Youtube::YoutubeApi.new(API_KEY).video_info(VIDEO_ID)

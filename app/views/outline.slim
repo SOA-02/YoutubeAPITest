@@ -1,0 +1,10 @@
+.container
+  .row
+    .col-5
+      img.img-thumbnail src=video.video_thumbnail_url alt="..."
+    .col-6 
+        h1
+            a href="https://www.youtube.com/watch?v=#{video.video_id}"  target="_blank" style="text-decoration: none; color: inherit;"
+                = video.video_title
+    .row.mb-4
+      .col-12

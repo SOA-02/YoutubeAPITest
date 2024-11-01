@@ -55,7 +55,7 @@ namespace :db do # rubocop:disable Metrics/BlockLength
       return
     end
 
-    require_app(%w[models infrastructure])
+    require_app(%w[domain infrastructure])
     DatabaseHelper.wipe_database
   end
 

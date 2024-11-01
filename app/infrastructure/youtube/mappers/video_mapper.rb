@@ -38,8 +38,7 @@ module Outline
             video_title:,
             video_published_at:,
             video_description:,
-            video_thumbnail_url:,
-            video_tags:
+            video_thumbnail_url:
           )
         end
 
@@ -63,10 +62,6 @@ module Outline
 
         def video_thumbnail_url
           @mapper_data['items'][0]['snippet']['thumbnails']['high']['url']
-        end
-
-        def video_tags
-          @mapper_data['items'][0]['snippet']['tags']
         end
       end
     end
