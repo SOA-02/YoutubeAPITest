@@ -1,10 +1,10 @@
 .container
-  form role="form" action="/search" method='POST' id='show-project-form'
+  form role="form" action="/outline" method='POST' id='show-project-form'
     .row.vertical-align.query-bar
       .col-md-2.col-sm-3
         .text-right Search:
       .col-md-8.col-sm-6
-        input.form-control#search_key_word type='text' name='search_key_word' placeholder="e.g. Ruby" 
+        input.form-control#search_key_word type='text' name='youtube_url' placeholder="e.g. https://www.youtube.com/watch?v=mp5eKjFyLwg" 
         / list="datalistOptions"
         / datalist#datalistOptions
         /   option value="https://www.googleapis.com/youtube/v3/channels/UCpYf6C9QsP_BRf97vLuXlIA"
@@ -18,23 +18,24 @@
           } Show Info
     .row
       .col-md-12.blank-row
-    - if channel.any?
-      table class="table table-hover" id="channels_table"
+    - if video.any?
+      table class="table table-hover" id="videos_table"
         thead
           tr
-            th Channel_title
-            th custom_url
-            th subscriber_count
+            th video_title
+            th video_published_at
+            th video_url
         tbody
-          - channel.each.with_index do |channel, index|
-            tr class="table-row channel_row"
-              td id='td_channel_title'
-                span class="channel_table_channel_title" id="channel[#{index}].channel_title"
-                  = channel.channel_title
-              td id='td_custom_url'
-                span class="channel_table_custom_url" id="channel[#{index}].custom_url"
-                  = channel.custom_url
-              td id='td_subscriber_count'
-                span class="channel_table_subscriber_count" id="channel[#{index}].subscriber_count"
-                  = channel.subscriber_count
+          - video.each.with_index do |video, index|
+            tr class="table-row video_row"
+              td id='td_video_title'
+                span class="video_table_video_title" id="video[#{index}].video_title"
+                  = video.video_title
+              td id='td_video_published_at'
+                span class="video_table_video_published_at" id="video[#{index}].video_published_at"
+                  = video.video_published_at
+              td id='td_video_url'
+                span class="video_table_video_url" id="video[#{index}].video_url"
+                  a href="https://www.youtube.com/watch?v=#{video.video_id}" target="_blank"
+                    = video.video_id
 
