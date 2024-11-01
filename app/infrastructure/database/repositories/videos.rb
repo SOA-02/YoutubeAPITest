@@ -37,13 +37,11 @@ module Outline
         )
       end
 
+      def initialize(entity)
+        @entity = entity
+      end
 
-        def initialize(entity)
-          @entity = entity
-        end
-
-        def call; end
-
+      def call; end
     end
   end
 end

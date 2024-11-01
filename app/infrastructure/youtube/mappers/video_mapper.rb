@@ -63,8 +63,6 @@ module Outline
         def video_thumbnail_url
           @mapper_data['items'][0]['snippet']['thumbnails']['high']['url']
         end
-
-
       end
     end
   end

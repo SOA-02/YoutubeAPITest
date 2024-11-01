@@ -30,10 +30,9 @@ module Outline
 
         video_items.map do |item|
           build_entity(item)
-
         end
       end
-      
+
       def build_entity(data)
         # puts "=== data===: #{data.inspect}"
         DataMapper.new(data).build_entity
