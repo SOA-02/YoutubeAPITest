@@ -26,6 +26,9 @@ Feature: List of Table of Content
     And H1: # Title of Playlist
     And H2: ## Title of each video
 ```
+## ERD
+![image](https://github.com/user-attachments/assets/f10a4d33-8e19-467e-bd86-a889b70730b3)
+
 
 ## Resource
 ### YouTube API 
