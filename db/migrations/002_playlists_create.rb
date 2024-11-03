@@ -14,6 +14,7 @@ Sequel.migration do
       DateTime :published_at
       DateTime :created_at
       DateTime :updated_at
+      index :playlist_id
     end
   end
 end
