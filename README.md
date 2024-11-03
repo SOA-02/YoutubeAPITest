@@ -27,7 +27,7 @@ Feature: List of Table of Content
     And H2: ## Title of each video
 ```
 ## ERD
-![image]('C:\Users\Mindy\Downloads\SOA-ER Model.drawio.png')
+![image](https://raw.githubusercontent.com/SOA-02/YoutubeAPITest/refs/heads/MING-CHUNLee-ERM-1/SOA-ER%20Model.drawio.png)
 
 
 ## Resource
