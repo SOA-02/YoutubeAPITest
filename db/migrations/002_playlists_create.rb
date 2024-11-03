@@ -12,6 +12,8 @@ Sequel.migration do
       String :playlist_description
 
       DateTime :published_at
+      DateTime :created_at
+      DateTime :updated_at
     end
   end
 end
