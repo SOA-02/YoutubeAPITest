@@ -22,11 +22,20 @@ task :respec do
   sh "rerun -c 'rake spec' --ignore 'coverage/*'"
 end
 
-desc 'Run web app'
-task :run do
-  sh 'bundle exec puma'
-end
+desc 'Run web app in default mode'
+task run: ['run:default']
 
+namespace :run do
+  desc 'Run web app in development or production'
+  task :default do
+    sh 'bundle exec puma -p 9393'
+  end
+
+  desc 'Run web app for acceptance tests'
+  task :test do
+    sh 'RACK_ENV=test puma -p 9000'
+  end
+end
 desc 'Keep rerunning web app upon changes'
 task :rerun do
   sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"

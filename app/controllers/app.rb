@@ -27,7 +27,6 @@ module Outline
         # Load previously viewed projects
         video = Repository::For.klass(Entity::Video)
           .find_all_video(session[:watching])
-        # binding.irb
         session[:watching] = video.map(&:video_id)
 
 
@@ -90,7 +89,6 @@ module Outline
             Repository::For.entity(video).create(video)
             # Add new project to watched set in cookies
             session[:watching].insert(0, video.video_id).uniq!
-            # binding.irb
             video = Repository::For.klass(Entity::Video).find_id(video_id)
             # puts "Retrieved video: #{video.inspect}"
             view 'outline', locals: { video: video }
