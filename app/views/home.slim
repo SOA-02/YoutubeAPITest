@@ -22,12 +22,19 @@
       table class="table table-hover" id="videos_table"
         thead
           tr
+            th action
             th video_title
             th video_published_at
             th video_url
         tbody
           - video.each.with_index do |video, index|
             tr class="table-row video_row"
+              td id='delete_video'
+                form role='form' method='post' action="/outline/#{video.video_id}"
+                input type='hidden' name='_method' value='delete'
+                button type="submit" class="btn btn-sm btn-link" id="video[#{@index}].delete"
+                     i class="fas fa-trash-alt"
+
               td id='td_video_title'
                 span class="video_table_video_title" id="video[#{index}].video_title"
                   = video.video_title

@@ -1,15 +1,20 @@
 # frozen_string_literal: true
 
+require 'rack' # for Rack::MethodOverride
 require 'roda'
 require 'slim'
 
 module Outline
   # Web App
   class App < Roda
+    plugin :halt
+    plugin :flash
+    plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
     plugin :render, engine: 'slim', views: 'app/views'
     plugin :assets, css: 'style.css', path: 'app/views/assets'
     plugin :common_logger, $stderr
-    plugin :halt
+
+    use Rack::MethodOverride # allows HTTP verbs beyond GET/POST (e.g., DELETE)
 
     route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # Load CSS
@@ -17,7 +22,14 @@ module Outline
 
       # GET /
       routing.root do
+        # Get cookie viewer's previously seen projects
+        session[:watching] ||= []
+        # Load previously viewed projects
         video = Repository::For.klass(Entity::Video).all
+        
+        session[:watching] = video.map(&:video_id)
+
+
         view 'home', locals: { video: }
       end
 
@@ -27,8 +39,6 @@ module Outline
           routing.post do
             key_word = routing.params['search_key_word']
             routing.halt(400, 'Search keyword parameter is required') unless key_word
-            # puts "POST /search - Received key_word: #{key_word}" # Log received keyword
-
             routing.redirect "search/#{key_word}"
           end
         end
@@ -63,6 +73,13 @@ module Outline
         end
 
         routing.on String do |video_id|
+          # DELETE /outline/{video_id}
+          routing.delete do
+            session[:watching].delete(video_id)
+            binding.irb
+            routing.redirect '/'
+          end
+
           # GET /outline/video_id
           routing.get do
             # puts "Video_id#{video_id}"
@@ -70,7 +87,9 @@ module Outline
               .new(App.config.API_KEY).find(video_id)
             # puts "Get video=>#{video.inspect}"
             Repository::For.entity(video).create(video)
-
+            # Add new project to watched set in cookies
+            session[:watching].insert(0, video.video_id).uniq!
+            binding.irb
             video = Repository::For.klass(Entity::Video).find_id(video_id)
             # puts "Retrieved video: #{video.inspect}"
             view 'outline', locals: { video: video }
