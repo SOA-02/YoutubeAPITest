@@ -16,8 +16,8 @@
             type='submit' id='repo-form-submit' class='submit' 
             value='submit' class="btn btn-success" 
           } Show Info
-    .row
-      .col-md-12.blank-row
+  .row
+    .col-md-12.blank-row
     - if video.any?
       table class="table table-hover" id="videos_table"
         thead
@@ -31,9 +31,9 @@
             tr class="table-row video_row"
               td id='delete_video'
                 form role='form' method='post' action="/outline/#{video.video_id}"
-                input type='hidden' name='_method' value='delete'
-                button type="submit" class="btn btn-sm btn-link" id="video[#{@index}].delete"
-                     i class="fas fa-trash-alt"
+                  input type='hidden' name='_method' value='delete'
+                  button type="submit" class="btn btn-sm btn-link" id="video[#{@index}].delete"
+                      i class="fas fa-trash-alt"
 
               td id='td_video_title'
                 span class="video_table_video_title" id="video[#{index}].video_title"
