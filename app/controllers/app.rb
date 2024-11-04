@@ -25,8 +25,9 @@ module Outline
         # Get cookie viewer's previously seen projects
         session[:watching] ||= []
         # Load previously viewed projects
-        video = Repository::For.klass(Entity::Video).all
-        
+        video = Repository::For.klass(Entity::Video)
+          .find_all_video(session[:watching])
+        # binding.irb
         session[:watching] = video.map(&:video_id)
 
 
@@ -76,7 +77,7 @@ module Outline
           # DELETE /outline/{video_id}
           routing.delete do
             session[:watching].delete(video_id)
-            binding.irb
+            # binding.irb
             routing.redirect '/'
           end
 

@@ -12,6 +12,12 @@ module Outline
         find_id(entity.video_id)
       end
 
+      def self.find_all_video(video_ids)
+        video_ids.map do |video_id|
+          find_id(video_id)
+        end.compact
+      end
+
       def self.find_id(video_id)
         db_record = Outline::Database::VideoOrm.first(video_id:)
         rebuild_entity(db_record)
