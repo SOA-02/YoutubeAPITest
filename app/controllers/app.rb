@@ -48,12 +48,12 @@ module Outline
       routing.on 'outline' do
         routing.is do
           routing.post do
-            yt_url = routing.params['youtube_url']
-            routing.halt(400, 'YouTube channel URL parameter is required') unless yt_url
+            # yt_url = routing.params['youtube_url']
+            # routing.halt(400, 'YouTube channel URL parameter is required') unless yt_url
 
-            routing.halt(400, 'Invalid YouTube URL') unless (yt_url.include? 'youtube.com') &&
-                                                            (yt_url.include? 'watch?v=')
-            video_id = yt_url[/(?<=v=)[\w-]+/]
+            # routing.halt(400, 'Invalid YouTube URL') unless (yt_url.include? 'youtube.com') &&
+            #                                                 (yt_url.include? 'watch?v=')
+            # video_id = yt_url[/(?<=v=)[\w-]+/]
             # binding.irb
             video = Youtube::VideoMapper
               .new(App.config.API_KEY).find(video_id)
