@@ -10,8 +10,8 @@ module Outline
     plugin :halt
     plugin :flash
     plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
-    plugin :render, engine: 'slim', views: 'app/views'
-    plugin :assets, css: 'style.css', path: 'app/views/assets'
+    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
+    plugin :assets, css: 'style.css', path: 'app/presentation/assets'
     plugin :common_logger, $stderr
 
     use Rack::MethodOverride # allows HTTP verbs beyond GET/POST (e.g., DELETE)
@@ -37,8 +37,8 @@ module Outline
           .find_all_video(session[:watching])
         session[:watching] = video.map(&:video_id)
         flash.now[:notice] = MSG_NO_VIDS if session[:watching].none?
-
-        view 'home', locals: { video: }
+        viewable_videos = Views::VideosList.new(video)
+        view 'home', locals: { videos: viewable_videos }
       end
 
       routing.on 'search' do

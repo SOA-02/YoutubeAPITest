@@ -11,7 +11,7 @@
           1,
           null,
           1,
-          16,
+          18,
           null,
           null
         ]
@@ -784,6 +784,75 @@
           null
         ]
       },
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/presentation/view_objects/video.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/root/Desktop/rubyhw/YoutubeAPITest/app/presentation/view_objects/videos_list.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
       "/root/Desktop/rubyhw/YoutubeAPITest/app/controllers/app.rb": {
         "lines": [
           null,
@@ -825,7 +894,7 @@
           null,
           0,
           0,
-          null,
+          0,
           0,
           null,
           null,
@@ -1082,6 +1151,6 @@
         ]
       }
     },
-    "timestamp": 1730794053
+    "timestamp": 1730816181
   }
 }
