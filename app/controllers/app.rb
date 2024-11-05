@@ -3,7 +3,7 @@
 require 'rack' # for Rack::MethodOverride
 require 'roda'
 require 'slim'
-
+require 'slim/include'
 module Outline
   # Web App
   class App < Roda
@@ -16,19 +16,21 @@ module Outline
 
     use Rack::MethodOverride # allows HTTP verbs beyond GET/POST (e.g., DELETE)
 
+    MSG_NO_VIDS = 'Please enter the keywords you are interested in to get started'
+
     route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # Load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
       # GET /
       routing.root do
-        # Get cookie viewer's previously seen projects
+        # Get cookie viewer's previously seen videos
         session[:watching] ||= []
-        # Load previously viewed projects
+        # Load previously viewed videos
         video = Repository::For.klass(Entity::Video)
           .find_all_video(session[:watching])
         session[:watching] = video.map(&:video_id)
-
+        flash.now[:notice] = MSG_NO_VIDS if session[:watching].none?
 
         view 'home', locals: { video: }
       end
