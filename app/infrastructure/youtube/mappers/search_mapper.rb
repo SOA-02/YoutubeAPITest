@@ -19,14 +19,14 @@ module Outline
 
       def find(key_word)
         data = @gateway.search_info(key_word)
-        # 確認 `items` 是否有內容，並取得第一個項目
-        item_data = data['items']
-        # puts "Item data: #{item_data}"
-        raise 'Video data is missing' if item_data.nil? || item_data.empty? # 若資料為空則報錯
 
-        # 只選擇 id.kind 為 'youtube#video' 的項目
+        item_data = data['items']
+
+        return 'Video data is missing' if item_data.nil? || item_data.empty? 
+
+
         video_items = item_data.select { |item| item['id']['kind'] == 'youtube#video' }
-        raise 'No video items found' if video_items.empty? # 若沒有視頻項目則報錯
+        return 'No video items found' if video_items.empty?
 
         video_items.map do |item|
           build_entity(item)
