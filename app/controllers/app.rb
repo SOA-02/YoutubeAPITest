@@ -24,7 +24,7 @@ module Outline
     MSG_VID_EXISTS = 'Videos already exists.'
     MSG_VIDINFO_NOT_FOUND = 'Sorry,Could not find that  video information.'
 
-    route do |routing| # rubocop:disable Metrics/BlockLength
+    route do |routing|
       routing.assets # Load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
@@ -66,8 +66,8 @@ module Outline
               routing.redirect '/'
             end
             view 'search', locals: { search_results: @search_results }
-          rescue StandardError => e
-            puts "Error: #{e.message} at #{e.backtrace.first}"
+          rescue StandardError => err
+            puts "Error: #{err.message} at #{err.backtrace.first}"
             flash[:error] = MSG_SERVER_ERROR
             routing.redirect '/'
           end
@@ -92,8 +92,8 @@ module Outline
             begin
               video = Youtube::VideoMapper
                 .new(App.config.API_KEY).find(video_id)
-            rescue StandardError => e
-              App.logger.error e.backtrace.join("DB READ PROJ\n")
+            rescue StandardError => err
+              App.logger.error err.backtrace.join("DB READ PROJ\n")
               flash[:error] = MSG_VID_NOT_FOUND
               response.status = 404
               routing.redirect '/'
@@ -109,14 +109,14 @@ module Outline
             session[:watching].insert(0, video.video_id).uniq!
             begin
               video = Repository::For.klass(Entity::Video).find_id(video_id)
-            rescue StandardError => e
+            rescue StandardError
               flash[:error] = MSG_VIDINFO_NOT_FOUND
               response.status = 410
               routing.redirect '/'
             end
             view 'outline', locals: { video: video }
-          rescue StandardError => e
-            puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
+          rescue StandardError => err
+            puts "Error: #{err.message} at #{err.backtrace.first}" # Output to console
             # view 'error', locals: { error_message: e.message }
             flash[:error] = MSG_SERVER_ERROR
             routing.redirect '/'
