@@ -17,6 +17,7 @@ module Outline
       'lib/prettify.min.js'
     ]
     css_files = [
+      'style.css',
       'editormd.css',
       'lib/codemirror/codemirror.min.css',
       'lib/codemirror/addon/dialog/dialog.css',
