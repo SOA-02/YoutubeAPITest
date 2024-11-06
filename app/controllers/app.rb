@@ -7,11 +7,29 @@ require 'slim/include'
 module Outline
   # Web App
   class App < Roda
+    js_files = [
+      'jquery.min.js',
+      'editormd.min.js',
+      'lib/codemirror/codemirror.min.js',
+      'lib/codemirror/addons.min.js',
+      'lib/codemirror/modes.min.js',
+      'lib/marked.min.js',
+      'lib/prettify.min.js'
+    ]
+    css_files = [
+      'editormd.css',
+      'lib/codemirror/codemirror.min.css',
+      'lib/codemirror/addon/dialog/dialog.css',
+      'lib/codemirror/addon/search/matchesonscrollbar.css'
+    ]
     plugin :halt
     plugin :flash
     plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
     plugin :render, engine: 'slim', views: 'app/presentation/views_html'
-    plugin :assets, css: 'style.css', path: 'app/presentation/assets'
+    plugin :assets, path: 'app/presentation/assets',
+                    url: '/',
+                    css: css_files,
+                    js: js_files # 加载 js/lib 文件夹中的所有 JS 文件
     plugin :common_logger, $stderr
 
     use Rack::MethodOverride # allows HTTP verbs beyond GET/POST (e.g., DELETE)

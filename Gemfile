@@ -53,3 +53,7 @@ group :development do
   gem 'rubocop-rake'
   gem 'rubocop-sequel'
 end
+
+# Gemfile
+gem 'fiddle'
+gem 'rdoc'
