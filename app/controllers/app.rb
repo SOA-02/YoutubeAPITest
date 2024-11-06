@@ -21,39 +21,39 @@ module Outline
         view 'home', locals: { video: }
       end
 
-      # routing.on 'search' do
-      #   routing.is do
-      #     # POST /search/
-      #     routing.post do
-      #       key_word = routing.params['search_key_word']
-      #       routing.halt(400, 'Search keyword parameter is required') unless key_word
-      #       # puts "POST /search - Received key_word: #{key_word}" # Log received keyword
+      routing.on 'search' do
+        routing.is do
+          # POST /search/
+          routing.post do
+            key_word = routing.params['search_key_word']
+            routing.halt(400, 'Search keyword parameter is required') unless key_word
+            # puts "POST /search - Received key_word: #{key_word}" # Log received keyword
 
-      #       routing.redirect "search/#{key_word}"
-      #     end
-      #   end
+            routing.redirect "search/#{key_word}"
+          end
+        end
 
-      #   routing.on String do |key_word|
-      #     # GET /search/key_word
-      #     routing.get do
-      #       @search_results = Youtube::SearchMapper
-      #         .new(App.config.API_KEY).find(key_word)
-      #       view 'search', locals: { search_results: @search_results }
-      #     rescue StandardError => e
-      #       puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
-      #       view 'error', locals: { error_message: e.message }
-      #     end
-      #   end
-      # end
+        routing.on String do |key_word|
+          # GET /search/key_word
+          routing.get do
+            @search_results = Youtube::SearchMapper
+              .new(App.config.API_KEY).find(key_word)
+            view 'search', locals: { search_results: @search_results }
+          rescue StandardError => e
+            puts "Error: #{e.message} at #{e.backtrace.first}" # Output to console
+            view 'error', locals: { error_message: e.message }
+          end
+        end
+      end
       routing.on 'outline' do
         routing.is do
           routing.post do
-            yt_url = routing.params['youtube_url']
-            routing.halt(400, 'YouTube channel URL parameter is required') unless yt_url
+            # yt_url = routing.params['youtube_url']
+            # routing.halt(400, 'YouTube channel URL parameter is required') unless yt_url
 
-            routing.halt(400, 'Invalid YouTube URL') unless (yt_url.include? 'youtube.com') &&
-                                                            (yt_url.include? 'watch?v=')
-            video_id = yt_url[/(?<=v=)[\w-]+/]
+            # routing.halt(400, 'Invalid YouTube URL') unless (yt_url.include? 'youtube.com') &&
+            #                                                 (yt_url.include? 'watch?v=')
+            # video_id = yt_url[/(?<=v=)[\w-]+/]
             # binding.irb
             video = Youtube::VideoMapper
               .new(App.config.API_KEY).find(video_id)
@@ -65,11 +65,11 @@ module Outline
         routing.on String do |video_id|
           # GET /outline/video_id
           routing.get do
-            # # puts "Video_id#{video_id}"
-            # video = Youtube::VideoMapper
-            #   .new(App.config.API_KEY).find(video_id)
-            # # puts "Get video=>#{video.inspect}"
-            # Repository::For.entity(video).create(video)
+            # puts "Video_id#{video_id}"
+            video = Youtube::VideoMapper
+              .new(App.config.API_KEY).find(video_id)
+            # puts "Get video=>#{video.inspect}"
+            Repository::For.entity(video).create(video)
 
             video = Repository::For.klass(Entity::Video).find_id(video_id)
             # puts "Retrieved video: #{video.inspect}"

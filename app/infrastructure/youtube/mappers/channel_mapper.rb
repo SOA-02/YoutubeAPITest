@@ -19,14 +19,15 @@ module Outline
 
       def find(channel_id)
         data = @gateway.channel_info(channel_id)
-        # 確認 `items` 是否有內容，並取得第一個項目
+
         item_data = data['items']&.first
         raise 'Video data is missing' unless item_data # 若資料為空則報錯
 
-        build_entity(item_data)
+        ChannelMapper.build_entity(item_data)
       end
 
-      def build_entity(data)
+      # Changed build_entity to a class method
+      def self.build_entity(data)
         DataMapper.new(data).build_entity
       end
 

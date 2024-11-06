@@ -26,6 +26,9 @@ Feature: List of Table of Content
     And H1: # Title of Playlist
     And H2: ## Title of each video
 ```
+## ERD
+![image](https://raw.githubusercontent.com/SOA-02/YoutubeAPITest/refs/heads/MING-CHUNLee-ERM-1/SOA-ER%20Model.drawio.png)
+
 
 ## Resource
 ### YouTube API 
