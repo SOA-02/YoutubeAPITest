@@ -22,17 +22,34 @@ task :respec do
   sh "rerun -c 'rake spec' --ignore 'coverage/*'"
 end
 
-desc 'Run web app'
-task :run do
-  sh 'bundle exec puma'
-end
+desc 'Run web app in default mode'
+task run: ['run:default']
 
+namespace :run do
+  desc 'Run web app in development or production'
+  task :default do
+    sh 'bundle exec puma -p 9393'
+  end
+
+  desc 'Run web app for acceptance tests'
+  task :test do
+    sh 'RACK_ENV=test puma -p 9000'
+  end
+end
 desc 'Keep rerunning web app upon changes'
 task :rerun do
   sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
 end
 
-namespace :db do # rubocop:disable Metrics/BlockLength
+desc 'Generates a 64-byte secret for Rack::Session'
+task :new_session_secret do
+  require 'base64'
+  require 'securerandom' # Corrected capitalization here
+  secret = SecureRandom.random_bytes(64).then { Base64.urlsafe_encode64(_1) }
+  puts "SESSION_SECRET: #{secret}"
+end
+
+namespace :db do
   task :config do # rubocop:disable Rake/Desc
     require 'sequel'
     require_relative 'config/environment' # load config info

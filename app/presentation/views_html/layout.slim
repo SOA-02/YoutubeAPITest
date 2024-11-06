@@ -9,10 +9,16 @@ html
       rel="stylesheet" 
       crossorigin="anonymous"
     }
-    
+        / FontAwesome
+    script{
+      src="https://kit.fontawesome.com/7ece9c0c1e.js"
+      crossorigin="anonymous"
+    }
     / Custom CSS
     / link rel='stylesheet' href='/presentation/assets/css/style.css'
+       / Custom Assets
     == assets(:css)
+    == assets(:js)
   body
     / Popper
     script{ 
@@ -34,6 +40,7 @@ html
               a.text-underline-hover href="/" OuterSpace
 
       section
+        include :flash_bar
         == yield
 
       footer

@@ -8,7 +8,7 @@ module Outline
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::Video => Videos,
+        Entity::Video   => Videos,
         Entity::Channel => Channels
       }.freeze
 
