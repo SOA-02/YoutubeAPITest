@@ -54,7 +54,6 @@ describe 'Tests Youtube API library' do
         end
         puts "Video ID: #{video_id}"
       end
-      binding.irb
     end
     it 'HAPPY: should recognize search result' do
       # 檢查 @result 是否為數組
