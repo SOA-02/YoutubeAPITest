@@ -11,6 +11,7 @@ gem 'rake'
 # Web Application
 gem 'logger', '~> 1.6'
 gem 'puma', '~> 6.4'
+gem 'rack-session', '~> 0.3'
 gem 'roda', '~> 3.85'
 gem 'slim', '~> 5.2'
 
@@ -52,3 +53,7 @@ group :development do
   gem 'rubocop-rake'
   gem 'rubocop-sequel'
 end
+
+# Gemfile
+gem 'fiddle'
+gem 'rdoc'
