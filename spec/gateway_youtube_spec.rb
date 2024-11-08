@@ -37,6 +37,25 @@ describe 'Tests Youtube API library' do
         .find(KEY_WORD)
     end
 
+    it 'HAPPY: search relevant videos' do
+      @search_result = Outline::Youtube::YoutubeApi.new(API_KEY).search_popular(KEY_WORD)
+      @search_result_items = @search_result['items']
+      # Loop through each description to find timestamps
+      @search_result_items.each do |item|
+        video_id = item['id']['videoId']
+        description = item['snippet']['description']
+
+        timestamps = description.scan(/\d{1,2}:\d{2}(?::\d{2})?/)
+         # Matches timestamps like "00:00:00"
+        if timestamps.any?
+          puts "Found timestamps in description: #{timestamps.join(', ')}"
+        else
+          puts "No timestamps found in description: #{description}"
+        end
+        puts "Video ID: #{video_id}"
+      end
+      binding.irb
+    end
     it 'HAPPY: should recognize search result' do
       # 檢查 @result 是否為數組
       assert_kind_of Array, @result

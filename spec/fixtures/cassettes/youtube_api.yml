@@ -1474,4 +1474,1243 @@ http_interactions:
         \"none\",\n        \"publishTime\": \"2022-01-03T08:59:58Z\"\n      }\n    }\n
         \ ]\n}\n"
   recorded_at: Mon, 28 Oct 2024 14:33:25 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3search?key=<API_KEY>&order=viewCount&part=snippet&q=ruby&type=video&videoDefinition=high
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      Referrer-Policy:
+      - no-referrer
+      Content-Length:
+      - '1577'
+      Date:
+      - Wed, 06 Nov 2024 03:43:28 GMT
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE html>
+        <html lang=en>
+          <meta charset=utf-8>
+          <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+          <title>Error 404 (Not Found)!!1</title>
+          <style>
+            *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+          </style>
+          <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+          <p><b>404.</b> <ins>That’s an error.</ins>
+          <p>The requested URL <code>/youtube/v3search</code> was not found on this server.  <ins>That’s all we know.</ins>
+  recorded_at: Wed, 06 Nov 2024 03:43:28 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3search?key=<API_KEY>&order=viewCount&part=snippet&q=Ruby&type=video&videoDefinition=high
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      Referrer-Policy:
+      - no-referrer
+      Content-Length:
+      - '1577'
+      Date:
+      - Wed, 06 Nov 2024 03:45:56 GMT
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE html>
+        <html lang=en>
+          <meta charset=utf-8>
+          <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+          <title>Error 404 (Not Found)!!1</title>
+          <style>
+            *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+          </style>
+          <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+          <p><b>404.</b> <ins>That’s an error.</ins>
+          <p>The requested URL <code>/youtube/v3search</code> was not found on this server.  <ins>That’s all we know.</ins>
+  recorded_at: Wed, 06 Nov 2024 03:45:56 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3search?key=<API_KEY>&order=viewCount&part=snippet&q=Ruby
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      Referrer-Policy:
+      - no-referrer
+      Content-Length:
+      - '1577'
+      Date:
+      - Wed, 06 Nov 2024 03:46:33 GMT
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE html>
+        <html lang=en>
+          <meta charset=utf-8>
+          <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+          <title>Error 404 (Not Found)!!1</title>
+          <style>
+            *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+          </style>
+          <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+          <p><b>404.</b> <ins>That’s an error.</ins>
+          <p>The requested URL <code>/youtube/v3search</code> was not found on this server.  <ins>That’s all we know.</ins>
+  recorded_at: Wed, 06 Nov 2024 03:46:33 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3search?key=<API_KEY>&part=snippet&q=Ruby
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      Referrer-Policy:
+      - no-referrer
+      Content-Length:
+      - '1577'
+      Date:
+      - Wed, 06 Nov 2024 03:46:49 GMT
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE html>
+        <html lang=en>
+          <meta charset=utf-8>
+          <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+          <title>Error 404 (Not Found)!!1</title>
+          <style>
+            *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+          </style>
+          <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+          <p><b>404.</b> <ins>That’s an error.</ins>
+          <p>The requested URL <code>/youtube/v3search</code> was not found on this server.  <ins>That’s all we know.</ins>
+  recorded_at: Wed, 06 Nov 2024 03:46:49 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&order=viewCount&part=snippet&q=Ruby
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 06 Nov 2024 03:48:59 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "UN4HapxiShemeXUzppYi-DLGYy4",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "EcoANtbUVw9v-rymi8wH5cqwt9k",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "gbt6cTZSKgo"
+              },
+              "snippet": {
+                "publishedAt": "2021-03-10T19:08:40Z",
+                "channelId": "UCip4vBJAJrQo8U4PLCb1nUA",
+                "title": "Ruby - Hetta Tanya [ Official Lyrics Video] | روبي - حته تانيه",
+                "description": "Ruby - Hetta Tanya [ Official Lyrics Video] | روبي - حته تانيه حصريا لعملاء فودافون ابعت 632 ل 5555 و خليها كول تونك و لو عايز ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/gbt6cTZSKgo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/gbt6cTZSKgo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/gbt6cTZSKgo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Ruby",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-03-10T19:08:40Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "qSork_ILBlv5ACEGbdpk-5HC1NQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "ztB_qLZPsCE"
+              },
+              "snippet": {
+                "publishedAt": "2018-07-04T15:00:09Z",
+                "channelId": "UC_wITz-Ze4JFc3WLQA1n3Hw",
+                "title": "Ruby helps Babies! Kids Pretend Play with Baby Dolls and morning routine video",
+                "description": "Ruby pretend play as mummy helping the babies with morning routine and pretend food toys. The family goes to have fun at the ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ztB_qLZPsCE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ztB_qLZPsCE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ztB_qLZPsCE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "RubyandBonnie",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-07-04T15:00:09Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "PFxk1jK7rQpOs0y4hFX-G9gLGlU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "0jp_vIBa9mA"
+              },
+              "snippet": {
+                "publishedAt": "2022-06-24T09:31:00Z",
+                "channelId": "UC_wITz-Ze4JFc3WLQA1n3Hw",
+                "title": "Ruby and Bonnie build a good friendship at school",
+                "description": "Ruby and Bonnie are building a good relationship at school to show how it important it is to be kind and supportive to your friends.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/0jp_vIBa9mA/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/0jp_vIBa9mA/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/0jp_vIBa9mA/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "RubyandBonnie",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-06-24T09:31:00Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "-XYwITj5bxqFRVnR_g6DxZXd6Bg",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "-Q2hKb1nGYg"
+              },
+              "snippet": {
+                "publishedAt": "2023-09-08T10:30:00Z",
+                "channelId": "UC_wITz-Ze4JFc3WLQA1n3Hw",
+                "title": "Ruby and Bonnie The best school stories for kids | 1 Hour Video",
+                "description": "Ruby and Bonnie The best school stories for kids | 1 Hour Video 00:00 Ruby and Bonnie Pretend Play Pop It Toys In School 5:48 ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/-Q2hKb1nGYg/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/-Q2hKb1nGYg/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/-Q2hKb1nGYg/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "RubyandBonnie",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-09-08T10:30:00Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "wJWPQujMg263mPgx0_wXoYboWEs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "g-0oVCy-VKw"
+              },
+              "snippet": {
+                "publishedAt": "2022-08-02T09:30:14Z",
+                "channelId": "UC_wITz-Ze4JFc3WLQA1n3Hw",
+                "title": "Ruby and Bonnie school stories with good moral values",
+                "description": "Ruby and Bonnie in a series of new school stories about knowledge which is very important and brings competitive advantage for ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/g-0oVCy-VKw/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/g-0oVCy-VKw/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/g-0oVCy-VKw/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "RubyandBonnie",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-08-02T09:30:14Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Wed, 06 Nov 2024 03:48:59 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&order=viewCount&part=snippet&q=Ruby%20tutorial
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 06 Nov 2024 04:04:33 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n  \"kind\": \"youtube#searchListResponse\",\n  \"etag\": \"NkCHS6Gsxrjv4dgBYqAGomacjeE\",\n
+        \ \"nextPageToken\": \"CAUQAA\",\n  \"regionCode\": \"TW\",\n  \"pageInfo\":
+        {\n    \"totalResults\": 1000000,\n    \"resultsPerPage\": 5\n  },\n  \"items\":
+        [\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"MH90rNEbMmhEzEtCE3EW92eYvC8\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"lTjyG-1RZ9A\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2023-06-01T15:41:00Z\",\n        \"channelId\": \"UCcYTCcPMaMrHIiTr-5hxcJw\",\n
+        \       \"title\": \"Hoshino Ruby ❤️ Oshi no Ko -  Sculpting Anime Clay Art
+        Figure\",\n        \"description\": \"Hello guys, this is Clay KM. I made
+        Hoshino Ruby from Anime Oshi no Ko with air dry clay. I am using air dry clay
+        called 'I CLAY' ...\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/lTjyG-1RZ9A/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/lTjyG-1RZ9A/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/lTjyG-1RZ9A/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"클레이 꼼망 Clay KM\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2023-06-01T15:41:00Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"Yg3Hkd8ohA6R_rdvzKwztjIctnY\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"qMkXnwRlpRo\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2022-04-01T08:45:40Z\",\n        \"channelId\": \"UCYqksDldZTkKmsrBb4OGJ9g\",\n
+        \       \"title\": \"Learn Colors With Lucas and Ruby | Learning Video For
+        Toddlers | \U0001F308 Colour For Kids RV AppStudios\",\n        \"description\":
+        \"Help your baby, toddler, preschooler or kindergartener learn all the colors
+        of the rainbow with this adorable learning video for kids!\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/qMkXnwRlpRo/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/qMkXnwRlpRo/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/qMkXnwRlpRo/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Toddler Learning Videos For Kids - Lucas & Friends\",\n
+        \       \"liveBroadcastContent\": \"none\",\n        \"publishTime\": \"2022-04-01T08:45:40Z\"\n
+        \     }\n    },\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\":
+        \"fpYFL_ouk9NWvvokr7w4CGn0t3M\",\n      \"id\": {\n        \"kind\": \"youtube#video\",\n
+        \       \"videoId\": \"vt9uFSTKNlk\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2023-06-28T00:27:59Z\",\n        \"channelId\": \"UCPf3hAGEPILvDnILzBTHpZA\",\n
+        \       \"title\": \"Kaka Ruby Membawakan Lagu Dzuqtu Di Perpisahan Beryl\",\n
+        \       \"description\": \"\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/vt9uFSTKNlk/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/vt9uFSTKNlk/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/vt9uFSTKNlk/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Arinaga Family\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2023-06-28T00:27:59Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"MQdhm2dr2wRySj4KPhUrrrYdN_U\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"9pWprlrNEYw\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2022-02-09T11:00:04Z\",\n        \"channelId\": \"UC_wITz-Ze4JFc3WLQA1n3Hw\",\n
+        \       \"title\": \"Ruby and Bonnie Learns Simple DIY Science Experiments\",\n
+        \       \"description\": \"Ruby and Bonnie arrive home with Science homework
+        after school. Granny helps the girls with their homework and illustrates 5
+        ...\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/9pWprlrNEYw/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/9pWprlrNEYw/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/9pWprlrNEYw/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"RubyandBonnie\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2022-02-09T11:00:04Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"aDaZmlduHsABfzE2LD7vMUkJ5oo\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"soXuxjT33dk\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2024-10-08T04:54:00Z\",\n        \"channelId\": \"UCe6XlMMfgFLSgAwqU2ao_JQ\",\n
+        \       \"title\": \"Draw With Me Rainbow Ruby #fyp #rainbowruby #drawwithme
+        @deliindonesia #art\",\n        \"description\": \"\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/soXuxjT33dk/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/soXuxjT33dk/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/soXuxjT33dk/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"KAKAOLA TV\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2024-10-08T04:54:00Z\"\n      }\n    }\n
+        \ ]\n}\n"
+  recorded_at: Wed, 06 Nov 2024 04:04:33 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&order=relevance&part=snippet&q=Ruby%20code%20tutorial%20lectures
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 06 Nov 2024 04:11:01 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "0AViO_BIDWEeCZ0RC4jDBns28XU",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "je2opN2twvouoG-m1t8S9yfIB6A",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLLAZ4kZ9dFpO90iMas70Tt4_wYjhLGkya"
+              },
+              "snippet": {
+                "publishedAt": "2017-11-01T03:39:13Z",
+                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
+                "title": "Ruby - Programming Language | Tutorial",
+                "description": "This course will give you a full introduction into all of the core concepts in ruby. Follow along with the videos and you'll be a ruby ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/CIe1DxrSrhs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/CIe1DxrSrhs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/CIe1DxrSrhs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Giraffe Academy",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-11-01T03:39:13Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "hW96mNU3ZGajP7EpSg8vQKYMO4Q",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLS1QulWo1RIbNBXZAeVbkkHEj9zsEbXQK"
+              },
+              "snippet": {
+                "publishedAt": "2021-03-28T21:28:48Z",
+                "channelId": "UCs6nmQViDpUw0nuIx9c_WvA",
+                "title": "Ruby Tutorial For Beginners",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ml5sNqftiK4/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ml5sNqftiK4/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ml5sNqftiK4/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "ProgrammingKnowledge",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-03-28T21:28:48Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "W2_Q-cC6tUEC7P0Rq6U3bDO3Ji8",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLlxmoA0rQ-Lx45j3D6da7-Iqvo5wtjKBm"
+              },
+              "snippet": {
+                "publishedAt": "2014-04-08T07:44:58Z",
+                "channelId": "UC0FPjuZLQ16UpvLtbs6LYpg",
+                "title": "Ruby Tutorial for Beginners, Ruby programming tutorials",
+                "description": "New to Ruby? Learn smart programming with Ruby with concepts.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/SHzeVBrW_rA/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/SHzeVBrW_rA/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/SHzeVBrW_rA/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Smartherd",
+                "liveBroadcastContent": "none",
+                "publishTime": "2014-04-08T07:44:58Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "UU8rhJf-CZ0Blzm1G9lP_9IOooo",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PL1512BD72E7C9FFCA"
+              },
+              "snippet": {
+                "publishedAt": "2012-02-01T04:09:54Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorials Playlist",
+                "description": "thenewboston Official Playlist for Ruby Programming Tutorials!",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/WJlfVjGt6Hg/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/WJlfVjGt6Hg/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/WJlfVjGt6Hg/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-02-01T04:09:54Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "2oDCli9ba04gOkhjL3yUpDm6V4I",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLMK2xMz5H5Zv8eC8b4K6tMaE1-Z9FgSOp"
+              },
+              "snippet": {
+                "publishedAt": "2013-11-12T22:12:27Z",
+                "channelId": "UCuRCaGY0u5tOtgyZuPqQReA",
+                "title": "Ruby Programming Tutorials",
+                "description": "Tutorials on Ruby Programming. Learn to code with these easy to follow video instructions.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8I539U5lXWY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8I539U5lXWY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8I539U5lXWY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Jake Day",
+                "liveBroadcastContent": "none",
+                "publishTime": "2013-11-12T22:12:27Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Wed, 06 Nov 2024 04:11:01 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=cs50
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 06 Nov 2024 13:01:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "Oo4ZFusATqcM8tZJMC6SjBrO5jM",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "6p9mGBCcK3ECFASTWCiCVUIp9Tg",
+              "id": {
+                "kind": "youtube#channel",
+                "channelId": "UCcabW7890RKJzL968QWEykA"
+              },
+              "snippet": {
+                "publishedAt": "2011-12-15T01:36:09Z",
+                "channelId": "UCcabW7890RKJzL968QWEykA",
+                "title": "CS50",
+                "description": "This is CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://yt3.ggpht.com/ytc/AIdro_m7MWMBm4PynPndRMCxUEfNcU9Eufkk5ZkYI5RNjPchQ_c=s88-c-k-c0xffffffff-no-rj-mo"
+                  },
+                  "medium": {
+                    "url": "https://yt3.ggpht.com/ytc/AIdro_m7MWMBm4PynPndRMCxUEfNcU9Eufkk5ZkYI5RNjPchQ_c=s240-c-k-c0xffffffff-no-rj-mo"
+                  },
+                  "high": {
+                    "url": "https://yt3.ggpht.com/ytc/AIdro_m7MWMBm4PynPndRMCxUEfNcU9Eufkk5ZkYI5RNjPchQ_c=s800-c-k-c0xffffffff-no-rj-mo"
+                  }
+                },
+                "channelTitle": "CS50",
+                "liveBroadcastContent": "none",
+                "publishTime": "2011-12-15T01:36:09Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "nvsnixIH6jMCEEYJLiLVh6JgDuQ",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLhQjrBD2T381WAHyx1pq-sBfykqMBI7V4"
+              },
+              "snippet": {
+                "publishedAt": "2023-12-02T18:56:23Z",
+                "channelId": "UCcabW7890RKJzL968QWEykA",
+                "title": "CS50x 2024 Lectures",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/3LPJfIKxwWc/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/3LPJfIKxwWc/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/3LPJfIKxwWc/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "CS50",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-12-02T18:56:23Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "5zCUoKyizqwLmbI0ipntcRQee2w",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V"
+              },
+              "snippet": {
+                "publishedAt": "2022-06-30T09:56:15Z",
+                "channelId": "UCcabW7890RKJzL968QWEykA",
+                "title": "CS50&#39;s Introduction to Programming with Python (CS50P) 2022",
+                "description": "This is CS50P, CS50's Introduction to Programming with Python. Register for free at https://cs50.edx.org/python. Slides and source ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OvKCESUCWII/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OvKCESUCWII/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OvKCESUCWII/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "CS50",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-06-30T09:56:15Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "mEEotOwUF1ie9pOBtDqsjpgiCtw",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "LfaMVlDaQ24"
+              },
+              "snippet": {
+                "publishedAt": "2023-10-24T12:43:08Z",
+                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+                "title": "Harvard CS50 (2023) – Full Computer Science University Course",
+                "description": "Learn the basics of computer science from Harvard University. This is CS50, an introduction to the intellectual enterprises of ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/LfaMVlDaQ24/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/LfaMVlDaQ24/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/LfaMVlDaQ24/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "freeCodeCamp.org",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-10-24T12:43:08Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "nXJZxLY78T1C7SAzgbK_U-q_eco",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4"
+              },
+              "snippet": {
+                "publishedAt": "2022-12-19T20:53:13Z",
+                "channelId": "UCcabW7890RKJzL968QWEykA",
+                "title": "CS50x 2023 Lectures",
+                "description": "This is CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/IDDmrzzB14M/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/IDDmrzzB14M/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/IDDmrzzB14M/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "CS50",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-12-19T20:53:13Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Wed, 06 Nov 2024 13:01:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20code%20tutorial%20lectures&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 06 Nov 2024 13:15:54 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "9hGakG4QtLhZShwHOKZkTohXhlY",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8wZ2ZD--VTk"
+              },
+              "snippet": {
+                "publishedAt": "2017-12-05T20:13:32Z",
+                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
+                "title": "Ruby Programming | In One Video",
+                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Giraffe Academy",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-12-05T20:13:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "5zsdKXYhRbXFCw4P4O0xT_qSgQs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "OTW56PCFE74"
+              },
+              "snippet": {
+                "publishedAt": "2016-12-31T00:00:02Z",
+                "channelId": "UCzp9tRqDmwQnVxL-yxeU6yA",
+                "title": "Lecture 3: Simple Ruby Code Example",
+                "description": "Hi Unicorn, we are creating so many courses/tutorials/videos/Vlog on TutorialDrive so that students can learn technologies and ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "TutorialDrive - Free Tutorials",
+                "liveBroadcastContent": "none",
+                "publishTime": "2016-12-31T00:00:02Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "1hi_ey73EG5IP2xO9492zNzN8do",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "PsH6uOuZsKY"
+              },
+              "snippet": {
+                "publishedAt": "2012-02-09T20:42:01Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 25 - Extracting Numbers and Character Classes",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-02-09T20:42:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "3vpn8A4Sk-nVZLgdwDuCAt4_TG4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "xyDoP5a_dvo"
+              },
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-26T14:30:10Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "KKSb5kqaGXUOaJTy7XRQcMcMUg0",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "m_H8lxpZrdQ"
+              },
+              "snippet": {
+                "publishedAt": "2012-02-14T21:09:01Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 29 - each and length",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/m_H8lxpZrdQ/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/m_H8lxpZrdQ/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/m_H8lxpZrdQ/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-02-14T21:09:01Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Wed, 06 Nov 2024 13:15:54 GMT
 recorded_with: VCR 6.3.1
