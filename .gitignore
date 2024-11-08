@@ -6,3 +6,8 @@ coverage/*
 config/secrets2.yml
 *.db
 .bundle/
+
+node_modules/
+package-lock.json
+package.json
+.prettierrc.yml

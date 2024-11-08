@@ -16,26 +16,34 @@
             type='submit' id='repo-form-submit' class='submit' 
             value='submit' class="btn btn-success" 
           } Show Info
-    .row
-      .col-md-12.blank-row
-    - if video.any?
+  .row
+    .col-md-12.blank-row
+    - if videos.any?
       table class="table table-hover" id="videos_table"
         thead
           tr
+            th action
             th video_title
             th video_published_at
             th video_url
         tbody
-          - video.each.with_index do |video, index|
+          - videos.each do |video|
             tr class="table-row video_row"
+              td id='delete_video'
+                form role='form' method='post' action=video.praise_link 
+                  input type='hidden' name='_method' value='delete'
+                  button type="submit" class="btn btn-sm btn-link" id="video[#{@index}].delete"
+                      i class="fas fa-trash-alt"
+
               td id='td_video_title'
-                span class="video_table_video_title" id="video[#{index}].video_title"
-                  = video.video_title
+                span class="video_table_video_title" id="index_str.video_title"
+                  a href=video.praise_link  target="_blank"
+                    = video.title
               td id='td_video_published_at'
-                span class="video_table_video_published_at" id="video[#{index}].video_published_at"
-                  = video.video_published_at
+                span class="video_table_video_published_at" id="index_str.video_published_at"
+                  = video.published_at
               td id='td_video_url'
-                span class="video_table_video_url" id="video[#{index}].video_url"
-                  a href="https://www.youtube.com/watch?v=#{video.video_id}" target="_blank"
-                    = video.video_id
+                span class="video_table_video_url" id="index_str.video_url"
+                  a href="https://www.youtube.com/watch?v=#{video.id}" target="_blank"
+                    = video.id
 
