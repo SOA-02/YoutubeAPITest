@@ -1,11 +1,12 @@
 .container
   .row
     .col
-      h2 Search Information
+      h2 Search Results
 
   - @search_results.each do |result|
     .row.mb-4
       .col-12
         a.card(href='/outline/#{result.video_id}'  style="text-decoration: none; color: inherit;")
           .card-body
-            p title: #{result.title}
+            p #{result.title}
+            img.img-thumbnail src=result.default_thumbnail_url

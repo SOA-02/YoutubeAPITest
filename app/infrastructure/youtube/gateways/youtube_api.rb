@@ -20,6 +20,10 @@ module Outline
         Request.new(@api_key).yt_search_path(key_word).parse
       end
 
+      def search_relevant(keyword)
+        Request.new(@api_key).yt_search_relevant_path(keyword).parse
+      end
+
       def video_info(video_id)
         Request.new(@api_key).yt_video_path(video_id).parse
       end
@@ -46,6 +50,11 @@ module Outline
           get(YT_API_ROOT + "/search?part=snippet&maxResults=#{MAX_RESULTS}&q=#{key_word}&key=#{@api_key}")
         end
 
+        def yt_search_relevant_path(keyword)
+          modified_keyword = "#{keyword} code lectures tutorials"
+          get(YT_API_ROOT + "/search?part=snippet&maxResults=#{MAX_RESULTS}&type=video&q=#{modified_keyword}&key=#{@api_key}")
+        end
+
         def yt_playlist_path(playlist_id)
           get(YT_API_ROOT + "/playlists?id=#{playlist_id}&key=#{@api_key}&part=snippet")
         end
@@ -54,8 +63,12 @@ module Outline
           get(YT_API_ROOT + "/videos?id=#{video_id}&key=#{@api_key}&part=snippet")
         end
 
+        def yt_comment_path(video_id)
+          
+        end
+
         def get(url)
-          puts("先確認URL是否正確#{url}")
+          # puts("先確認URL是否正確#{url}")
           http_response = HTTP.headers('Accept' => 'application/json').get(url)
           Response.new(http_response).tap do |response|
             raise(response.error) unless response.successful?

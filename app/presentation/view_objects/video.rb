@@ -32,6 +32,10 @@ module Views
       @video.video_title
     end
 
+    def description
+      @video.video_description
+    end
+    
     def published_at
       @video.video_published_at
     end
