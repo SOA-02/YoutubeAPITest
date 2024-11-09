@@ -78,7 +78,7 @@ module Outline
         routing.on String do |key_word|
           # GET /search/key_word
           routing.get do
-            @search_results = Youtube::SearchMapper
+            @search_results = Youtube::SearchRelevantMapper
               .new(App.config.API_KEY).find(key_word)
             if @search_results == 'No video items found'
               flash[:error] = MSG_NO_RECLIST
@@ -111,7 +111,7 @@ module Outline
             begin
               video = Youtube::VideoMapper
                 .new(App.config.API_KEY).find(video_id)
-            rescue StandardError => err
+            rescue StandardError
 
               flash[:error] = MSG_VID_NOT_FOUND
               response.status = 404
@@ -133,7 +133,12 @@ module Outline
               response.status = 410
               routing.redirect '/'
             end
-            view 'outline', locals: { video: video }
+
+            # Extract timestamps from description data
+            timestamp_parser = Views::Timestamp.new(video.video_description)
+            toc = timestamp_parser.extract_toc
+
+            view 'outline', locals: { video: video, toc: toc }
           rescue StandardError => err
             puts "Error: #{err.message} at #{err.backtrace.first}" # Output to console
             # view 'error', locals: { error_message: e.message }

@@ -20,7 +20,7 @@ module Outline
         Request.new(@api_key).yt_search_path(key_word).parse
       end
 
-      def search_popular(keyword)
+      def search_relevant(keyword)
         Request.new(@api_key).yt_search_relevant_path(keyword).parse
       end
 
@@ -51,7 +51,7 @@ module Outline
         end
 
         def yt_search_relevant_path(keyword)
-          modified_keyword = "#{keyword} code tutorial lectures"
+          modified_keyword = "#{keyword} code lectures tutorials"
           get(YT_API_ROOT + "/search?part=snippet&maxResults=#{MAX_RESULTS}&type=video&q=#{modified_keyword}&key=#{@api_key}")
         end
 
