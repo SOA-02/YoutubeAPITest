@@ -1,21 +1,19 @@
 .container
   .row
-    .col-5
-      img.img-thumbnail src=video.video_thumbnail_url alt="..."
-    .col-6 
+    .col-md-6
+      iframe width="100%" height="315" src="https://www.youtube.com/embed/#{video.video_id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+    .col-md-6
       h1
         a href="https://www.youtube.com/watch?v=#{video.video_id}" target="_blank" style="text-decoration: none; color: inherit;"
           = video.video_title
-          br
-          = toc
-    .row.mb-4
-      .col-12
-        #test-editormd
-          textarea#editor-content
-            
-          
-          
-
+  .row.mb-4
+    .col-12
+      #test-editormd
+        textarea#editor-content
+          = "## #{video.video_title}\n\n"
+          - toc.each do |timestamp, title|
+            = "## #{timestamp} #{title}\n\n"     
+    
   / 初始化 Editor.md 編輯器
   script type="text/javascript"
     |
@@ -23,16 +21,12 @@
       $(function() {
         try {
           testEditor = editormd("test-editormd", {
-            width   : "90%",
+            width   : "100%",
             height  : 640,
             syncScrolling : "single",
             path    : "./lib/" 
           });
           console.log(testEditor);
-
-          // set title
-          var editorContent = document.getElementById('editor-content');
-          editorContent.value = "## #{video.video_title}\n\n ## #{toc[0][0]} #{toc[0][1]}";
         } catch (err) {
           console.error("Error initializing Editor.md:", err);
         }

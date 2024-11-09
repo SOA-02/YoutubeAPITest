@@ -109,6 +109,7 @@ describe 'Tests Youtube API library' do
 
     it 'HAPPY: should parse video description' do
       @toc = Views::Timestamp.new(@video.video_description).extract_toc
+      binding.irb
       assert_kind_of Array, @toc
       @toc.each do |timestamp, title|
         assert_match(/\d{1,2}:\d{2}(?::\d{2})?/, timestamp) # Check timestamp format
