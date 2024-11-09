@@ -20,7 +20,7 @@ module Outline
         Request.new(@api_key).yt_search_path(key_word).parse
       end
 
-      def search_popular(keyword)
+      def search_relevant(keyword)
         Request.new(@api_key).yt_search_relevant_path(keyword).parse
       end
 

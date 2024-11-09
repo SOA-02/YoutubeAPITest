@@ -6,11 +6,15 @@
       h1
         a href="https://www.youtube.com/watch?v=#{video.video_id}" target="_blank" style="text-decoration: none; color: inherit;"
           = video.video_title
+          br
+          = toc
     .row.mb-4
       .col-12
         #test-editormd
-          textarea
-            | ## Sample Markdown Content!!!!
+          textarea#editor-content
+            
+          
+          
 
   / 初始化 Editor.md 編輯器
   script type="text/javascript"
@@ -25,6 +29,10 @@
             path    : "./lib/" 
           });
           console.log(testEditor);
+
+          // set title
+          var editorContent = document.getElementById('editor-content');
+          editorContent.value = "## #{video.video_title}\n\n ## #{toc[0][0]} #{toc[0][1]}";
         } catch (err) {
           console.error("Error initializing Editor.md:", err);
         }
