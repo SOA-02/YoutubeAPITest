@@ -111,7 +111,7 @@ module Outline
             begin
               video = Youtube::VideoMapper
                 .new(App.config.API_KEY).find(video_id)
-            rescue StandardError
+            rescue StandardError => err
 
               flash[:error] = MSG_VID_NOT_FOUND
               response.status = 404
