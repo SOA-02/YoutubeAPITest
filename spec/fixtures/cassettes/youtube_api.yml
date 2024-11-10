@@ -2713,4 +2713,1378 @@ http_interactions:
           ]
         }
   recorded_at: Wed, 06 Nov 2024 13:15:54 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20code%20tutorial%20lectures&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 09 Nov 2024 09:12:27 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "9hGakG4QtLhZShwHOKZkTohXhlY",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8wZ2ZD--VTk"
+              },
+              "snippet": {
+                "publishedAt": "2017-12-05T20:13:32Z",
+                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
+                "title": "Ruby Programming | In One Video",
+                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Giraffe Academy",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-12-05T20:13:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "5zsdKXYhRbXFCw4P4O0xT_qSgQs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "OTW56PCFE74"
+              },
+              "snippet": {
+                "publishedAt": "2016-12-31T00:00:02Z",
+                "channelId": "UCzp9tRqDmwQnVxL-yxeU6yA",
+                "title": "Lecture 3: Simple Ruby Code Example",
+                "description": "Hi Unicorn, we are creating so many courses/tutorials/videos/Vlog on TutorialDrive so that students can learn technologies and ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "TutorialDrive - Free Tutorials",
+                "liveBroadcastContent": "none",
+                "publishTime": "2016-12-31T00:00:02Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "1hi_ey73EG5IP2xO9492zNzN8do",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "PsH6uOuZsKY"
+              },
+              "snippet": {
+                "publishedAt": "2012-02-09T20:42:01Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 25 - Extracting Numbers and Character Classes",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-02-09T20:42:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "3vpn8A4Sk-nVZLgdwDuCAt4_TG4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "xyDoP5a_dvo"
+              },
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-26T14:30:10Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "KKSb5kqaGXUOaJTy7XRQcMcMUg0",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "m_H8lxpZrdQ"
+              },
+              "snippet": {
+                "publishedAt": "2012-02-14T21:09:01Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 29 - each and length",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/m_H8lxpZrdQ/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/m_H8lxpZrdQ/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/m_H8lxpZrdQ/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-02-14T21:09:01Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sat, 09 Nov 2024 09:12:27 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=P6FORpg0KVo&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 09 Nov 2024 12:42:20 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "UtJD87KuYdjrykKFh3gnH0hA_NY",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "iqHMrqLfD09H6ZaKg7xlgLiHoig",
+              "id": "P6FORpg0KVo",
+              "snippet": {
+                "publishedAt": "2023-10-26T11:00:18Z",
+                "channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+                "title": "How to Make Learning as Addictive as Social Media | Duolingo's Luis Von Ahn | TED",
+                "description": "When technologist Luis von Ahn was building the popular language-learning platform Duolingo, he faced a big problem: Could an app designed to teach you something ever compete with addictive platforms like Instagram and TikTok? He explains how Duolingo harnesses the psychological techniques of social media and mobile games to get you excited to learn — all while spreading access to education across the world.\n\nIf you love watching TED Talks like this one, become a TED Member to support our mission of spreading ideas: https://ted.com/membership\n\nFollow TED! \nTwitter: https://twitter.com/TEDTalks\nInstagram: https://www.instagram.com/ted\nFacebook: https://facebook.com/TED\nLinkedIn: https://www.linkedin.com/company/ted-conferences\nTikTok: https://www.tiktok.com/@tedtoks\n\nThe TED Talks channel features talks, performances and original series from the world's leading thinkers and doers. Subscribe to our channel for videos on Technology, Entertainment and Design — plus science, business, global issues, the arts and more. Visit https://TED.com to get our entire library of TED Talks, transcripts, translations, personalized talk recommendations and more.\n\nWatch more: https://go.ted.com/luisvonahn\n\nhttps://youtu.be/P6FORpg0KVo\n\nTED's videos may be used for non-commercial purposes under a Creative Commons License, Attribution–Non Commercial–No Derivatives (or the CC BY – NC – ND 4.0 International) and in accordance with our TED Talks Usage Policy: https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy. For more information on using TED for commercial purposes (e.g. employee learning, in a film or online course), please submit a Media Request at https://media-requests.ted.com\n\n#TED #TEDTalks #Duolingo",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "TED",
+                "tags": [
+                  "TEDTalk",
+                  "TEDTalks",
+                  "TED Talk",
+                  "TED Talks",
+                  "TED"
+                ],
+                "categoryId": "28",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "How to Make Learning as Addictive as Social Media | Duolingo's Luis Von Ahn | TED",
+                  "description": "When technologist Luis von Ahn was building the popular language-learning platform Duolingo, he faced a big problem: Could an app designed to teach you something ever compete with addictive platforms like Instagram and TikTok? He explains how Duolingo harnesses the psychological techniques of social media and mobile games to get you excited to learn — all while spreading access to education across the world.\n\nIf you love watching TED Talks like this one, become a TED Member to support our mission of spreading ideas: https://ted.com/membership\n\nFollow TED! \nTwitter: https://twitter.com/TEDTalks\nInstagram: https://www.instagram.com/ted\nFacebook: https://facebook.com/TED\nLinkedIn: https://www.linkedin.com/company/ted-conferences\nTikTok: https://www.tiktok.com/@tedtoks\n\nThe TED Talks channel features talks, performances and original series from the world's leading thinkers and doers. Subscribe to our channel for videos on Technology, Entertainment and Design — plus science, business, global issues, the arts and more. Visit https://TED.com to get our entire library of TED Talks, transcripts, translations, personalized talk recommendations and more.\n\nWatch more: https://go.ted.com/luisvonahn\n\nhttps://youtu.be/P6FORpg0KVo\n\nTED's videos may be used for non-commercial purposes under a Creative Commons License, Attribution–Non Commercial–No Derivatives (or the CC BY – NC – ND 4.0 International) and in accordance with our TED Talks Usage Policy: https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy. For more information on using TED for commercial purposes (e.g. employee learning, in a film or online course), please submit a Media Request at https://media-requests.ted.com\n\n#TED #TEDTalks #Duolingo"
+                },
+                "defaultAudioLanguage": "en"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sat, 09 Nov 2024 12:42:20 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=P6FORpg0KVo&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 09 Nov 2024 12:42:20 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "UtJD87KuYdjrykKFh3gnH0hA_NY",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "iqHMrqLfD09H6ZaKg7xlgLiHoig",
+              "id": "P6FORpg0KVo",
+              "snippet": {
+                "publishedAt": "2023-10-26T11:00:18Z",
+                "channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+                "title": "How to Make Learning as Addictive as Social Media | Duolingo's Luis Von Ahn | TED",
+                "description": "When technologist Luis von Ahn was building the popular language-learning platform Duolingo, he faced a big problem: Could an app designed to teach you something ever compete with addictive platforms like Instagram and TikTok? He explains how Duolingo harnesses the psychological techniques of social media and mobile games to get you excited to learn — all while spreading access to education across the world.\n\nIf you love watching TED Talks like this one, become a TED Member to support our mission of spreading ideas: https://ted.com/membership\n\nFollow TED! \nTwitter: https://twitter.com/TEDTalks\nInstagram: https://www.instagram.com/ted\nFacebook: https://facebook.com/TED\nLinkedIn: https://www.linkedin.com/company/ted-conferences\nTikTok: https://www.tiktok.com/@tedtoks\n\nThe TED Talks channel features talks, performances and original series from the world's leading thinkers and doers. Subscribe to our channel for videos on Technology, Entertainment and Design — plus science, business, global issues, the arts and more. Visit https://TED.com to get our entire library of TED Talks, transcripts, translations, personalized talk recommendations and more.\n\nWatch more: https://go.ted.com/luisvonahn\n\nhttps://youtu.be/P6FORpg0KVo\n\nTED's videos may be used for non-commercial purposes under a Creative Commons License, Attribution–Non Commercial–No Derivatives (or the CC BY – NC – ND 4.0 International) and in accordance with our TED Talks Usage Policy: https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy. For more information on using TED for commercial purposes (e.g. employee learning, in a film or online course), please submit a Media Request at https://media-requests.ted.com\n\n#TED #TEDTalks #Duolingo",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/P6FORpg0KVo/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "TED",
+                "tags": [
+                  "TEDTalk",
+                  "TEDTalks",
+                  "TED Talk",
+                  "TED Talks",
+                  "TED"
+                ],
+                "categoryId": "28",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "How to Make Learning as Addictive as Social Media | Duolingo's Luis Von Ahn | TED",
+                  "description": "When technologist Luis von Ahn was building the popular language-learning platform Duolingo, he faced a big problem: Could an app designed to teach you something ever compete with addictive platforms like Instagram and TikTok? He explains how Duolingo harnesses the psychological techniques of social media and mobile games to get you excited to learn — all while spreading access to education across the world.\n\nIf you love watching TED Talks like this one, become a TED Member to support our mission of spreading ideas: https://ted.com/membership\n\nFollow TED! \nTwitter: https://twitter.com/TEDTalks\nInstagram: https://www.instagram.com/ted\nFacebook: https://facebook.com/TED\nLinkedIn: https://www.linkedin.com/company/ted-conferences\nTikTok: https://www.tiktok.com/@tedtoks\n\nThe TED Talks channel features talks, performances and original series from the world's leading thinkers and doers. Subscribe to our channel for videos on Technology, Entertainment and Design — plus science, business, global issues, the arts and more. Visit https://TED.com to get our entire library of TED Talks, transcripts, translations, personalized talk recommendations and more.\n\nWatch more: https://go.ted.com/luisvonahn\n\nhttps://youtu.be/P6FORpg0KVo\n\nTED's videos may be used for non-commercial purposes under a Creative Commons License, Attribution–Non Commercial–No Derivatives (or the CC BY – NC – ND 4.0 International) and in accordance with our TED Talks Usage Policy: https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy. For more information on using TED for commercial purposes (e.g. employee learning, in a film or online course), please submit a Media Request at https://media-requests.ted.com\n\n#TED #TEDTalks #Duolingo"
+                },
+                "defaultAudioLanguage": "en"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sat, 09 Nov 2024 12:42:20 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=xyDoP5a_dvo&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 09 Nov 2024 13:51:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "56lzhdZfswmxBoPUbzO0BIerutY",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "F4z2yFBImnWfEBuQnCiju_KwF0A",
+              "id": "xyDoP5a_dvo",
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/\n00:00 Introduction\n02:20 Hello World\n03:50 How to copy my ruby project\n04:28 Comments\n05:12 Variables\n06:31 Getting input from user\n08:09 Strings\n16:07 Operators\n17:15 Ternary Operator\n18:20 Arrays\n26:09 Hashes\n29:16 If-Else Conditional Statements\n31:35 Cases\n33:28 For loop\n34:07 While loop\n34:56 Do While loop\n35:39 Until & Unless\n36:45 Break & Next\n37:55 Redo & Retry\n39:45 Methods\n42:03 Classes & Objects\n46:28 Run from Command line\n\n47:12 Ruby Interview FAQs\n\n47:16 What is Ruby\n47:25 Who created Ruby\n47:29 History of Ruby\n47:42 Why is the name Ruby\n47:52 Features of Ruby\n48:06 Ruby Gems\n48:15 Ruby Blocks\n48:28 What is String Freezing in Ruby\n48:36 Ruby Hashes\n48:47 Difference between Class variables and Instance variables\n48:58 Ruby Metaprogramming\n49:05 How to Create new time instance in Ruby\n\n#RubyBeginnerTutorials\nIf my work has helped you, consider helping any animal near you, in any way you can\nYou can support my mission for education by sharing this knowledge and helping as many people as you can\n\nJoin Automation Step By Step channel: https://www.youtube.com/automationstepbystep/join\n\nStories by Raghav - https://automationstepbystep.com/stories/\nMy Udemy Courses - https://automationstepbystep.com/udemy-discounts/\n\nEvery LIKE & SUBSCRIPTION gives me great motivation to keep working for you\n\n________ ONLINE COURSES TO LEARN ________\nhttps://automationstepbystep.com/online-courses/\n\nGitHub - https://github.com/Raghav-Pal/\nUdemy - https://www.udemy.com/user/raghav-pal-3/\nTraining by Raghav at your venue - raghav.qna@gmail.com\nTraining schedule - https://automationstepbystep.com/trainings-2/\n\n------------ UI TESTING ------------\nSelenium Beginners - https://bit.ly/2MGRS8K\nSelenium Java Framework from Scratch - https://bit.ly/2N9xvR6\nSelenium Python - https://bit.ly/2oyMp5x\nSelenium Tips - https://bit.ly/2owxc50\nSelenium Builder - https://bit.ly/2MKNtlq\nKatalon Studio - https://bit.ly/2wARFdi\nRobot Framework with RIDE- https://bit.ly/2Px6Ue9\nRobot Framework with Eclipse - http://bit.ly/2N8DZxb\nProtractor - http://bit.ly/2KtqVkU\nTestProject - http://bit.ly/2DRNJYE\n\n------------ API TESTING ------------\nWeb Services (API) - https://bit.ly/2MGafL7\nSoapUI - https://bit.ly/2MGahmd\nPostman - https://bit.ly/2wz8LrW\nGeneral - https://bit.ly/2PYdwmV\nKatalon Studio API Testing - https://bit.ly/2BwuCTN\n\n------------ MOBILE TESTING ------------\nAppium - https://bit.ly/2ZHFSGX\nMobile Playlist - https://bit.ly/2PxpeUv\n\n------------ CI | CD | DEVOPS ------------\nJenkins Beginner - https://bit.ly/2MIn8EC\nJenkins Tips & Trick - https://bit.ly/2LRt6xC\nDocker - https://bit.ly/2MInnzx\nKubernetes - http://bit.ly/2MJIlMK\n\n-------------VIRTUALISATION-------------\nVirtualization on windows - http://bit.ly/2SItIL9\n------------ VERSION CONTROL SYSTEM ------------\nGit & GitHub - https://bit.ly/2Q1pagY\nGitLab - http://bit.ly/2kQPGyQ\n\n------------ PERFORMANCE TESTING ------------\nJMeter Beginner - https://bit.ly/2oBbtIU\nJMeter Intermediate - https://bit.ly/2oziNVB\nJMeter Advanced - https://bit.ly/2Q22Y6a\nJMeter Tips & Tricks - https://bit.ly/2NOfWD2\nPerformance Testing - https://bit.ly/2wEXbLS\n\n------------ PROGRAMMING ------------\nJava Beginners - https://bit.ly/2PVUcXs\nJava Tips & Tricks - https://bit.ly/2CdcDnJ\nGROOVY - https://bit.ly/2FvWV5C\nJAVASCRIPT - http://bit.ly/2KJDZ8o\nPYTHON - http://bit.ly/2Z4iRye\n\n------------ IDE ------------\nVisual Studio Code - https://bit.ly/2V15yvt\n\n------------ BUILD TOOLS ------------\nMaven - https://bit.ly/2NJdDRS\nGradle - http://bit.ly/30l3h1B\n\n------------ OTHERS ------------\nRedis- https://bit.ly/2N9jyCG\nMisc - https://bit.ly/2Q2q5xQ\nTools & Tips - https://bit.ly/2oBfwoR\nQnA Friday- https://bit.ly/2NgwGpw\nSunday Special - https://bit.ly/2wB23BO\n\nAsk Raghav - https://bit.ly/2CoJGWf\nInterviews - https://bit.ly/2NIPPxk\nAll Playlists - https://bit.ly/2LSiezA\n\n----------- Connect with Raghav ------------\nWebsite - https://automationstepbystep.com/\nLifeCharger - http://lifecharger.org/\nUdemy Courses - https://www.udemy.com/user/raghav-pal-3/\nFacebook - https://www.facebook.com/automationstepbystep\nTwitter - https://twitter.com/LearnWithRaghav\nYoutube - http://youtube.com/automationstepbystep\n\nNever Stop Learning\nRaghav",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "tags": [
+                  "learn ruby in one video",
+                  "ruby programming for beginners",
+                  "ruby beginner tutorial",
+                  "how to use ruby programming",
+                  "ruby for beginners",
+                  "ruby crash course",
+                  "learn ruby",
+                  "ruby programming handson training"
+                ],
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "defaultLanguage": "en",
+                "localized": {
+                  "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                  "description": "All my FREE courses - https://automationstepbystep.com/\n00:00 Introduction\n02:20 Hello World\n03:50 How to copy my ruby project\n04:28 Comments\n05:12 Variables\n06:31 Getting input from user\n08:09 Strings\n16:07 Operators\n17:15 Ternary Operator\n18:20 Arrays\n26:09 Hashes\n29:16 If-Else Conditional Statements\n31:35 Cases\n33:28 For loop\n34:07 While loop\n34:56 Do While loop\n35:39 Until & Unless\n36:45 Break & Next\n37:55 Redo & Retry\n39:45 Methods\n42:03 Classes & Objects\n46:28 Run from Command line\n\n47:12 Ruby Interview FAQs\n\n47:16 What is Ruby\n47:25 Who created Ruby\n47:29 History of Ruby\n47:42 Why is the name Ruby\n47:52 Features of Ruby\n48:06 Ruby Gems\n48:15 Ruby Blocks\n48:28 What is String Freezing in Ruby\n48:36 Ruby Hashes\n48:47 Difference between Class variables and Instance variables\n48:58 Ruby Metaprogramming\n49:05 How to Create new time instance in Ruby\n\n#RubyBeginnerTutorials\nIf my work has helped you, consider helping any animal near you, in any way you can\nYou can support my mission for education by sharing this knowledge and helping as many people as you can\n\nJoin Automation Step By Step channel: https://www.youtube.com/automationstepbystep/join\n\nStories by Raghav - https://automationstepbystep.com/stories/\nMy Udemy Courses - https://automationstepbystep.com/udemy-discounts/\n\nEvery LIKE & SUBSCRIPTION gives me great motivation to keep working for you\n\n________ ONLINE COURSES TO LEARN ________\nhttps://automationstepbystep.com/online-courses/\n\nGitHub - https://github.com/Raghav-Pal/\nUdemy - https://www.udemy.com/user/raghav-pal-3/\nTraining by Raghav at your venue - raghav.qna@gmail.com\nTraining schedule - https://automationstepbystep.com/trainings-2/\n\n------------ UI TESTING ------------\nSelenium Beginners - https://bit.ly/2MGRS8K\nSelenium Java Framework from Scratch - https://bit.ly/2N9xvR6\nSelenium Python - https://bit.ly/2oyMp5x\nSelenium Tips - https://bit.ly/2owxc50\nSelenium Builder - https://bit.ly/2MKNtlq\nKatalon Studio - https://bit.ly/2wARFdi\nRobot Framework with RIDE- https://bit.ly/2Px6Ue9\nRobot Framework with Eclipse - http://bit.ly/2N8DZxb\nProtractor - http://bit.ly/2KtqVkU\nTestProject - http://bit.ly/2DRNJYE\n\n------------ API TESTING ------------\nWeb Services (API) - https://bit.ly/2MGafL7\nSoapUI - https://bit.ly/2MGahmd\nPostman - https://bit.ly/2wz8LrW\nGeneral - https://bit.ly/2PYdwmV\nKatalon Studio API Testing - https://bit.ly/2BwuCTN\n\n------------ MOBILE TESTING ------------\nAppium - https://bit.ly/2ZHFSGX\nMobile Playlist - https://bit.ly/2PxpeUv\n\n------------ CI | CD | DEVOPS ------------\nJenkins Beginner - https://bit.ly/2MIn8EC\nJenkins Tips & Trick - https://bit.ly/2LRt6xC\nDocker - https://bit.ly/2MInnzx\nKubernetes - http://bit.ly/2MJIlMK\n\n-------------VIRTUALISATION-------------\nVirtualization on windows - http://bit.ly/2SItIL9\n------------ VERSION CONTROL SYSTEM ------------\nGit & GitHub - https://bit.ly/2Q1pagY\nGitLab - http://bit.ly/2kQPGyQ\n\n------------ PERFORMANCE TESTING ------------\nJMeter Beginner - https://bit.ly/2oBbtIU\nJMeter Intermediate - https://bit.ly/2oziNVB\nJMeter Advanced - https://bit.ly/2Q22Y6a\nJMeter Tips & Tricks - https://bit.ly/2NOfWD2\nPerformance Testing - https://bit.ly/2wEXbLS\n\n------------ PROGRAMMING ------------\nJava Beginners - https://bit.ly/2PVUcXs\nJava Tips & Tricks - https://bit.ly/2CdcDnJ\nGROOVY - https://bit.ly/2FvWV5C\nJAVASCRIPT - http://bit.ly/2KJDZ8o\nPYTHON - http://bit.ly/2Z4iRye\n\n------------ IDE ------------\nVisual Studio Code - https://bit.ly/2V15yvt\n\n------------ BUILD TOOLS ------------\nMaven - https://bit.ly/2NJdDRS\nGradle - http://bit.ly/30l3h1B\n\n------------ OTHERS ------------\nRedis- https://bit.ly/2N9jyCG\nMisc - https://bit.ly/2Q2q5xQ\nTools & Tips - https://bit.ly/2oBfwoR\nQnA Friday- https://bit.ly/2NgwGpw\nSunday Special - https://bit.ly/2wB23BO\n\nAsk Raghav - https://bit.ly/2CoJGWf\nInterviews - https://bit.ly/2NIPPxk\nAll Playlists - https://bit.ly/2LSiezA\n\n----------- Connect with Raghav ------------\nWebsite - https://automationstepbystep.com/\nLifeCharger - http://lifecharger.org/\nUdemy Courses - https://www.udemy.com/user/raghav-pal-3/\nFacebook - https://www.facebook.com/automationstepbystep\nTwitter - https://twitter.com/LearnWithRaghav\nYoutube - http://youtube.com/automationstepbystep\n\nNever Stop Learning\nRaghav"
+                },
+                "defaultAudioLanguage": "en"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sat, 09 Nov 2024 13:51:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=xyDoP5a_dvo&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 09 Nov 2024 13:51:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "56lzhdZfswmxBoPUbzO0BIerutY",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "F4z2yFBImnWfEBuQnCiju_KwF0A",
+              "id": "xyDoP5a_dvo",
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/\n00:00 Introduction\n02:20 Hello World\n03:50 How to copy my ruby project\n04:28 Comments\n05:12 Variables\n06:31 Getting input from user\n08:09 Strings\n16:07 Operators\n17:15 Ternary Operator\n18:20 Arrays\n26:09 Hashes\n29:16 If-Else Conditional Statements\n31:35 Cases\n33:28 For loop\n34:07 While loop\n34:56 Do While loop\n35:39 Until & Unless\n36:45 Break & Next\n37:55 Redo & Retry\n39:45 Methods\n42:03 Classes & Objects\n46:28 Run from Command line\n\n47:12 Ruby Interview FAQs\n\n47:16 What is Ruby\n47:25 Who created Ruby\n47:29 History of Ruby\n47:42 Why is the name Ruby\n47:52 Features of Ruby\n48:06 Ruby Gems\n48:15 Ruby Blocks\n48:28 What is String Freezing in Ruby\n48:36 Ruby Hashes\n48:47 Difference between Class variables and Instance variables\n48:58 Ruby Metaprogramming\n49:05 How to Create new time instance in Ruby\n\n#RubyBeginnerTutorials\nIf my work has helped you, consider helping any animal near you, in any way you can\nYou can support my mission for education by sharing this knowledge and helping as many people as you can\n\nJoin Automation Step By Step channel: https://www.youtube.com/automationstepbystep/join\n\nStories by Raghav - https://automationstepbystep.com/stories/\nMy Udemy Courses - https://automationstepbystep.com/udemy-discounts/\n\nEvery LIKE & SUBSCRIPTION gives me great motivation to keep working for you\n\n________ ONLINE COURSES TO LEARN ________\nhttps://automationstepbystep.com/online-courses/\n\nGitHub - https://github.com/Raghav-Pal/\nUdemy - https://www.udemy.com/user/raghav-pal-3/\nTraining by Raghav at your venue - raghav.qna@gmail.com\nTraining schedule - https://automationstepbystep.com/trainings-2/\n\n------------ UI TESTING ------------\nSelenium Beginners - https://bit.ly/2MGRS8K\nSelenium Java Framework from Scratch - https://bit.ly/2N9xvR6\nSelenium Python - https://bit.ly/2oyMp5x\nSelenium Tips - https://bit.ly/2owxc50\nSelenium Builder - https://bit.ly/2MKNtlq\nKatalon Studio - https://bit.ly/2wARFdi\nRobot Framework with RIDE- https://bit.ly/2Px6Ue9\nRobot Framework with Eclipse - http://bit.ly/2N8DZxb\nProtractor - http://bit.ly/2KtqVkU\nTestProject - http://bit.ly/2DRNJYE\n\n------------ API TESTING ------------\nWeb Services (API) - https://bit.ly/2MGafL7\nSoapUI - https://bit.ly/2MGahmd\nPostman - https://bit.ly/2wz8LrW\nGeneral - https://bit.ly/2PYdwmV\nKatalon Studio API Testing - https://bit.ly/2BwuCTN\n\n------------ MOBILE TESTING ------------\nAppium - https://bit.ly/2ZHFSGX\nMobile Playlist - https://bit.ly/2PxpeUv\n\n------------ CI | CD | DEVOPS ------------\nJenkins Beginner - https://bit.ly/2MIn8EC\nJenkins Tips & Trick - https://bit.ly/2LRt6xC\nDocker - https://bit.ly/2MInnzx\nKubernetes - http://bit.ly/2MJIlMK\n\n-------------VIRTUALISATION-------------\nVirtualization on windows - http://bit.ly/2SItIL9\n------------ VERSION CONTROL SYSTEM ------------\nGit & GitHub - https://bit.ly/2Q1pagY\nGitLab - http://bit.ly/2kQPGyQ\n\n------------ PERFORMANCE TESTING ------------\nJMeter Beginner - https://bit.ly/2oBbtIU\nJMeter Intermediate - https://bit.ly/2oziNVB\nJMeter Advanced - https://bit.ly/2Q22Y6a\nJMeter Tips & Tricks - https://bit.ly/2NOfWD2\nPerformance Testing - https://bit.ly/2wEXbLS\n\n------------ PROGRAMMING ------------\nJava Beginners - https://bit.ly/2PVUcXs\nJava Tips & Tricks - https://bit.ly/2CdcDnJ\nGROOVY - https://bit.ly/2FvWV5C\nJAVASCRIPT - http://bit.ly/2KJDZ8o\nPYTHON - http://bit.ly/2Z4iRye\n\n------------ IDE ------------\nVisual Studio Code - https://bit.ly/2V15yvt\n\n------------ BUILD TOOLS ------------\nMaven - https://bit.ly/2NJdDRS\nGradle - http://bit.ly/30l3h1B\n\n------------ OTHERS ------------\nRedis- https://bit.ly/2N9jyCG\nMisc - https://bit.ly/2Q2q5xQ\nTools & Tips - https://bit.ly/2oBfwoR\nQnA Friday- https://bit.ly/2NgwGpw\nSunday Special - https://bit.ly/2wB23BO\n\nAsk Raghav - https://bit.ly/2CoJGWf\nInterviews - https://bit.ly/2NIPPxk\nAll Playlists - https://bit.ly/2LSiezA\n\n----------- Connect with Raghav ------------\nWebsite - https://automationstepbystep.com/\nLifeCharger - http://lifecharger.org/\nUdemy Courses - https://www.udemy.com/user/raghav-pal-3/\nFacebook - https://www.facebook.com/automationstepbystep\nTwitter - https://twitter.com/LearnWithRaghav\nYoutube - http://youtube.com/automationstepbystep\n\nNever Stop Learning\nRaghav",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "tags": [
+                  "learn ruby in one video",
+                  "ruby programming for beginners",
+                  "ruby beginner tutorial",
+                  "how to use ruby programming",
+                  "ruby for beginners",
+                  "ruby crash course",
+                  "learn ruby",
+                  "ruby programming handson training"
+                ],
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "defaultLanguage": "en",
+                "localized": {
+                  "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                  "description": "All my FREE courses - https://automationstepbystep.com/\n00:00 Introduction\n02:20 Hello World\n03:50 How to copy my ruby project\n04:28 Comments\n05:12 Variables\n06:31 Getting input from user\n08:09 Strings\n16:07 Operators\n17:15 Ternary Operator\n18:20 Arrays\n26:09 Hashes\n29:16 If-Else Conditional Statements\n31:35 Cases\n33:28 For loop\n34:07 While loop\n34:56 Do While loop\n35:39 Until & Unless\n36:45 Break & Next\n37:55 Redo & Retry\n39:45 Methods\n42:03 Classes & Objects\n46:28 Run from Command line\n\n47:12 Ruby Interview FAQs\n\n47:16 What is Ruby\n47:25 Who created Ruby\n47:29 History of Ruby\n47:42 Why is the name Ruby\n47:52 Features of Ruby\n48:06 Ruby Gems\n48:15 Ruby Blocks\n48:28 What is String Freezing in Ruby\n48:36 Ruby Hashes\n48:47 Difference between Class variables and Instance variables\n48:58 Ruby Metaprogramming\n49:05 How to Create new time instance in Ruby\n\n#RubyBeginnerTutorials\nIf my work has helped you, consider helping any animal near you, in any way you can\nYou can support my mission for education by sharing this knowledge and helping as many people as you can\n\nJoin Automation Step By Step channel: https://www.youtube.com/automationstepbystep/join\n\nStories by Raghav - https://automationstepbystep.com/stories/\nMy Udemy Courses - https://automationstepbystep.com/udemy-discounts/\n\nEvery LIKE & SUBSCRIPTION gives me great motivation to keep working for you\n\n________ ONLINE COURSES TO LEARN ________\nhttps://automationstepbystep.com/online-courses/\n\nGitHub - https://github.com/Raghav-Pal/\nUdemy - https://www.udemy.com/user/raghav-pal-3/\nTraining by Raghav at your venue - raghav.qna@gmail.com\nTraining schedule - https://automationstepbystep.com/trainings-2/\n\n------------ UI TESTING ------------\nSelenium Beginners - https://bit.ly/2MGRS8K\nSelenium Java Framework from Scratch - https://bit.ly/2N9xvR6\nSelenium Python - https://bit.ly/2oyMp5x\nSelenium Tips - https://bit.ly/2owxc50\nSelenium Builder - https://bit.ly/2MKNtlq\nKatalon Studio - https://bit.ly/2wARFdi\nRobot Framework with RIDE- https://bit.ly/2Px6Ue9\nRobot Framework with Eclipse - http://bit.ly/2N8DZxb\nProtractor - http://bit.ly/2KtqVkU\nTestProject - http://bit.ly/2DRNJYE\n\n------------ API TESTING ------------\nWeb Services (API) - https://bit.ly/2MGafL7\nSoapUI - https://bit.ly/2MGahmd\nPostman - https://bit.ly/2wz8LrW\nGeneral - https://bit.ly/2PYdwmV\nKatalon Studio API Testing - https://bit.ly/2BwuCTN\n\n------------ MOBILE TESTING ------------\nAppium - https://bit.ly/2ZHFSGX\nMobile Playlist - https://bit.ly/2PxpeUv\n\n------------ CI | CD | DEVOPS ------------\nJenkins Beginner - https://bit.ly/2MIn8EC\nJenkins Tips & Trick - https://bit.ly/2LRt6xC\nDocker - https://bit.ly/2MInnzx\nKubernetes - http://bit.ly/2MJIlMK\n\n-------------VIRTUALISATION-------------\nVirtualization on windows - http://bit.ly/2SItIL9\n------------ VERSION CONTROL SYSTEM ------------\nGit & GitHub - https://bit.ly/2Q1pagY\nGitLab - http://bit.ly/2kQPGyQ\n\n------------ PERFORMANCE TESTING ------------\nJMeter Beginner - https://bit.ly/2oBbtIU\nJMeter Intermediate - https://bit.ly/2oziNVB\nJMeter Advanced - https://bit.ly/2Q22Y6a\nJMeter Tips & Tricks - https://bit.ly/2NOfWD2\nPerformance Testing - https://bit.ly/2wEXbLS\n\n------------ PROGRAMMING ------------\nJava Beginners - https://bit.ly/2PVUcXs\nJava Tips & Tricks - https://bit.ly/2CdcDnJ\nGROOVY - https://bit.ly/2FvWV5C\nJAVASCRIPT - http://bit.ly/2KJDZ8o\nPYTHON - http://bit.ly/2Z4iRye\n\n------------ IDE ------------\nVisual Studio Code - https://bit.ly/2V15yvt\n\n------------ BUILD TOOLS ------------\nMaven - https://bit.ly/2NJdDRS\nGradle - http://bit.ly/30l3h1B\n\n------------ OTHERS ------------\nRedis- https://bit.ly/2N9jyCG\nMisc - https://bit.ly/2Q2q5xQ\nTools & Tips - https://bit.ly/2oBfwoR\nQnA Friday- https://bit.ly/2NgwGpw\nSunday Special - https://bit.ly/2wB23BO\n\nAsk Raghav - https://bit.ly/2CoJGWf\nInterviews - https://bit.ly/2NIPPxk\nAll Playlists - https://bit.ly/2LSiezA\n\n----------- Connect with Raghav ------------\nWebsite - https://automationstepbystep.com/\nLifeCharger - http://lifecharger.org/\nUdemy Courses - https://www.udemy.com/user/raghav-pal-3/\nFacebook - https://www.facebook.com/automationstepbystep\nTwitter - https://twitter.com/LearnWithRaghav\nYoutube - http://youtube.com/automationstepbystep\n\nNever Stop Learning\nRaghav"
+                },
+                "defaultAudioLanguage": "en"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sat, 09 Nov 2024 13:51:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=xiWUL3M9D8c&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 09 Nov 2024 14:17:03 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "lS5IEMr3UtICKMHRxE8qxDkw8fQ",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "wYPIHNiKyyFeeZ6Wu3MEZusM37g",
+              "id": "xiWUL3M9D8c",
+              "snippet": {
+                "publishedAt": "2024-11-06T14:05:23Z",
+                "channelId": "UCcabW7890RKJzL968QWEykA",
+                "title": "CS50 Fall 2024 - Lecture 8 - HTML, CSS, JavaScript",
+                "description": "This is CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.\n\n***\nTABLE OF CONTENTS\n\n00:00:00 - The Internet\n00:04:17 - TCP/IP\n00:14:01 - Ports\n00:18:08 - DNS\n00:23:53 - DHCP\n00:27:47 - HTTP\n00:39:35 - Inspect\n00:43:17 - Status Codes\n00:48:36 - HTML\n01:43:31 - Regular Expressions\n01:51:10 - CSS\n02:22:43 - Bootstrap\n02:27:09 - JavaScript\n03:00:16 - Background\n03:04:42 - Blink\n03:07:05 - Autocomplete\n\n***\n\nHOW TO SUBSCRIBE\n\nhttp://www.youtube.com/subscription_center?add_user=cs50tv\n\nHOW TO TAKE CS50\n\nedX: https://cs50.edx.org/\nHarvard Extension School: https://cs50.harvard.edu/extension\nHarvard Summer School: https://cs50.harvard.edu/summer\nOpenCourseWare: https://cs50.harvard.edu/x\n\nHOW TO JOIN CS50 COMMUNITIES\n\nDiscord: https://discord.gg/cs50\nEd: https://cs50.edx.org/ed\nFacebook Group: https://www.facebook.com/groups/cs50/\nFaceboook Page: https://www.facebook.com/cs50/\nGitHub: https://github.com/cs50\nGitter: https://gitter.im/cs50/x\nInstagram: https://instagram.com/cs50\nLinkedIn Group: https://www.linkedin.com/groups/7437240/\nLinkedIn Page: https://www.linkedin.com/school/cs50/\nMedium: https://cs50.medium.com/\nQuora: https://www.quora.com/topic/CS50\nReddit: https://www.reddit.com/r/cs50/\nSlack: https://cs50.edx.org/slack\nSnapchat: https://www.snapchat.com/add/cs50\nSoundCloud: https://soundcloud.com/cs50\nStack Exchange: https://cs50.stackexchange.com/\nTelegram: https://t.me/cs50x\nThreads: https://www.threads.net/@cs50\nTikTok: https://www.tiktok.com/@cs50\nTwitter: https://twitter.com/cs50\nTwitter Community: https://twitter.com/i/communities/1722308663522594923\nYouTube: http://www.youtube.com/cs50\n\nHOW TO FOLLOW DAVID J. MALAN\n\nFacebook: https://www.facebook.com/dmalan\nGitHub: https://github.com/dmalan\nInstagram: https://www.instagram.com/davidjmalan/\nLinkedIn: https://www.linkedin.com/in/malan/\nQuora: https://www.quora.com/profile/David-J-Malan\nThreads: https://www.threads.net/@davidjmalan\nTikTok: https://www.tiktok.com/@davidjmalan\nTwitter: https://twitter.com/davidjmalan\n\n***\n\nCS50 SHOP\n\nhttps://cs50.harvardshop.com/\n\n***\n\nLICENSE\n\nCC BY-NC-SA 4.0\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License\nhttps://creativecommons.org/licenses/by-nc-sa/4.0/\n\nDavid J. Malan\nhttps://cs.harvard.edu/malan\nmalan@harvard.edu",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "CS50",
+                "tags": [
+                  "cs50",
+                  "harvard",
+                  "computer",
+                  "science",
+                  "david",
+                  "malan"
+                ],
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "CS50 Fall 2024 - Lecture 8 - HTML, CSS, JavaScript",
+                  "description": "This is CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.\n\n***\nTABLE OF CONTENTS\n\n00:00:00 - The Internet\n00:04:17 - TCP/IP\n00:14:01 - Ports\n00:18:08 - DNS\n00:23:53 - DHCP\n00:27:47 - HTTP\n00:39:35 - Inspect\n00:43:17 - Status Codes\n00:48:36 - HTML\n01:43:31 - Regular Expressions\n01:51:10 - CSS\n02:22:43 - Bootstrap\n02:27:09 - JavaScript\n03:00:16 - Background\n03:04:42 - Blink\n03:07:05 - Autocomplete\n\n***\n\nHOW TO SUBSCRIBE\n\nhttp://www.youtube.com/subscription_center?add_user=cs50tv\n\nHOW TO TAKE CS50\n\nedX: https://cs50.edx.org/\nHarvard Extension School: https://cs50.harvard.edu/extension\nHarvard Summer School: https://cs50.harvard.edu/summer\nOpenCourseWare: https://cs50.harvard.edu/x\n\nHOW TO JOIN CS50 COMMUNITIES\n\nDiscord: https://discord.gg/cs50\nEd: https://cs50.edx.org/ed\nFacebook Group: https://www.facebook.com/groups/cs50/\nFaceboook Page: https://www.facebook.com/cs50/\nGitHub: https://github.com/cs50\nGitter: https://gitter.im/cs50/x\nInstagram: https://instagram.com/cs50\nLinkedIn Group: https://www.linkedin.com/groups/7437240/\nLinkedIn Page: https://www.linkedin.com/school/cs50/\nMedium: https://cs50.medium.com/\nQuora: https://www.quora.com/topic/CS50\nReddit: https://www.reddit.com/r/cs50/\nSlack: https://cs50.edx.org/slack\nSnapchat: https://www.snapchat.com/add/cs50\nSoundCloud: https://soundcloud.com/cs50\nStack Exchange: https://cs50.stackexchange.com/\nTelegram: https://t.me/cs50x\nThreads: https://www.threads.net/@cs50\nTikTok: https://www.tiktok.com/@cs50\nTwitter: https://twitter.com/cs50\nTwitter Community: https://twitter.com/i/communities/1722308663522594923\nYouTube: http://www.youtube.com/cs50\n\nHOW TO FOLLOW DAVID J. MALAN\n\nFacebook: https://www.facebook.com/dmalan\nGitHub: https://github.com/dmalan\nInstagram: https://www.instagram.com/davidjmalan/\nLinkedIn: https://www.linkedin.com/in/malan/\nQuora: https://www.quora.com/profile/David-J-Malan\nThreads: https://www.threads.net/@davidjmalan\nTikTok: https://www.tiktok.com/@davidjmalan\nTwitter: https://twitter.com/davidjmalan\n\n***\n\nCS50 SHOP\n\nhttps://cs50.harvardshop.com/\n\n***\n\nLICENSE\n\nCC BY-NC-SA 4.0\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License\nhttps://creativecommons.org/licenses/by-nc-sa/4.0/\n\nDavid J. Malan\nhttps://cs.harvard.edu/malan\nmalan@harvard.edu"
+                },
+                "defaultAudioLanguage": "en"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sat, 09 Nov 2024 14:17:03 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=xiWUL3M9D8c&key=<API_KEY>&part=snippet
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 09 Nov 2024 14:17:03 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "lS5IEMr3UtICKMHRxE8qxDkw8fQ",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "wYPIHNiKyyFeeZ6Wu3MEZusM37g",
+              "id": "xiWUL3M9D8c",
+              "snippet": {
+                "publishedAt": "2024-11-06T14:05:23Z",
+                "channelId": "UCcabW7890RKJzL968QWEykA",
+                "title": "CS50 Fall 2024 - Lecture 8 - HTML, CSS, JavaScript",
+                "description": "This is CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.\n\n***\nTABLE OF CONTENTS\n\n00:00:00 - The Internet\n00:04:17 - TCP/IP\n00:14:01 - Ports\n00:18:08 - DNS\n00:23:53 - DHCP\n00:27:47 - HTTP\n00:39:35 - Inspect\n00:43:17 - Status Codes\n00:48:36 - HTML\n01:43:31 - Regular Expressions\n01:51:10 - CSS\n02:22:43 - Bootstrap\n02:27:09 - JavaScript\n03:00:16 - Background\n03:04:42 - Blink\n03:07:05 - Autocomplete\n\n***\n\nHOW TO SUBSCRIBE\n\nhttp://www.youtube.com/subscription_center?add_user=cs50tv\n\nHOW TO TAKE CS50\n\nedX: https://cs50.edx.org/\nHarvard Extension School: https://cs50.harvard.edu/extension\nHarvard Summer School: https://cs50.harvard.edu/summer\nOpenCourseWare: https://cs50.harvard.edu/x\n\nHOW TO JOIN CS50 COMMUNITIES\n\nDiscord: https://discord.gg/cs50\nEd: https://cs50.edx.org/ed\nFacebook Group: https://www.facebook.com/groups/cs50/\nFaceboook Page: https://www.facebook.com/cs50/\nGitHub: https://github.com/cs50\nGitter: https://gitter.im/cs50/x\nInstagram: https://instagram.com/cs50\nLinkedIn Group: https://www.linkedin.com/groups/7437240/\nLinkedIn Page: https://www.linkedin.com/school/cs50/\nMedium: https://cs50.medium.com/\nQuora: https://www.quora.com/topic/CS50\nReddit: https://www.reddit.com/r/cs50/\nSlack: https://cs50.edx.org/slack\nSnapchat: https://www.snapchat.com/add/cs50\nSoundCloud: https://soundcloud.com/cs50\nStack Exchange: https://cs50.stackexchange.com/\nTelegram: https://t.me/cs50x\nThreads: https://www.threads.net/@cs50\nTikTok: https://www.tiktok.com/@cs50\nTwitter: https://twitter.com/cs50\nTwitter Community: https://twitter.com/i/communities/1722308663522594923\nYouTube: http://www.youtube.com/cs50\n\nHOW TO FOLLOW DAVID J. MALAN\n\nFacebook: https://www.facebook.com/dmalan\nGitHub: https://github.com/dmalan\nInstagram: https://www.instagram.com/davidjmalan/\nLinkedIn: https://www.linkedin.com/in/malan/\nQuora: https://www.quora.com/profile/David-J-Malan\nThreads: https://www.threads.net/@davidjmalan\nTikTok: https://www.tiktok.com/@davidjmalan\nTwitter: https://twitter.com/davidjmalan\n\n***\n\nCS50 SHOP\n\nhttps://cs50.harvardshop.com/\n\n***\n\nLICENSE\n\nCC BY-NC-SA 4.0\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License\nhttps://creativecommons.org/licenses/by-nc-sa/4.0/\n\nDavid J. Malan\nhttps://cs.harvard.edu/malan\nmalan@harvard.edu",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/xiWUL3M9D8c/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "CS50",
+                "tags": [
+                  "cs50",
+                  "harvard",
+                  "computer",
+                  "science",
+                  "david",
+                  "malan"
+                ],
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "CS50 Fall 2024 - Lecture 8 - HTML, CSS, JavaScript",
+                  "description": "This is CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.\n\n***\nTABLE OF CONTENTS\n\n00:00:00 - The Internet\n00:04:17 - TCP/IP\n00:14:01 - Ports\n00:18:08 - DNS\n00:23:53 - DHCP\n00:27:47 - HTTP\n00:39:35 - Inspect\n00:43:17 - Status Codes\n00:48:36 - HTML\n01:43:31 - Regular Expressions\n01:51:10 - CSS\n02:22:43 - Bootstrap\n02:27:09 - JavaScript\n03:00:16 - Background\n03:04:42 - Blink\n03:07:05 - Autocomplete\n\n***\n\nHOW TO SUBSCRIBE\n\nhttp://www.youtube.com/subscription_center?add_user=cs50tv\n\nHOW TO TAKE CS50\n\nedX: https://cs50.edx.org/\nHarvard Extension School: https://cs50.harvard.edu/extension\nHarvard Summer School: https://cs50.harvard.edu/summer\nOpenCourseWare: https://cs50.harvard.edu/x\n\nHOW TO JOIN CS50 COMMUNITIES\n\nDiscord: https://discord.gg/cs50\nEd: https://cs50.edx.org/ed\nFacebook Group: https://www.facebook.com/groups/cs50/\nFaceboook Page: https://www.facebook.com/cs50/\nGitHub: https://github.com/cs50\nGitter: https://gitter.im/cs50/x\nInstagram: https://instagram.com/cs50\nLinkedIn Group: https://www.linkedin.com/groups/7437240/\nLinkedIn Page: https://www.linkedin.com/school/cs50/\nMedium: https://cs50.medium.com/\nQuora: https://www.quora.com/topic/CS50\nReddit: https://www.reddit.com/r/cs50/\nSlack: https://cs50.edx.org/slack\nSnapchat: https://www.snapchat.com/add/cs50\nSoundCloud: https://soundcloud.com/cs50\nStack Exchange: https://cs50.stackexchange.com/\nTelegram: https://t.me/cs50x\nThreads: https://www.threads.net/@cs50\nTikTok: https://www.tiktok.com/@cs50\nTwitter: https://twitter.com/cs50\nTwitter Community: https://twitter.com/i/communities/1722308663522594923\nYouTube: http://www.youtube.com/cs50\n\nHOW TO FOLLOW DAVID J. MALAN\n\nFacebook: https://www.facebook.com/dmalan\nGitHub: https://github.com/dmalan\nInstagram: https://www.instagram.com/davidjmalan/\nLinkedIn: https://www.linkedin.com/in/malan/\nQuora: https://www.quora.com/profile/David-J-Malan\nThreads: https://www.threads.net/@davidjmalan\nTikTok: https://www.tiktok.com/@davidjmalan\nTwitter: https://twitter.com/davidjmalan\n\n***\n\nCS50 SHOP\n\nhttps://cs50.harvardshop.com/\n\n***\n\nLICENSE\n\nCC BY-NC-SA 4.0\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License\nhttps://creativecommons.org/licenses/by-nc-sa/4.0/\n\nDavid J. Malan\nhttps://cs.harvard.edu/malan\nmalan@harvard.edu"
+                },
+                "defaultAudioLanguage": "en"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sat, 09 Nov 2024 14:17:03 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20code%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 10 Nov 2024 15:24:08 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "7p9lzgMAl2gFLdHx7_SV3pI2tHI",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8wZ2ZD--VTk"
+              },
+              "snippet": {
+                "publishedAt": "2017-12-05T20:13:32Z",
+                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
+                "title": "Ruby Programming | In One Video",
+                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Giraffe Academy",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-12-05T20:13:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "1hi_ey73EG5IP2xO9492zNzN8do",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "PsH6uOuZsKY"
+              },
+              "snippet": {
+                "publishedAt": "2012-02-09T20:42:01Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 25 - Extracting Numbers and Character Classes",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-02-09T20:42:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "3vpn8A4Sk-nVZLgdwDuCAt4_TG4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "xyDoP5a_dvo"
+              },
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-26T14:30:10Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "ui-U4cMkdoY9uymonBiql04B53g",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "RDqJUU7XmLs"
+              },
+              "snippet": {
+                "publishedAt": "2012-01-30T16:03:27Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 2 - Writing a Simple Program",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-01-30T16:03:27Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "5zsdKXYhRbXFCw4P4O0xT_qSgQs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "OTW56PCFE74"
+              },
+              "snippet": {
+                "publishedAt": "2016-12-31T00:00:02Z",
+                "channelId": "UCzp9tRqDmwQnVxL-yxeU6yA",
+                "title": "Lecture 3: Simple Ruby Code Example",
+                "description": "Hi Unicorn, we are creating so many courses/tutorials/videos/Vlog on TutorialDrive so that students can learn technologies and ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "TutorialDrive - Free Tutorials",
+                "liveBroadcastContent": "none",
+                "publishTime": "2016-12-31T00:00:02Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 10 Nov 2024 15:24:07 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20code%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 10 Nov 2024 15:24:08 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "7p9lzgMAl2gFLdHx7_SV3pI2tHI",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8wZ2ZD--VTk"
+              },
+              "snippet": {
+                "publishedAt": "2017-12-05T20:13:32Z",
+                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
+                "title": "Ruby Programming | In One Video",
+                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Giraffe Academy",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-12-05T20:13:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "1hi_ey73EG5IP2xO9492zNzN8do",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "PsH6uOuZsKY"
+              },
+              "snippet": {
+                "publishedAt": "2012-02-09T20:42:01Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 25 - Extracting Numbers and Character Classes",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-02-09T20:42:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "3vpn8A4Sk-nVZLgdwDuCAt4_TG4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "xyDoP5a_dvo"
+              },
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-26T14:30:10Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "ui-U4cMkdoY9uymonBiql04B53g",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "RDqJUU7XmLs"
+              },
+              "snippet": {
+                "publishedAt": "2012-01-30T16:03:27Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 2 - Writing a Simple Program",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-01-30T16:03:27Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "5zsdKXYhRbXFCw4P4O0xT_qSgQs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "OTW56PCFE74"
+              },
+              "snippet": {
+                "publishedAt": "2016-12-31T00:00:02Z",
+                "channelId": "UCzp9tRqDmwQnVxL-yxeU6yA",
+                "title": "Lecture 3: Simple Ruby Code Example",
+                "description": "Hi Unicorn, we are creating so many courses/tutorials/videos/Vlog on TutorialDrive so that students can learn technologies and ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "TutorialDrive - Free Tutorials",
+                "liveBroadcastContent": "none",
+                "publishTime": "2016-12-31T00:00:02Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 10 Nov 2024 15:24:08 GMT
 recorded_with: VCR 6.3.1

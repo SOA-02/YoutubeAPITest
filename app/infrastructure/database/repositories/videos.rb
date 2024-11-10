@@ -46,8 +46,6 @@ module Outline
       def initialize(entity)
         @entity = entity
       end
-
-      def call; end
     end
   end
 end

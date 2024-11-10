@@ -35,27 +35,26 @@ describe 'Tests Youtube API library' do
       @result = Outline::Youtube::SearchMapper
         .new(API_KEY)
         .find(KEY_WORD)
+
+      @relevant_result = Outline::Youtube::SearchRelevantMapper
+        .new(API_KEY)
+        .find(KEY_WORD)
     end
 
-    it 'HAPPY: search relevant videos' do
-      @search_result = Outline::Youtube::YoutubeApi.new(API_KEY).search_popular(KEY_WORD)
-      @search_result_items = @search_result['items']
-      # Loop through each description to find timestamps
-      @search_result_items.each do |item|
-        video_id = item['id']['videoId']
-        description = item['snippet']['description']
+    it 'HAPPY: search relevant gateway captures search relevant results' do
+      @search_relevant_data = Outline::Youtube::YoutubeApi.new(API_KEY).search_relevant(KEY_WORD)
+      _(@search_relevant_data).must_be_kind_of Hash
+      _(@search_relevant_data['items']).must_be_kind_of Array
+    end
 
-        timestamps = description.scan(/\d{1,2}:\d{2}(?::\d{2})?/)
-         # Matches timestamps like "00:00:00"
-        if timestamps.any?
-          puts "Found timestamps in description: #{timestamps.join(', ')}"
-        else
-          puts "No timestamps found in description: #{description}"
-        end
-        puts "Video ID: #{video_id}"
+    it 'HAPPY: recognize search relevant results' do
+      assert_kind_of Array, @relevant_result
+      refute_empty @relevant_result
+      @relevant_result.each do |item|
+        assert_kind_of Outline::Entity::SearchRelevant, item
       end
-      binding.irb
     end
+
     it 'HAPPY: should recognize search result' do
       # 檢查 @result 是否為數組
       assert_kind_of Array, @result
@@ -96,6 +95,26 @@ describe 'Tests Youtube API library' do
     it 'HAPPY: entity are of correct type' do
       _(@video_mapper.video_id).must_equal VIDEO_ID
       _(@video_mapper.video_title).must_be_kind_of String
+      _(@video_mapper.video_description).must_be_kind_of String
+      _(@video_mapper.video_published_at).must_be_kind_of String
+    end
+  end
+
+  describe 'HAPPY: Parse video description' do
+    before do
+      @video = Outline::Youtube::VideoMapper
+        .new(API_KEY)
+        .find(VIDEO_ID)
+    end
+
+    it 'HAPPY: should parse video description' do
+      @toc = Views::Timestamp.new(@video.video_description).extract_toc
+      binding.irb
+      assert_kind_of Array, @toc
+      @toc.each do |timestamp, title|
+        assert_match(/\d{1,2}:\d{2}(?::\d{2})?/, timestamp) # Check timestamp format
+        assert_kind_of String, title # Check title is a string
+      end
     end
   end
 end
