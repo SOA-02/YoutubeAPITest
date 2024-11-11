@@ -35,8 +35,8 @@ module Outline
 
     use Rack::MethodOverride # allows HTTP verbs beyond GET/POST (e.g., DELETE)
 
-    MSG_NO_VIDS = 'Please enter the keywords you are interested in to get started.'
-    MSG_NO_EMPTY_VALUE = 'Please do not enter an empty value.'
+    MSG_GET_STARTED = 'Please enter the keywords you are interested in to get started.'
+    
     MSG_NO_RECLIST = 'Unable to recommend a list of related videos for you.'
     MSG_SERVER_ERROR = 'Internal Server Error'
     MSG_VID_NOT_FOUND = 'Could not find that Youtube video'
@@ -51,12 +51,17 @@ module Outline
       routing.root do
         # Get cookie viewer's previously seen videos
         session[:watching] ||= []
-        # Load previously viewed videos
-        video = Repository::For.klass(Entity::Video)
-          .find_all_video(session[:watching])
-        session[:watching] = video.map(&:video_id)
-        flash.now[:notice] = MSG_NO_VIDS if session[:watching].none?
-        viewable_videos = Views::VideosList.new(video)
+        
+        result = Service::FetchViewedVideos.new.call(session[:watching])
+
+        if result.failure?
+          flash.now[:notice] = MSG_GET_STARTED
+          viewable_videos = Views::VideosList.new([])
+        else
+          videos = result.value!
+          session[:watching] = videos.map(&:video_id)
+          viewable_videos = Views::VideosList.new(videos)
+        end
         view 'home', locals: { videos: viewable_videos }
       end
 
@@ -64,13 +69,15 @@ module Outline
         routing.is do
           # POST /search/
           routing.post do
-            key_word = routing.params['search_key_word']
-            if key_word.nil? || key_word.strip.empty? || key_word !~ /\w/
-              flash[:error] = MSG_NO_EMPTY_VALUE
+            result = Service::SearchService.new.call(routing.params)
+
+            if result.failure?
+              flash[:error] = result.failure[:search_key_word].join(', ')
               response.status = 400
               routing.redirect '/'
             else
-              routing.redirect "search/#{key_word}"
+              search_key_word = result.value!
+              routing.redirect "search/#{search_key_word}"
             end
           end
         end
