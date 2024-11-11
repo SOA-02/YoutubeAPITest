@@ -34,16 +34,10 @@ module Outline
     plugin :common_logger, $stderr
 
     use Rack::MethodOverride # allows HTTP verbs beyond GET/POST (e.g., DELETE)
-
     MSG_GET_STARTED = 'Please enter the keywords you are interested in to get started.'
-    
-    MSG_NO_RECLIST = 'Unable to recommend a list of related videos for you.'
     MSG_SERVER_ERROR = 'Internal Server Error'
-    MSG_VID_NOT_FOUND = 'Could not find that Youtube video'
-    MSG_VID_EXISTS = 'Videos already exists.'
-    MSG_VIDINFO_NOT_FOUND = 'Sorry,Could not find that  video information.'
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # Load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
@@ -54,7 +48,7 @@ module Outline
         result = Service::FetchViewedVideos.new.call(session[:watching])
         if result.failure?
           flash[:error] = result.failure
-          viewable_videos =[]
+          viewable_videos = []
         else
           videos = result.value!
           flash.now[:notice] = MSG_GET_STARTED if videos.none?
@@ -63,20 +57,17 @@ module Outline
         end
         view 'home', locals: { videos: viewable_videos }
       end
-
       routing.on 'search' do
         routing.is do
           # POST /search/
           routing.post do
-            result = Service::SearchService.new.call(routing.params)
-
-            if result.failure?
-              flash[:error] = result.failure[:search_key_word].join(', ')
-              response.status = 400
-              routing.redirect '/'
+            key_word_request = Forms::NewSearch.new.call(routing.params)
+            if key_word_request.errors.empty?
+              key_word = key_word_request[:search_key_word]
+              routing.redirect "search/#{key_word}"
             else
-              search_key_word = result.value!
-              routing.redirect "search/#{search_key_word}"
+              flash[:error] = key_word_request.errors[:search_key_word].first
+              routing.redirect '/'
             end
           end
         end
@@ -84,17 +75,14 @@ module Outline
         routing.on String do |key_word|
           # GET /search/key_word
           routing.get do
-            @search_results = Youtube::SearchRelevantMapper
-              .new(App.config.API_KEY).find(key_word)
-            if @search_results == 'No video items found'
-              flash[:error] = MSG_NO_RECLIST
+            results = Service::SearchService.new.video_from_youtube(key_word)
+            if results.failure?
+              flash[:error] = results.failure
               routing.redirect '/'
+            else
+              @search_results = results.value!
+              view 'search', locals: { search_results: @search_results }
             end
-            view 'search', locals: { search_results: @search_results }
-          rescue StandardError => err
-            puts "Error: #{err.message} at #{err.backtrace.first}"
-            flash[:error] = MSG_SERVER_ERROR
-            routing.redirect '/'
           end
         end
       end
@@ -106,6 +94,7 @@ module Outline
         end
 
         routing.on String do |video_id|
+          session[:watching].insert(0, video_id).uniq!
           # DELETE /outline/{video_id}
           routing.delete do
             session[:watching].delete(video_id)
@@ -114,72 +103,21 @@ module Outline
 
           # GET /outline/video_id
           routing.get do
-            begin
-              video = Youtube::VideoMapper
-                .new(App.config.API_KEY).find(video_id)
-            rescue StandardError
-
-              flash[:error] = MSG_VID_NOT_FOUND
-              response.status = 404
+            video_made = Service::AddVideo.new.call(video_id)
+            if video_made.failure?
+              flash[:error] = video_made.failure
               routing.redirect '/'
-            end
-            begin
-              Repository::For.entity(video).create(video)
-            rescue StandardError
-              flash[:error] = MSG_VID_EXISTS
-              routing.redirect '/'
-            end
+            else
+              # Extract timestamps from description data
+              video = video_made.value![:local_video]
+              timestamp_parser = Views::Timestamp.new(video.video_description)
+              toc = timestamp_parser.extract_toc
+              view 'outline', locals: { video: video, toc: toc }
 
-            # Add new video to watched set in cookies
-            session[:watching].insert(0, video.video_id).uniq!
-            begin
-              video = Repository::For.klass(Entity::Video).find_id(video_id)
-            rescue StandardError
-              flash[:error] = MSG_VIDINFO_NOT_FOUND
-              response.status = 410
-              routing.redirect '/'
             end
-
-            # Extract timestamps from description data
-            timestamp_parser = Views::Timestamp.new(video.video_description)
-            toc = timestamp_parser.extract_toc
-
-            view 'outline', locals: { video: video, toc: toc }
-          rescue StandardError => err
-            puts "Error: #{err.message} at #{err.backtrace.first}" # Output to console
-            # view 'error', locals: { error_message: e.message }
-            flash[:error] = MSG_SERVER_ERROR
-            routing.redirect '/'
           end
         end
       end
-      # routing.on 'channel' do
-      #   routing.is do
-      #     # POST /channel/
-      #     routing.post do
-      #       yt_url = routing.params['youtube_url']
-      #       routing.halt(400, 'YouTube channel URL parameter is required') unless yt_url
-
-      #       routing.halt(400, 'Invalid YouTube URL') unless (yt_url.include? 'googleapis.com') &&
-      #                                                       (yt_url.include? '/channels/') &&
-      #                                                       (yt_url.split('/').count >= 5)
-      #       channel_id = yt_url.split('/').last
-
-      #       channel = Youtube::ChannelMapper
-      #         .new(App.config.API_KEY).find(channel_id)
-      #       Repository::For.entity(channel).create_or_update(channel)
-      #       routing.redirect "channel/#{channel_id}"
-      #     end
-      #   end
-
-      #   routing.on String do |channel_id|
-      #     # GET /channel/channel_id
-      #     routing.get do
-      #       channel = Repository::For.klass(Entity::Channel).find_channel_id(channel_id)
-      #       view 'channel', locals: { channel: channel }
-      #     end
-      #   end
-      # end
     end
   end
 end

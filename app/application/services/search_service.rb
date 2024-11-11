@@ -1,12 +1,25 @@
+# frozen_string_literal: true
+
+require 'dry/monads'
 module Outline
   module Service
     class SearchService
-      def call(params)
-        form = Forms::SearchKeywordForm.new.call(params)
-        return Failure(form.errors.to_h) unless form.success?
+      include Dry::Monads::Result::Mixin
+      MSG_NO_RECLIST = 'Unable to recommend a list of related videos for you.'
 
-        search_key_word = form[:search_key_word]
-        Success(search_key_word)
+      def video_from_youtube(key_word)
+        @search_results = Youtube::SearchRelevantMapper
+          .new(App.config.API_KEY)
+          .find(key_word)
+
+        # Handle the case where no results are found
+        if @search_results == 'Video data is missing' || @search_results == 'No video items found'
+          return Failure(MSG_NO_RECLIST)
+        end
+
+        Success(@search_results)
+      rescue StandardError
+        Failure(MSG_SERVER_ERROR)
       end
     end
   end
