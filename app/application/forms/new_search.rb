@@ -6,14 +6,15 @@ module Outline
   module Forms
     # Validation for new search form
     class NewSearch < Dry::Validation::Contract
-      MSG_NO_EMPTY_VALUE = 'Please do not enter an empty value.'
+      INPUT_REGEX = /\A(?!.*<script>|.*javascript:)[\p{L}\p{N}\p{P}]*\p{L}[\p{L}\p{N}\p{P}]*\z/
+      MSG_INVALID_INPUT = 'Please enter a non-empty value that contains letters or numbers.'
 
       params do
         required(:keywords).filled(:string)
       end
 
       rule(:keywords) do
-        key.failure(MSG_NO_EMPTY_VALUE)
+        key.failure(MSG_INVALID_INPUT) unless INPUT_REGEX.match?(value)
       end
     end
   end

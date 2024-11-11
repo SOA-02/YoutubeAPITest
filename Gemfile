@@ -15,10 +15,15 @@ gem 'rack-session', '~> 0.3'
 gem 'roda', '~> 3.85'
 gem 'slim', '~> 5.2'
 
+# Controllers and services
+gem 'dry-monads', '~> 1.4'
+gem 'dry-transaction', '~> 0.13'
+gem 'dry-validation', '~> 1.7'
+
 # Validation
 gem 'dry-struct', '~> 1.6'
 gem 'dry-types', '~> 1.7'
-gem 'dry-validation', '~> 1.7'
+
 
 # Networking
 gem 'http', '~> 5.2'

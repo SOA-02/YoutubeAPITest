@@ -1,13 +1,20 @@
 # frozen_string_literal: true
+require 'dry/monads'
 
-module Service
-  # logic of fetching viewed videos
-  class FetchViewedVideos
-    def call(watching)
-      videos = Repository::For.klass(Entity::Video).find_all_video(watching)
-      return Failure('No videos found') if videos.empty?
+module Outline
+  module Service
+    # logic of fetching viewed videos
+    class FetchViewedVideos
+      include Dry::Monads::Result::Mixin
+    
+      def call(videos_list)
 
-      Success(videos)
+        videos = Repository::For.klass(Entity::Video).find_all_video(videos_list)
+
+        Success(videos)
+      rescue StandardError
+        Failure('Could not access database')
+      end
     end
   end
 end

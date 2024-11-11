@@ -51,14 +51,13 @@ module Outline
       routing.root do
         # Get cookie viewer's previously seen videos
         session[:watching] ||= []
-        
         result = Service::FetchViewedVideos.new.call(session[:watching])
-
         if result.failure?
-          flash.now[:notice] = MSG_GET_STARTED
-          viewable_videos = Views::VideosList.new([])
+          flash[:error] = result.failure
+          viewable_videos =[]
         else
           videos = result.value!
+          flash.now[:notice] = MSG_GET_STARTED if videos.none?
           session[:watching] = videos.map(&:video_id)
           viewable_videos = Views::VideosList.new(videos)
         end
