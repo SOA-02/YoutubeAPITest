@@ -19,13 +19,11 @@ h1 {
   .project.detail {
     color: grey;
   }
-  
+  .navbar-custom{
+    background-color: #0F2540 !important; /* Use !important to override Bootstrap default */
+  }
   .project.owner {
     font-weight: bold
-  }
-  
-  .project.name {
-    
   }
   
   .vcenter {

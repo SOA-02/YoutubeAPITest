@@ -28,9 +28,8 @@ module Outline
     plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
     plugin :render, engine: 'slim', views: 'app/presentation/views_html'
     plugin :assets, path: 'app/presentation/assets',
-                    url: '/',
                     css: css_files,
-                    js: js_files # 加载 js/lib 文件夹中的所有 JS 文件
+                    js: js_files
     plugin :common_logger, $stderr
 
     use Rack::MethodOverride # allows HTTP verbs beyond GET/POST (e.g., DELETE)
@@ -109,10 +108,11 @@ module Outline
               routing.redirect '/'
             else
               # Extract timestamps from description data
-              video = video_made.value![:local_video]
-              timestamp_parser = Views::Timestamp.new(video.video_description)
+              @video = video_made.value![:local_video]
+              binding.irb
+              timestamp_parser = Views::Timestamp.new(@video.video_description)
               toc = timestamp_parser.extract_toc
-              view 'outline', locals: { video: video, toc: toc }
+              view 'outline', locals: { video: @video, toc: toc }
 
             end
           end
