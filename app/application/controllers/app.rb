@@ -27,6 +27,7 @@ module Outline
     plugin :flash
     plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
     plugin :render, engine: 'slim', views: 'app/presentation/views_html'
+    plugin :public, root: 'app/presentation/public'
     plugin :assets, path: 'app/presentation/assets',
                     css: css_files,
                     js: js_files
@@ -37,9 +38,9 @@ module Outline
     MSG_SERVER_ERROR = 'Internal Server Error'
 
     route do |routing| # rubocop:disable Metrics/BlockLength
-      routing.assets # Load CSS
+      routing.public
+      routing.assets # Load CSS and JS
       response['Content-Type'] = 'text/html; charset=utf-8'
-
       # GET /
       routing.root do
         # Get cookie viewer's previously seen videos
@@ -109,7 +110,6 @@ module Outline
             else
               # Extract timestamps from description data
               @video = video_made.value![:local_video]
-              binding.irb
               timestamp_parser = Views::Timestamp.new(@video.video_description)
               toc = timestamp_parser.extract_toc
               view 'outline', locals: { video: @video, toc: toc }

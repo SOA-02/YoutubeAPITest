@@ -1,53 +1,53 @@
-.container-fluid.bg-image
-  .content-container.d-flex.justify-content-center.align-items-center
+.container-fluid.bg
+  .row.d-flex.justify-content-center.align-items-center.home
     .text-center
       h1.display-4 Welcome to OuterSpace
       p.lead Your gateway to the universe of knowledge
 
-.container
-
-  form role="form" action="/search" method='POST' id='show-project-form'
-    .row.vertical-align.query-bar
-      .col-md-2.col-sm-3
-        .text-right Search:
+  / Corrected form structure to contain input and button elements
+  form role="form" action="/search" method="POST" id="show-project-form"
+    .row.d-flex.justify-content-center.align-items-center.query-bar
+      .col-md-1.col-sm-2.text-light
+        .text-md-end Search:
       .col-md-8.col-sm-6
-        input.form-control#search_key_word type='text' name='search_key_word' placeholder="e.g. Ruby tutorial" 
-          .col-md-2.col-sm-3
-            button { 
-              type='submit' id='repo-form-submit' class='submit' 
-              value='submit' class="btn btn-success" 
-            } Show Info
-    .row.vertical-align
-      section
-        include :flash_bar
-    .row
-      .col-md-12.blank-row
-        - if videos.any?
-          table class="table table-hover" id="videos_table"
-            thead
-              tr
-                th Action
-                th Video Title
-                th Video Published At
-                th Video URL
-            tbody
-              - videos.each do |video|
-                tr class="table-row video_row"
-                  td id='delete_video'
-                form role='form' method='post' action=video.praise_link 
-                  input type='hidden' name='_method' value='delete'
-                  button type="submit" class="btn btn-sm btn-link" id="video[#{@index}].delete"
-                      i class="fas fa-trash-alt"
+        input.form-control#search_key_word type="text" name="search_key_word" placeholder="e.g. Ruby tutorial" list="datalistOptions"
+        datalist#datalistOptions
+          option value="Ruby"
+          option value="PHP"
+      
+      .col-md-2.col-sm-3
+        button.btn.btn-success#repo-form-submit type="submit" Show Info
 
-              td id='td_video_title'
-                span class="video_table_video_title" id="index_str.video_title"
-                  a href=video.praise_link  target="_blank"
+.container
+  section
+    include :flash_bar
+  .row
+    .col-md-12.blank-row
+    - if videos.any?
+      table.table.table-hover#videos_table
+        thead
+          tr
+            th Action
+            th Video Title
+            th Video Published At
+            th Video URL
+        tbody
+          - videos.each do |video|
+            tr.table-row.video_row
+              td#delete_video
+                form role="form" method="post" action=video.praise_link 
+                  input type="hidden" name="_method" value="delete"
+                  button.btn.btn-sm.btn-link type="submit" id="video[#{@index}].delete"
+                    i.fas.fa-trash-alt
+
+              td#td_video_title
+                span.video_table_video_title id="index_str.video_title"
+                  a href=video.praise_link target="_blank"
                     = video.title
-              td id='td_video_published_at'
-                span class="video_table_video_published_at" id="index_str.video_published_at"
+              td#td_video_published_at
+                span.video_table_video_published_at id="index_str.video_published_at"
                   = video.published_at
-              td id='td_video_url'
-                span class="video_table_video_url" id="index_str.video_url"
+              td#td_video_url
+                span.video_table_video_url id="index_str.video_url"
                   a href="https://www.youtube.com/watch?v=#{video.id}" target="_blank"
                     = video.id
-
