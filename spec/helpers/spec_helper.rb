@@ -12,7 +12,8 @@ require 'minitest/rg'
 require 'vcr'
 require 'webmock'
 
-require_relative '../require_app'
+require_relative '../../require_app'
+
 require_app
 
 CHANNEL_ID = 'UCpYf6C9QsP_BRf97vLuXlIA'
