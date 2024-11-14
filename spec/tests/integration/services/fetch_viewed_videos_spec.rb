@@ -30,14 +30,12 @@ describe 'OutSpace Service Integration Test' do
       db_video = Outline::Repository::For.entity(yt_video)
         .create(yt_video)
 
-      binding.irb # 在這裡檢查 yt_video 和 db_video 的內容
 
       watched_list = [VIDEO_ID]
 
       # WHEN: we request a list of all watched videos
       result = Outline::Service::FetchViewedVideos.new.call(watched_list)
 
-      binding.irb # 在這裡檢查 result 和 videos 的內容
 
       # THEN: we should see our video in the resulting list
       _(result.success?).must_equal true
