@@ -21,7 +21,7 @@ module Outline
         data = @gateway.channel_info(channel_id)
 
         item_data = data['items']&.first
-        raise 'Video data is missing' unless item_data # 若資料為空則報錯
+        raise 'Video data is missing' unless item_data 
 
         ChannelMapper.build_entity(item_data)
       end
@@ -35,7 +35,7 @@ module Outline
       class DataMapper
         def initialize(data)
           @data = data
-          raise 'Snippet data missing' unless @data # 若無 `snippet` 則報錯
+          raise 'Snippet data missing' unless @data 
         end
 
         # rubocop:disable Metrics/MethodLength

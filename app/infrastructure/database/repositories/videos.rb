@@ -26,8 +26,8 @@ module Outline
       def self.create(entity)
         return if find(entity)
 
-        Outline::Database::VideoOrm.create(entity.to_attr_hash)
-        rebuild_entity(entity)
+        db_record = Outline::Database::VideoOrm.create(entity.to_attr_hash)
+        rebuild_entity(db_record)
       end
 
       def self.rebuild_entity(db_record)

@@ -4,7 +4,7 @@ module Outline
   module Youtube
     # Video mapper: Youtube repo -> Video entity
     class VideoMapper
-      def initialize(yt_key, gateway_class = Outline::Youtube::YoutubeApi)
+      def initialize(yt_key, gateway_class = YoutubeApi)
         @api_key = yt_key
         @gateway_class = gateway_class
         @gateway = gateway_class.new(@api_key)
@@ -16,15 +16,13 @@ module Outline
       end
 
       def build_entity(video_data)
-        DataMapper.new(video_data, @api_key, @gateway_class).build_entity_map
+        DataMapper.new(video_data).build_entity_map
       end
 
       # Extracts entity specific elements from data structure
       class DataMapper
-        def initialize(mapper_data, token, gateway)
+        def initialize(mapper_data)
           @mapper_data = mapper_data
-          @token = token
-          @gateway = gateway
         end
 
         def build_entity_map
