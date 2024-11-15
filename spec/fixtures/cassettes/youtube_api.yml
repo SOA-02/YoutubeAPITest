@@ -3625,7 +3625,7 @@ http_interactions:
   recorded_at: Sat, 09 Nov 2024 14:17:03 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20one%20hour%20lectures%20tutorials&type=video
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20code%20lectures%20tutorials&type=video
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -3650,7 +3650,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Tue, 12 Nov 2024 08:07:17 GMT
+      - Sun, 10 Nov 2024 15:24:08 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -3674,7 +3674,7 @@ http_interactions:
       string: |
         {
           "kind": "youtube#searchListResponse",
-          "etag": "WJgnB3KizDqvF8uQgDQBGYI7HW4",
+          "etag": "7p9lzgMAl2gFLdHx7_SV3pI2tHI",
           "nextPageToken": "CAUQAA",
           "regionCode": "TW",
           "pageInfo": {
@@ -3718,36 +3718,36 @@ http_interactions:
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "I_XkVBXhjvq6BW3pZcLIpxC39Ww",
+              "etag": "1hi_ey73EG5IP2xO9492zNzN8do",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "fmyvWz5TUWg"
+                "videoId": "PsH6uOuZsKY"
               },
               "snippet": {
-                "publishedAt": "2020-11-09T14:50:57Z",
-                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
-                "title": "Learn Ruby on Rails - Full Course",
-                "description": "Learn Ruby on Rails in this full course for beginners. Ruby on Rails is a is a server-side web application framework used for ...",
+                "publishedAt": "2012-02-09T20:42:01Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 25 - Extracting Numbers and Character Classes",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
                 "thumbnails": {
                   "default": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/default.jpg",
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/default.jpg",
                     "width": 120,
                     "height": 90
                   },
                   "medium": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/mqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/mqdefault.jpg",
                     "width": 320,
                     "height": 180
                   },
                   "high": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/hqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/hqdefault.jpg",
                     "width": 480,
                     "height": 360
                   }
                 },
-                "channelTitle": "freeCodeCamp.org",
+                "channelTitle": "thenewboston",
                 "liveBroadcastContent": "none",
-                "publishTime": "2020-11-09T14:50:57Z"
+                "publishTime": "2012-02-09T20:42:01Z"
               }
             },
             {
@@ -3786,75 +3786,307 @@ http_interactions:
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "xu02JA1NeDc-ux2HU40uy1JwlCs",
+              "etag": "ui-U4cMkdoY9uymonBiql04B53g",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "LADHwoN2LMM"
+                "videoId": "RDqJUU7XmLs"
               },
               "snippet": {
-                "publishedAt": "2008-03-12T01:24:57Z",
-                "channelId": "UCFkid-1EIBbauJLbMFDp2Cg",
-                "title": "Ruby on Rails - Part 1: Hello World",
-                "description": "Ruby on Rails Intensive 1-Day Course Part 1 - Hello World Web Apps anatomy 101, Model-View-Controller 101, Rails 101, ...",
+                "publishedAt": "2012-01-30T16:03:27Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 2 - Writing a Simple Program",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
                 "thumbnails": {
                   "default": {
-                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/default.jpg",
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/default.jpg",
                     "width": 120,
                     "height": 90
                   },
                   "medium": {
-                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/mqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/mqdefault.jpg",
                     "width": 320,
                     "height": 180
                   },
                   "high": {
-                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/hqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/hqdefault.jpg",
                     "width": 480,
                     "height": 360
                   }
                 },
-                "channelTitle": "UC Berkeley Events",
+                "channelTitle": "thenewboston",
                 "liveBroadcastContent": "none",
-                "publishTime": "2008-03-12T01:24:57Z"
+                "publishTime": "2012-01-30T16:03:27Z"
               }
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "dZoe22emAme0qjq30hTIDsLGUKs",
+              "etag": "5zsdKXYhRbXFCw4P4O0xT_qSgQs",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "oG-H6Qo-EnI"
+                "videoId": "OTW56PCFE74"
               },
               "snippet": {
-                "publishedAt": "2024-08-18T16:45:24Z",
-                "channelId": "UCIIhqydramkUXfwCldOXWSQ",
-                "title": "Oi oi oi Baka",
-                "description": "",
+                "publishedAt": "2016-12-31T00:00:02Z",
+                "channelId": "UCzp9tRqDmwQnVxL-yxeU6yA",
+                "title": "Lecture 3: Simple Ruby Code Example",
+                "description": "Hi Unicorn, we are creating so many courses/tutorials/videos/Vlog on TutorialDrive so that students can learn technologies and ...",
                 "thumbnails": {
                   "default": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/default.jpg",
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/default.jpg",
                     "width": 120,
                     "height": 90
                   },
                   "medium": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/mqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/mqdefault.jpg",
                     "width": 320,
                     "height": 180
                   },
                   "high": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/hqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/hqdefault.jpg",
                     "width": 480,
                     "height": 360
                   }
                 },
-                "channelTitle": "finnerson405",
+                "channelTitle": "TutorialDrive - Free Tutorials",
                 "liveBroadcastContent": "none",
-                "publishTime": "2024-08-18T16:45:24Z"
+                "publishTime": "2016-12-31T00:00:02Z"
               }
             }
           ]
         }
-  recorded_at: Tue, 12 Nov 2024 08:07:17 GMT
+  recorded_at: Sun, 10 Nov 2024 15:24:07 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20code%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 10 Nov 2024 15:24:08 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "7p9lzgMAl2gFLdHx7_SV3pI2tHI",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8wZ2ZD--VTk"
+              },
+              "snippet": {
+                "publishedAt": "2017-12-05T20:13:32Z",
+                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
+                "title": "Ruby Programming | In One Video",
+                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Giraffe Academy",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-12-05T20:13:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "1hi_ey73EG5IP2xO9492zNzN8do",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "PsH6uOuZsKY"
+              },
+              "snippet": {
+                "publishedAt": "2012-02-09T20:42:01Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 25 - Extracting Numbers and Character Classes",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/PsH6uOuZsKY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-02-09T20:42:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "3vpn8A4Sk-nVZLgdwDuCAt4_TG4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "xyDoP5a_dvo"
+              },
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-26T14:30:10Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "ui-U4cMkdoY9uymonBiql04B53g",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "RDqJUU7XmLs"
+              },
+              "snippet": {
+                "publishedAt": "2012-01-30T16:03:27Z",
+                "channelId": "UCJbPGzawDH1njbqV-D5HqKw",
+                "title": "Ruby Programming Tutorial - 2 - Writing a Simple Program",
+                "description": "Source Code: https://github.com/thenewboston-developers Core Deployment Guide (AWS): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/RDqJUU7XmLs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "thenewboston",
+                "liveBroadcastContent": "none",
+                "publishTime": "2012-01-30T16:03:27Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "5zsdKXYhRbXFCw4P4O0xT_qSgQs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "OTW56PCFE74"
+              },
+              "snippet": {
+                "publishedAt": "2016-12-31T00:00:02Z",
+                "channelId": "UCzp9tRqDmwQnVxL-yxeU6yA",
+                "title": "Lecture 3: Simple Ruby Code Example",
+                "description": "Hi Unicorn, we are creating so many courses/tutorials/videos/Vlog on TutorialDrive so that students can learn technologies and ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OTW56PCFE74/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "TutorialDrive - Free Tutorials",
+                "liveBroadcastContent": "none",
+                "publishTime": "2016-12-31T00:00:02Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 10 Nov 2024 15:24:08 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20one%20hour%20lectures%20tutorials&type=video
@@ -3882,11 +4114,9 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Tue, 12 Nov 2024 08:07:18 GMT
+      - Fri, 15 Nov 2024 06:56:12 GMT
       Server:
       - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
       X-Xss-Protection:
       - '0'
       X-Frame-Options:
@@ -3906,7 +4136,7 @@ http_interactions:
       string: |
         {
           "kind": "youtube#searchListResponse",
-          "etag": "WJgnB3KizDqvF8uQgDQBGYI7HW4",
+          "etag": "W8k1A1b6Fe3AUMik5IsOYxzW9e8",
           "nextPageToken": "CAUQAA",
           "regionCode": "TW",
           "pageInfo": {
@@ -3984,7 +4214,7 @@ http_interactions:
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "3vpn8A4Sk-nVZLgdwDuCAt4_TG4",
+              "etag": "AZrLELWvDg42-neoGkkNo388PVw",
               "id": {
                 "kind": "youtube#video",
                 "videoId": "xyDoP5a_dvo"
@@ -4052,39 +4282,269 @@ http_interactions:
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "dZoe22emAme0qjq30hTIDsLGUKs",
+              "etag": "1pnITlMbfXIxFU2F7TAm4_EqV70",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "oG-H6Qo-EnI"
+                "videoId": "MXlZCgh2M6A"
               },
               "snippet": {
-                "publishedAt": "2024-08-18T16:45:24Z",
-                "channelId": "UCIIhqydramkUXfwCldOXWSQ",
-                "title": "Oi oi oi Baka",
-                "description": "",
+                "publishedAt": "2022-08-20T08:45:02Z",
+                "channelId": "UCrRsuNXylZ85VT9u7c3e6Tw",
+                "title": "Ruby For Beginners | Ruby Tutorial with Real Projects #ruby",
+                "description": "Ruby For Beginners | Learn Ruby Practically with Real Projects #besttutorial #ruby #rubytutorial #rubyforbeginners #rubyprojects ...",
                 "thumbnails": {
                   "default": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/default.jpg",
+                    "url": "https://i.ytimg.com/vi/MXlZCgh2M6A/default.jpg",
                     "width": 120,
                     "height": 90
                   },
                   "medium": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/mqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/MXlZCgh2M6A/mqdefault.jpg",
                     "width": 320,
                     "height": 180
                   },
                   "high": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/hqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/MXlZCgh2M6A/hqdefault.jpg",
                     "width": 480,
                     "height": 360
                   }
                 },
-                "channelTitle": "finnerson405",
+                "channelTitle": "Best Tutorial",
                 "liveBroadcastContent": "none",
-                "publishTime": "2024-08-18T16:45:24Z"
+                "publishTime": "2022-08-20T08:45:02Z"
               }
             }
           ]
         }
-  recorded_at: Tue, 12 Nov 2024 08:07:18 GMT
+  recorded_at: Fri, 15 Nov 2024 06:56:13 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20one%20hour%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Fri, 15 Nov 2024 06:56:13 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "W8k1A1b6Fe3AUMik5IsOYxzW9e8",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8wZ2ZD--VTk"
+              },
+              "snippet": {
+                "publishedAt": "2017-12-05T20:13:32Z",
+                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
+                "title": "Ruby Programming | In One Video",
+                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Giraffe Academy",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-12-05T20:13:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "I_XkVBXhjvq6BW3pZcLIpxC39Ww",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "fmyvWz5TUWg"
+              },
+              "snippet": {
+                "publishedAt": "2020-11-09T14:50:57Z",
+                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+                "title": "Learn Ruby on Rails - Full Course",
+                "description": "Learn Ruby on Rails in this full course for beginners. Ruby on Rails is a is a server-side web application framework used for ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "freeCodeCamp.org",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-11-09T14:50:57Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "AZrLELWvDg42-neoGkkNo388PVw",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "xyDoP5a_dvo"
+              },
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-26T14:30:10Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "xu02JA1NeDc-ux2HU40uy1JwlCs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "LADHwoN2LMM"
+              },
+              "snippet": {
+                "publishedAt": "2008-03-12T01:24:57Z",
+                "channelId": "UCFkid-1EIBbauJLbMFDp2Cg",
+                "title": "Ruby on Rails - Part 1: Hello World",
+                "description": "Ruby on Rails Intensive 1-Day Course Part 1 - Hello World Web Apps anatomy 101, Model-View-Controller 101, Rails 101, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "UC Berkeley Events",
+                "liveBroadcastContent": "none",
+                "publishTime": "2008-03-12T01:24:57Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "1pnITlMbfXIxFU2F7TAm4_EqV70",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "MXlZCgh2M6A"
+              },
+              "snippet": {
+                "publishedAt": "2022-08-20T08:45:02Z",
+                "channelId": "UCrRsuNXylZ85VT9u7c3e6Tw",
+                "title": "Ruby For Beginners | Ruby Tutorial with Real Projects #ruby",
+                "description": "Ruby For Beginners | Learn Ruby Practically with Real Projects #besttutorial #ruby #rubytutorial #rubyforbeginners #rubyprojects ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/MXlZCgh2M6A/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/MXlZCgh2M6A/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/MXlZCgh2M6A/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Best Tutorial",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-08-20T08:45:02Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Fri, 15 Nov 2024 06:56:14 GMT
 recorded_with: VCR 6.3.1
